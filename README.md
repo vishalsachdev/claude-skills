@@ -1,6 +1,6 @@
 # Claude Code Skills Library
 
-A collection of production-ready, reusable Claude Code skills extracted from real-world projects.
+A collection of production-ready, reusable Claude Code skills extracted from the [TLDW](https://github.com/vishalsachdev/tldw) project - a production AI-powered YouTube video analysis app with 10K+ lines of code.
 
 ## Skills Available
 
