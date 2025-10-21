@@ -1,6 +1,6 @@
 # Claude Code Skills Library
 
-A collection of production-ready, reusable Claude Code skills extracted from the [TLDW](https://github.com/vishalsachdev/tldw) project - a production AI-powered YouTube video analysis app with 10K+ lines of code.
+A collection of production-ready, reusable Claude Code skills extracted from the [TLDW](https://github.com/SamuelZ12/tldw) project (forked at [vishalsachdev/tldw](https://github.com/vishalsachdev/tldw)) - a production AI-powered YouTube video analysis app with 10K+ lines of code.
 
 ## Skills Available
 
@@ -121,7 +121,7 @@ React state patterns without external libraries:
 
 - **8 skills** covering security, async, AI, validation, search, database, state, and setup
 - **5,233 lines** of production-ready code and documentation
-- **Extracted from** [TLDW](https://github.com/vishalsachdev/tldw) - production app with 10K+ LOC
+- **Extracted from** [TLDW](https://github.com/SamuelZ12/tldw) by SamuelZ12 - production app with 10K+ LOC
 
 ---
 
@@ -238,7 +238,7 @@ MIT - Feel free to use in your projects!
 Skills extracted from production applications by [@vishalsachdev](https://github.com/vishalsachdev).
 
 **Source Projects:**
-- [TLDW](https://github.com/vishalsachdev/tldw) - AI-powered YouTube video analysis
+- [TLDW](https://github.com/SamuelZ12/tldw) by [@SamuelZ12](https://github.com/SamuelZ12) - AI-powered YouTube video analysis (forked at [vishalsachdev/tldw](https://github.com/vishalsachdev/tldw))
 
 ---
 
