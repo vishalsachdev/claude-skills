@@ -73,11 +73,55 @@ Automate adding skills to new projects:
 
 ---
 
+### 🔍 Advanced Text Search & Matching
+**File**: `advanced-text-search-matching.md` • **821 lines**
+
+High-performance text search for large documents:
+- Boyer-Moore search algorithm (O(n/m) complexity)
+- N-gram similarity for fuzzy matching
+- Multi-strategy matching (exact → normalized → fuzzy)
+- Document indexing with word and n-gram maps
+- Character-precise highlighting for citations
+
+**Use when**: Building search, citation systems, or finding text with typos
+
+---
+
+### 🗄️ Supabase Full-Stack Setup
+**File**: `supabase-fullstack-setup.md` • **618 lines**
+
+Complete Supabase integration for Next.js:
+- Server and browser client setup
+- Authentication with social providers (Google, GitHub)
+- Row Level Security (RLS) patterns
+- Real-time subscriptions
+- Database schemas and migrations
+- Common CRUD patterns
+
+**Use when**: Starting new Next.js project with Supabase backend
+
+---
+
+### 🎛️ Complex State Management
+**File**: `complex-state-management.md` • **411 lines**
+
+React state patterns without external libraries:
+- Multi-stage loading with progress tracking
+- Command pattern for centralized control
+- Ref-based optimization to avoid re-renders
+- Memoized setters for performance
+- Parallel state updates and batching
+- Custom hooks for complex logic
+
+**Use when**: Building complex UIs without Redux/Zustand
+
+---
+
 ## Stats
 
-- **5 skills** covering security, async operations, AI integration, validation, and project setup
-- **3,182 lines** of production-ready code and documentation
-- **Extracted from** [TLDW](https://github.com/vishalsachdev/tldw) - real production app
+- **8 skills** covering security, async, AI, validation, search, database, state, and setup
+- **5,233 lines** of production-ready code and documentation
+- **Extracted from** [TLDW](https://github.com/vishalsachdev/tldw) - production app with 10K+ LOC
 
 ---
 
@@ -174,12 +218,12 @@ Tips and gotchas...
 ## Roadmap
 
 **Potential Future Skills:**
-- Advanced Text Search & Matching (Boyer-Moore, n-gram similarity)
-- Supabase Full-Stack Setup (auth, RLS, common patterns)
-- Complex State Management (multi-stage loading, command pattern)
 - YouTube Video Processing Pipeline
-- Citation & Quote System
-- Real-time Loading Context
+- Citation & Quote System with Highlighting
+- Real-time Loading Context with Progress
+- GitHub Actions Workflows for CI/CD
+- Error Boundary Patterns
+- Accessibility (a11y) Best Practices
 
 ---
 
