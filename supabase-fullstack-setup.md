@@ -1,3 +1,8 @@
+---
+name: supabase-fullstack-setup
+description: Complete guide to integrating Supabase with Next.js 13+ App Router, including authentication, database setup, Row Level Security (RLS), and common patterns for production apps. Use when starting a new Next.js project with Supabase, need authentication with social providers, or building apps with user-specific data.
+---
+
 # Supabase Full-Stack Setup for Next.js
 
 Complete guide to integrating Supabase with Next.js 13+ App Router, including authentication, database setup, Row Level Security (RLS), and common patterns for production apps.

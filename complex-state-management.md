@@ -1,3 +1,8 @@
+---
+name: complex-state-management
+description: Production patterns for managing complex application state in React without Redux, Zustand, or other state libraries. Includes multi-stage loading, command patterns, refs for performance, and parallel data fetching. Use when building complex UIs with interconnected states, need loading stages and progress tracking, or implementing command patterns.
+---
+
 # Complex State Management Without External Libraries
 
 Production patterns for managing complex application state in React without Redux, Zustand, or other state libraries. Includes multi-stage loading, command patterns, refs for performance, and parallel data fetching.

@@ -1,3 +1,8 @@
+---
+name: resilient-async-operations
+description: A comprehensive pattern for handling asynchronous operations in JavaScript/TypeScript applications with automatic cleanup, graceful error handling, and memory leak prevention. Use when building async operations that need timeout control, cancellation support, retry logic, or graceful error handling.
+---
+
 # Resilient Async Operations
 
 A comprehensive pattern for handling asynchronous operations in JavaScript/TypeScript applications with automatic cleanup, graceful error handling, and memory leak prevention.

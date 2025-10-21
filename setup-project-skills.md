@@ -1,3 +1,8 @@
+---
+name: setup-project-skills
+description: A meta-skill that helps you quickly add Claude Code skills to any new project from your centralized skills repository. Use when starting a new project and need to add reusable skills, adding specific skills to an existing project, or setting up skills across different platforms.
+---
+
 # Setup Project Skills
 
 A meta-skill that helps you quickly add Claude Code skills to any new project from your centralized skills repository.

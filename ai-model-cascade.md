@@ -1,3 +1,8 @@
+---
+name: ai-model-cascade
+description: A production-ready pattern for integrating AI models (specifically Google Gemini) with automatic fallback, retry logic, structured output via Zod schemas, and comprehensive error handling. Use when integrating AI/LLM APIs, need automatic fallback when models are overloaded, want type-safe structured responses, or building features requiring reliable AI generation.
+---
+
 # AI Model Cascade with Structured Output
 
 A production-ready pattern for integrating AI models (specifically Google Gemini) with automatic fallback, retry logic, structured output via Zod schemas, and comprehensive error handling.

@@ -1,3 +1,8 @@
+---
+name: advanced-text-search-matching
+description: Production-grade text search algorithms for finding and matching text in large documents with millisecond performance. Includes Boyer-Moore search, n-gram similarity, fuzzy matching, and intelligent indexing. Use when building search features for large documents, finding quotes with imperfect matches, implementing fuzzy search, or need character-level precision.
+---
+
 # Advanced Text Search & Matching
 
 Production-grade text search algorithms for finding and matching text in large documents with millisecond performance. Includes Boyer-Moore search, n-gram similarity, fuzzy matching, and intelligent indexing.
