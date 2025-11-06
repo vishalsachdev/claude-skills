@@ -117,11 +117,26 @@ React state patterns without external libraries:
 
 ---
 
+### 🏗️ Claude Code Infrastructure Showcase
+**File**: `claude-infrastructure-showcase.md` • **1,221 lines**
+
+Enterprise-ready infrastructure patterns for Claude Code:
+- Auto-activating skills system (skills suggest themselves!)
+- 10 specialized agents (code review, refactoring, debugging)
+- 6 production hooks (automation triggers)
+- Modular skill architecture (500-line rule)
+- Dev documentation system (context-reset resistant)
+- Integration guide for complex projects
+
+**Use when**: Scaling Claude Code for enterprise, need automatic skill activation, building production workflows
+
+---
+
 ## Stats
 
-- **8 skills** covering security, async, AI, validation, search, database, state, and setup
-- **5,233 lines** of production-ready code and documentation
-- **Extracted from** [TLDW](https://github.com/vishalsachdev/tldw) - production app with 10K+ LOC
+- **9 skills** covering security, async, AI, validation, search, database, state, setup, and infrastructure
+- **6,454 lines** of production-ready code and documentation
+- **Extracted from** [TLDW](https://github.com/vishalsachdev/tldw) - production app with 10K+ LOC and [Infrastructure Showcase](https://github.com/diet103/claude-code-infrastructure-showcase) - 6 months of production patterns
 
 ---
 
