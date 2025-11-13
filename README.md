@@ -4,6 +4,23 @@ A collection of production-ready, reusable Claude Code skills extracted from the
 
 ## Skills Available
 
+### 🚀 Vibe Coder SDLC
+**Folder**: `vibe-coder-sdlc/` • **SKILL.md + 4 agent references**
+
+A flexible SDLC workflow system for developers who want professional practices without rigid processes:
+- Orchestrated multi-agent system (orchestrator, git, code-review, project-manager)
+- Automatic tech stack detection (Python, TypeScript, Go, Rust, Java, Ruby, PHP)
+- Feature branch workflows with automated PR creation
+- Intelligent code review with language-specific best practices
+- GitHub issues tracking and documentation updates
+- Designed for "staying in flow" while maintaining quality
+
+**Structure**: Main SKILL.md with 4 specialized agent definitions in `references/`
+
+**Use when**: Starting features, managing git workflows, wanting code review, tracking work in GitHub issues
+
+---
+
 ### 🔒 Secure Next.js API Routes
 **File**: `secure-nextjs-api-routes.md` • **671 lines**
 
@@ -119,9 +136,17 @@ React state patterns without external libraries:
 
 ## Stats
 
-- **8 skills** covering security, async, AI, validation, search, database, state, and setup
-- **5,233 lines** of production-ready code and documentation
+- **9 skills** covering SDLC workflows, security, async, AI, validation, search, database, state, and setup
+- **Official format**: Following [Anthropic Agent Skills Spec v1.0](https://github.com/anthropics/skills)
+- **Folder-based skills**: Proper SKILL.md format with references for long content
+- **6,330+ lines** of production-ready code and documentation
 - **Extracted from** [TLDW](https://github.com/vishalsachdev/tldw) - production app with 10K+ LOC
+
+---
+
+## Creating Your Own Skills
+
+Want to create your own Claude skills? See **[SKILL_CREATION_GUIDE.md](SKILL_CREATION_GUIDE.md)** for the official format and best practices based on Anthropic's Agent Skills Spec v1.0.
 
 ---
 
