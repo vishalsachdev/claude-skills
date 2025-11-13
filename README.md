@@ -4,6 +4,21 @@ A collection of production-ready, reusable Claude Code skills extracted from the
 
 ## Skills Available
 
+### 🚀 Vibe Coder SDLC
+**File**: `vibe-coder-sdlc.md` • **1097 lines**
+
+A flexible SDLC workflow system for developers who want professional practices without rigid processes:
+- Orchestrated multi-agent system (orchestrator, git, code-review, project-manager)
+- Automatic tech stack detection (Python, TypeScript, Go, Rust, Java, Ruby, PHP)
+- Feature branch workflows with automated PR creation
+- Intelligent code review with language-specific best practices
+- GitHub issues tracking and documentation updates
+- Designed for "staying in flow" while maintaining quality
+
+**Use when**: Starting features, managing git workflows, wanting code review, tracking work in GitHub issues
+
+---
+
 ### 🔒 Secure Next.js API Routes
 **File**: `secure-nextjs-api-routes.md` • **671 lines**
 
@@ -119,8 +134,8 @@ React state patterns without external libraries:
 
 ## Stats
 
-- **8 skills** covering security, async, AI, validation, search, database, state, and setup
-- **5,233 lines** of production-ready code and documentation
+- **9 skills** covering SDLC workflows, security, async, AI, validation, search, database, state, and setup
+- **6,330 lines** of production-ready code and documentation
 - **Extracted from** [TLDW](https://github.com/vishalsachdev/tldw) - production app with 10K+ LOC
 
 ---
