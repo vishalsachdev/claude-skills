@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "title": "Learning Graph",
+    "description": "Learning graph with 5 concepts generated from CSV",
+    "creator": "CSV to JSON Converter",
+    "date": "2025-11-15",
+    "version": "1.0",
+    "format": "Learning Graph JSON v1.0",
+    "schema": "https://raw.githubusercontent.com/dmccreary/learning-graphs/refs/heads/main/src/schema/learning-graph-schema.json",
+    "license": "CC BY-NC-SA 4.0 DEED"
+  },
+  "groups": {
+    "FOUND": {
+      "classifierName": "Foundation Concepts",
+      "color": "red",
+      "font": {
+        "color": "white"
+      }
+    },
+    "DEF": {
+      "classifierName": "Definitions",
+      "color": "orange",
+      "font": {
+        "color": "black"
+      }
+    },
+    "CORE": {
+      "classifierName": "Core Concepts",
+      "color": "gold",
+      "font": {
+        "color": "black"
+      }
+    },
+    "INTER": {
+      "classifierName": "Intermediate",
+      "color": "green",
+      "font": {
+        "color": "black"
+      }
+    },
+    "ADV": {
+      "classifierName": "Advanced",
+      "color": "blue",
+      "font": {
+        "color": "white"
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": 1,
+      "label": "Introduction to Testing",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 2,
+      "label": "Basic Concepts",
+      "group": "DEF"
+    },
+    {
+      "id": 3,
+      "label": "Core Principles",
+      "group": "CORE"
+    },
+    {
+      "id": 4,
+      "label": "Intermediate Topics",
+      "group": "INTER"
+    },
+    {
+      "id": 5,
+      "label": "Advanced Techniques",
+      "group": "ADV"
+    }
+  ],
+  "edges": [
+    {
+      "from": 2,
+      "to": 1
+    },
+    {
+      "from": 3,
+      "to": 1
+    },
+    {
+      "from": 3,
+      "to": 2
+    },
+    {
+      "from": 4,
+      "to": 2
+    },
+    {
+      "from": 4,
+      "to": 3
+    },
+    {
+      "from": 5,
+      "to": 3
+    },
+    {
+      "from": 5,
+      "to": 4
+    }
+  ]
+}

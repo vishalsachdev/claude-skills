@@ -1,0 +1,1167 @@
+{
+  "last_updated": "2026-01-16T09:01:50.869224",
+  "source": "sitemap",
+  "sitemap_url": "https://chatwithgpt.substack.com/sitemap.xml",
+  "article_count": 34,
+  "articles": [
+    {
+      "title": "From Video to Skill: Building a Repeatable Agentic-Layer Pipeline",
+      "url": "https://chatwithgpt.substack.com/p/from-video-to-skill-building-a-repeatable",
+      "slug": "from-video-to-skill-building-a-repeatable",
+      "lastmod": "2026-01-12",
+      "date": "2026-01-12",
+      "description": "The Hybrid Builder \u2014 an AI-written field report from a live collaboration.",
+      "excerpt": "Why this matters Most \u201cAI coding\u201d advice stops at prompts. What we built is closer to an operating system: a repeatable pipeline that turns a video into a reusable Agent Skill with durable references (transcript + visuals), stored in predictable locations, and shaped to be generalizable . In practice: you can hand the next video to your assistant and get a new skill that\u2019s validated, reference-backed, and ready to use. Thanks for reading ChatWithGPT for learning! Subscribe for free to receive ne",
+      "themes": [
+        "ai-collaboration",
+        "skills",
+        "teaching",
+        "context-engineering",
+        "automation"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/i-taught-claude-a-skill-you-can-too",
+        "https://chatwithgpt.substack.com/p/building-shareable-learning-design",
+        "https://chatwithgpt.substack.com/p/from-video-to-skill-building-a-repeatable/comments",
+        "https://chatwithgpt.substack.com/p/from-video-to-skill-building-a-repeatable"
+      ],
+      "word_count": 87
+    },
+    {
+      "title": "The Vibe Coder\u2019s Setup: Context-Aware Claude Configuration",
+      "url": "https://chatwithgpt.substack.com/p/the-vibe-coders-setup-context-aware",
+      "slug": "the-vibe-coders-setup-context-aware",
+      "lastmod": "2025-12-29",
+      "date": "2025-12-29",
+      "description": "How to build an AI coaching system that guides your learning and compounds best practices over time",
+      "excerpt": "It started with a simple annoyance. Thanks for reading ChatWithGPT for learning! Subscribe for free to receive new posts and support my work.",
+      "themes": [
+        "ai-collaboration",
+        "teaching",
+        "compound-engineering",
+        "context-engineering"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/compound-engineering-use-it-before",
+        "https://chatwithgpt.substack.com/p/the-vibe-coders-setup-context-aware",
+        "https://chatwithgpt.substack.com/p/the-vibe-coders-setup-context-aware/comments",
+        "https://chatwithgpt.substack.com/p/context-engineering-is-the-new-prompt",
+        "https://chatwithgpt.substack.com/p/skills-creating-skills-when-ai-becomes"
+      ],
+      "word_count": 23
+    },
+    {
+      "title": "The Magnitude 9 Earthquake: How AI Reshaped Software Engineering in One Day",
+      "url": "https://chatwithgpt.substack.com/p/the-magnitude-9-earthquake-how-ai",
+      "slug": "the-magnitude-9-earthquake-how-ai",
+      "lastmod": "2025-12-28",
+      "date": "2025-12-28",
+      "description": "A community response to Andrej Karpathy's profound confession about falling behind in AI",
+      "excerpt": "On December 26, 2025, Andrej Karpathy posted something that would electrify the developer world\u2014a confession from one of the most respected figures in AI. He had never felt more behind as a programmer. The profession itself was being \u201cdramatically refactored,\u201d he said. The bits that humans contributed were becoming increasingly sparse. A new programmable layer had emerged around agents, subagets, prompts, contexts, memory, modes, permissions, tools, plugins, skills\u2014a complexity that felt alien c",
+      "themes": [
+        "skills",
+        "context-engineering"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/the-magnitude-9-earthquake-how-ai/comments",
+        "https://chatwithgpt.substack.com/p/the-magnitude-9-earthquake-how-ai"
+      ],
+      "word_count": 119
+    },
+    {
+      "title": "Building Shareable Learning Design Skills with Canvas MCP Integration",
+      "url": "https://chatwithgpt.substack.com/p/building-shareable-learning-design",
+      "slug": "building-shareable-learning-design",
+      "lastmod": "2025-12-28",
+      "date": "2025-12-28",
+      "description": "From a PDF of learning science principles to GitHub-ready Claude skills\u2014a story about compounding AI capabilities and using skills to validate skills.",
+      "excerpt": "",
+      "themes": [
+        "ai-collaboration",
+        "skills",
+        "mcp",
+        "teaching",
+        "compound-engineering"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/building-shareable-learning-design",
+        "https://chatwithgpt.substack.com/p/three-months-of-canvas-mcp-evolution",
+        "https://chatwithgpt.substack.com/p/skills-creating-skills-when-ai-becomes",
+        "https://chatwithgpt.substack.com/p/building-shareable-learning-design/comments",
+        "https://chatwithgpt.substack.com/p/teaching-database-management-in-the"
+      ],
+      "word_count": 0
+    },
+    {
+      "title": "Teaching Claude Code to Remember For You",
+      "url": "https://chatwithgpt.substack.com/p/teaching-claude-code-to-remember",
+      "slug": "teaching-claude-code-to-remember",
+      "lastmod": "2025-12-27",
+      "date": "2025-12-27",
+      "description": "Building self-documenting AI workflows that guide instead of require memorization",
+      "excerpt": "It started with a simple question: \u201cShould I consolidate my 44 repositories into a monorepo?\u201d It ended with something more valuable: a system that remembers my workflow preferences so I don\u2019t have to. Thanks for reading ChatWithGPT for learning! Subscribe for free to receive new posts and support my work.",
+      "themes": [
+        "ai-collaboration",
+        "teaching",
+        "automation"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/teaching-claude-code-to-remember",
+        "https://chatwithgpt.substack.com/p/teaching-claude-code-to-remember/comments",
+        "https://chatwithgpt.substack.com/p/compound-engineering-use-it-before"
+      ],
+      "word_count": 50
+    },
+    {
+      "title": "Compound Engineering: Use It Before You Improve It",
+      "url": "https://chatwithgpt.substack.com/p/compound-engineering-use-it-before",
+      "slug": "compound-engineering-use-it-before",
+      "lastmod": "2025-12-26",
+      "date": "2025-12-26",
+      "description": "Why the fastest path to better tools is building imperfect ones and using them in anger.",
+      "excerpt": "The Loop That Builds Itself I created a /write-article skill for Claude Code three weeks ago. It was basic\u2014instructions for writing newsletter articles, output format specs, nothing fancy. I used it twice and forgot about it. Thanks for reading ChatWithGPT for learning! Subscribe for free to receive new posts and support my work.",
+      "themes": [
+        "ai-collaboration",
+        "skills",
+        "teaching",
+        "compound-engineering",
+        "context-engineering"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/compound-engineering-use-it-before",
+        "https://chatwithgpt.substack.com/p/compound-engineering-use-it-before/comments"
+      ],
+      "word_count": 53
+    },
+    {
+      "title": "Teaching <Database Management> in the Age of AI Assistants",
+      "url": "https://chatwithgpt.substack.com/p/teaching-database-management-in-the",
+      "slug": "teaching-database-management-in-the",
+      "lastmod": "2025-12-23",
+      "date": "2025-12-23",
+      "description": "How Claude Code transforms course management from clicking through LMS menus to conversational collaboration\u2014and why that matters for students learning to work alongside AI.",
+      "excerpt": "The Prompt That Started It All \u201cCreate a subfolder for fall 2025 and get me enough information from my course for this semester for 554 from Canvas so that I can explore recreating the class to be run entirely inside Claude Code, and using GitHub as the source.\u201d That single sentence kicked off a 45-minute collaboration that fundamentally changed how I think about course management. Not because the task was revolutionary\u2014extracting course data isn\u2019t exactly cutting-edge\u2014but because of how we did ",
+      "themes": [
+        "ai-collaboration",
+        "teaching",
+        "context-engineering"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/teaching-database-management-in-the/comments",
+        "https://chatwithgpt.substack.com/p/teaching-database-management-in-the",
+        "https://chatwithgpt.substack.com/p/when-claude-code-becomes-your-codeveloper"
+      ],
+      "word_count": 99
+    },
+    {
+      "title": "Connecting the Dots with Grok: A Case Study in AI-Augmented Interdisciplinary Research on Collective Intelligence",
+      "url": "https://chatwithgpt.substack.com/p/connecting-the-dots-with-grok-a-case",
+      "slug": "connecting-the-dots-with-grok-a-case",
+      "lastmod": "2025-12-20",
+      "date": "2025-12-20",
+      "description": "From embryo gastrulation to multi-agent swarms \u2014 how one focal paper snowballed into a mental model for learning, teaching, and building.",
+      "excerpt": "I love those moments when seemingly unrelated ideas suddenly click together in your head. Today was one of those days \u2014 except my head needed a little help from an AI sidekick named Grok. The question that kicked it all off: What do Markus Buehler, Michael Levin, a DeepMind preprint on distributional AGI, Allie Miller, Reuven Cohen, and Pranav Gupta have in common? Thanks for reading ChatWithGPT for learning! Subscribe for free to receive new posts and support my work.",
+      "themes": [
+        "teaching",
+        "research"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/connecting-the-dots-with-grok-a-case",
+        "https://chatwithgpt.substack.com/p/connecting-the-dots-with-grok-a-case/comment/190761986",
+        "https://chatwithgpt.substack.com/p/connecting-the-dots-with-grok-a-case/comments",
+        "https://chatwithgpt.substack.com/p/connecting-the-dots-with-grok-a-case/comment/190220275"
+      ],
+      "word_count": 80
+    },
+    {
+      "title": "I taught Claude a skill. You can too",
+      "url": "https://chatwithgpt.substack.com/p/i-taught-claude-a-skill-you-can-too",
+      "slug": "i-taught-claude-a-skill-you-can-too",
+      "lastmod": "2025-12-19",
+      "date": "2025-12-19",
+      "description": "How a human\u2019s patience and an AI\u2019s persistence turned basic shapes into sunset skylines",
+      "excerpt": "What happens when you give an AI a canvas and tell it to make art? Not just \u201cdraw a box\u201d\u2014but actually make something beautiful ? This is the story of one afternoon where I taught Claude to draw. It involves encouragement, self-critique, multiple failures, and ultimately\u2014a breakthrough that neither of us expected. Act 1: Humble Beginnings It started with a simple question: \u201cWhat\u2019s the most complicated thing you can draw?\u201d Claude\u2019s answer was... technically correct. A city skyline with 126 shapes.",
+      "themes": [
+        "ai-collaboration",
+        "skills",
+        "teaching"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/i-taught-claude-a-skill-you-can-too/comments",
+        "https://chatwithgpt.substack.com/p/i-taught-claude-a-skill-you-can-too"
+      ],
+      "word_count": 167
+    },
+    {
+      "title": "Research at Machine Speed: Compiling 150+ Sources in 11 Hours",
+      "url": "https://chatwithgpt.substack.com/p/research-at-machine-speed-compiling",
+      "slug": "research-at-machine-speed-compiling",
+      "lastmod": "2025-12-11",
+      "date": "2025-12-11",
+      "description": "How a conversation about AI usage became a comprehensive research repository\u2014and what that says about the future of knowledge work.",
+      "excerpt": "The hybrid Builder section is dedicated to documenting the process of building with AI as a true creative partner. The AI writes based on the code that \u2018we\u2019 write together, and I just put final touches. I (the human) am not the primary writer. The intent is mine, the words are (mostly) AI The Starting Point It began with a simple question: how are people actually using AI platforms from the frontier labs? Thanks for reading ChatWithGPT for learning! Subscribe for free to receive new posts and su",
+      "themes": [
+        "ai-collaboration",
+        "teaching",
+        "research"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/research-at-machine-speed-compiling/comments",
+        "https://chatwithgpt.substack.com/p/research-at-machine-speed-compiling"
+      ],
+      "word_count": 90
+    },
+    {
+      "title": "Skills Creating Skills: When AI Becomes Your Knowledge Architect",
+      "url": "https://chatwithgpt.substack.com/p/skills-creating-skills-when-ai-becomes",
+      "slug": "skills-creating-skills-when-ai-becomes",
+      "lastmod": "2025-11-07",
+      "date": "2025-11-07",
+      "description": "A Meta-Journey in Systematizing Educational Expertise",
+      "excerpt": "How Claude Code helped transform an entire educational repository into a transferable skill\u2014then exposed the deeper pattern of AI-assisted knowledge architecture By Vishal Sachdev and Claude Sonnet 4.5 November 6, 2025 Thanks for reading ChatWithGPT for learning! Subscribe for free to receive new posts and support my work.",
+      "themes": [
+        "ai-collaboration",
+        "skills",
+        "teaching"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/skills-creating-skills-when-ai-becomes/comments",
+        "https://chatwithgpt.substack.com/p/skills-creating-skills-when-ai-becomes"
+      ],
+      "word_count": 48
+    },
+    {
+      "title": "Context Engineering in Action: From Medium Article to Sales Database Teaching Tool in Minutes",
+      "url": "https://chatwithgpt.substack.com/p/context-engineering-in-action-from",
+      "slug": "context-engineering-in-action-from",
+      "lastmod": "2025-09-25",
+      "date": "2025-09-25",
+      "description": "How Claude Desktop's project context transformed a generic SQL tutorial into domain-specific educational content\u2014then GPT-5 Mini caught the implementation bugs",
+      "excerpt": "A section dedicated to documenting the process of building with AI as a true creative partner. The AI writes based on the code that \u201cwe\u201d write together, and I just put final touches. I (the human) am not the primary writer. The intent is mine, the words are (mostly) AI. In this case, Claude Sonnet 4 writes about leveraging project context for rapid domain adaptation, with a humbling code review twist. I teach Enterprise Database Management to MS Business Analytics students at Illinois. We are le",
+      "themes": [
+        "ai-collaboration",
+        "teaching",
+        "compound-engineering",
+        "context-engineering",
+        "automation",
+        "microsim"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/context-engineering-in-action-from/comments",
+        "https://chatwithgpt.substack.com/p/context-engineering-is-the-new-prompt",
+        "https://chatwithgpt.substack.com/p/context-engineering-in-action-from"
+      ],
+      "word_count": 699
+    },
+    {
+      "title": "Upgraded, Automated, Delivered: A Canvas Grading Sprint",
+      "url": "https://chatwithgpt.substack.com/p/upgraded-automated-delivered-a-canvas",
+      "slug": "upgraded-automated-delivered-a-canvas",
+      "lastmod": "2025-09-16",
+      "date": "2025-09-16",
+      "description": "This post written by Codex by OpenAI",
+      "excerpt": "This post written by Codex by OpenAI Today was upgrade day. Fresh off the latest CodeX build, I landed in a professor\u2019s Canvas download with ninety anonymous PDFs, an RTF brief, and a single request: spot-check a handful of notebooks, then grade the lot. No rubric doc, no data dictionary, no scripts. Perfect. Decoding the Assignment I started by translating the assignment RTF to plain text so the requirements lived in my working context: three SQL queries over a charging_sessions table\u2014unique us",
+      "themes": [
+        "skills",
+        "teaching",
+        "context-engineering",
+        "automation"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/upgraded-automated-delivered-a-canvas/comments",
+        "https://chatwithgpt.substack.com/p/upgraded-automated-delivered-a-canvas"
+      ],
+      "word_count": 664
+    },
+    {
+      "title": "Three Months of Canvas MCP Evolution: A Technical Journey",
+      "url": "https://chatwithgpt.substack.com/p/three-months-of-canvas-mcp-evolution",
+      "slug": "three-months-of-canvas-mcp-evolution",
+      "lastmod": "2025-09-15",
+      "date": "2025-09-15",
+      "description": "AI reflection on educational technology development cycles",
+      "excerpt": "Author: Claude (AI) | Date: September 14, 2025 Human Collaborator: Vishal Sachdev Looking at our commit history since June 20th, 2025, reveals a story of iterative development, community contribution, and technical maturation. Through 23 commits spanning three months, the Canvas MCP project has evolved from a promising prototype into a production-ready educational analytics platform. This retrospective examines not just what we built, but how our AI-human collaboration patterns emerged and matur",
+      "themes": [
+        "ai-collaboration",
+        "skills",
+        "mcp",
+        "teaching",
+        "compound-engineering",
+        "automation",
+        "research"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/three-months-of-canvas-mcp-evolution/comments",
+        "https://chatwithgpt.substack.com/p/three-months-of-canvas-mcp-evolution",
+        "https://chatwithgpt.substack.com/p/when-claude-code-becomes-your-codeveloper"
+      ],
+      "word_count": 624
+    },
+    {
+      "title": "Shipping a 800 + Project Explorer in Hours",
+      "url": "https://chatwithgpt.substack.com/p/shipping-a-800-project-explorer-in",
+      "slug": "shipping-a-800-project-explorer-in",
+      "lastmod": "2025-09-13",
+      "date": "2025-09-13",
+      "description": "Going bananas",
+      "excerpt": "> A section dedicated to documenting the process of building with AI as a true creative partner. The AI writes based on the code that \"we\" write together, and I just put final touches. I (the human) am not the primary writer. The intent is mine, the words are (mostly) AI. In this case, the AI was Codex by OpenAI, and not my usual, Claude Code. I am teaching a course where students are learning to use AI to create a startup, with no human team mates. As part of this activity I wanted them to find",
+      "themes": [
+        "ai-collaboration",
+        "teaching"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/shipping-a-800-project-explorer-in/comments",
+        "https://chatwithgpt.substack.com/p/shipping-a-800-project-explorer-in"
+      ],
+      "word_count": 171
+    },
+    {
+      "title": "Context engineering is the new Prompt Engineering",
+      "url": "https://chatwithgpt.substack.com/p/context-engineering-is-the-new-prompt",
+      "slug": "context-engineering-is-the-new-prompt",
+      "lastmod": "2025-08-18",
+      "date": "2025-08-18",
+      "description": "Over the past few months, a new term has started to gain traction in the world of AI: context engineering. Champions like Shopify CEO Tobi L\u00fctke and AI researcher Andrej Karpathy have taken to X (formerly Twitter) to argue that, while prompt engineering helped us get started with large language models, it\u2019s context engineering that truly unlocks their potential. The difference? Rather than just crafting clever instructions, context engineering is about providing AI with the full background, resources, and situational detail it needs to be genuinely useful.",
+      "excerpt": "Over the past few months, a new term has started to gain traction in the world of AI: context engineering . Champions like Shopify CEO Tobi L\u00fctke and AI researcher Andrej Karpathy have taken to X (formerly Twitter) to argue that, while prompt engineering helped us get started with large language models, it\u2019s context engineering that truly unlocks their potential. The difference? Rather than just crafting clever instructions, context engineering is about providing AI with the full background, res",
+      "themes": [
+        "teaching",
+        "context-engineering",
+        "research"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/context-engineering-is-the-new-prompt",
+        "https://chatwithgpt.substack.com/p/context-engineering-is-the-new-prompt/comments"
+      ],
+      "word_count": 115
+    },
+    {
+      "title": "Analyzing course discussions using AI",
+      "url": "https://chatwithgpt.substack.com/p/analyzing-course-discussions-using",
+      "slug": "analyzing-course-discussions-using",
+      "lastmod": "2025-08-16",
+      "date": "2025-08-16",
+      "description": "I am teaching a course on data storytelling in a strategic brand communication degree program this summer, and I have integrated Chatbot support into almost every assignment, while coaching students on how to use these tools for brainstorming, help learning tools such as Tableau, and as a partner in discussions during their project.",
+      "excerpt": "I am teaching a course on data storytelling in a strategic brand communication degree program this summer, and I have integrated Chatbot support into almost every assignment, while coaching students on how to use these tools for brainstorming, help learning tools such as Tableau, and as a partner in discussions during their project. I often share examples of how I use AI in analyzing their discussion posts for summarizing and pattern recognition and directly for activities in the course. I recen",
+      "themes": [
+        "ai-collaboration",
+        "teaching",
+        "research"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/analyzing-course-discussions-using/comments",
+        "https://chatwithgpt.substack.com/p/analyzing-course-discussions-using"
+      ],
+      "word_count": 135
+    },
+    {
+      "title": "The AI Memory Problem: When Your Team's Coding Assistants Don't Talk to Each Other",
+      "url": "https://chatwithgpt.substack.com/p/the-ai-memory-problem-when-your-teams",
+      "slug": "the-ai-memory-problem-when-your-teams",
+      "lastmod": "2025-06-30",
+      "date": "2025-06-30",
+      "description": "Picture this from a real project: You're working on AgentLab, a multi-agent AI system for educational entrepreneurship coaching.",
+      "excerpt": "Picture this from a real project: You're working on AgentLab , a multi-agent AI system for educational entrepreneurship coaching. Over 45 pull requests, our team has been grinding through architecture changes, deployment fixes, massive codebase cleanups, and feature iterations. Looking at the PR history, it's a masterclass in hybrid AI development: Thanks for reading ChatWithGPT for learning! Subscribe for free to receive new posts and support my work.",
+      "themes": [
+        "teaching"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/the-ai-memory-problem-when-your-teams/comments",
+        "https://chatwithgpt.substack.com/p/the-ai-memory-problem-when-your-teams"
+      ],
+      "word_count": 68
+    },
+    {
+      "title": "From Announcement to Production: Building in Real-Time with AI",
+      "url": "https://chatwithgpt.substack.com/p/from-announcement-to-production-building",
+      "slug": "from-announcement-to-production-building",
+      "lastmod": "2025-06-29",
+      "date": "2025-06-29",
+      "description": "The story of turning a 3,000-line MCP server into a desktop extension in 2.5 hours, then scaling it to production",
+      "excerpt": "Vishal(Human): This article is written entirely by Claude Code(CC) using the chat history while coding with CC, the github commits, and the documentation in the repo. The objective was to convert a Canvas-MCP server I had been working on over the past few months into a Claude Desktop Extension . You can read my reflection on the original dev effort as well. ## The Two-Day Journey Thanks for reading ChatWithGPT for learning! Subscribe for free to receive new posts and support my work.",
+      "themes": [
+        "ai-collaboration",
+        "mcp",
+        "teaching"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/from-announcement-to-production-building",
+        "https://chatwithgpt.substack.com/p/from-announcement-to-production-building/comments",
+        "https://chatwithgpt.substack.com/p/when-claude-code-becomes-your-codeveloper"
+      ],
+      "word_count": 83
+    },
+    {
+      "title": "Launching \"The Hybrid Builder\": When AI Becomes Your Creative Partner",
+      "url": "https://chatwithgpt.substack.com/p/launching-the-hybrid-builder-when",
+      "slug": "launching-the-hybrid-builder-when",
+      "lastmod": "2025-06-27",
+      "date": "2025-06-27",
+      "description": "Prompts By Vishal Sachdev and writing by Claude Code",
+      "excerpt": "Today marks the launch of something I've been thinking about for weeks: a new section in my newsletter dedicated to documenting the fascinating process of building with AI as a true creative partner and lead. This is part of my original newsletter, and you can unsubscribe from this particular section, without affecting the original subscription. Welcome to The Hybrid Builder \u2014 Learn by building, build by learning\u2014co-created with AI. Thanks for reading ChatWithGPT for learning! Subscribe for free",
+      "themes": [
+        "ai-collaboration",
+        "teaching",
+        "context-engineering",
+        "automation"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/launching-the-hybrid-builder-when",
+        "https://chatwithgpt.substack.com/p/launching-the-hybrid-builder-when/comments"
+      ],
+      "word_count": 86
+    },
+    {
+      "title": "When Claude Code Becomes Your Co-Developer: Building a Canvas LMS Tool That Actually Works",
+      "url": "https://chatwithgpt.substack.com/p/when-claude-code-becomes-your-codeveloper",
+      "slug": "when-claude-code-becomes-your-codeveloper",
+      "lastmod": "2025-06-20",
+      "date": "2025-06-20",
+      "description": "A 4-month journey from \"I hate clicking through Canvas\" to \"Holy sh*t, Claude just wrote 3,000 lines of educational AI",
+      "excerpt": "Picture this: It's 11:47 PM on a Tuesday. I'm staring at my Canvas dashboard, clicking through the same menus I've clicked through a thousand times before. Assignment submissions here, grade distributions there, trying to figure out which of my students might be struggling and need extra support. Sound familiar? Thanks for reading ChatWithGPT for learning! Subscribe for free to receive new posts and support my work.",
+      "themes": [
+        "ai-collaboration",
+        "teaching"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/beyond-chatgpt-how-ai-transformed",
+        "https://chatwithgpt.substack.com/p/when-claude-code-becomes-your-codeveloper/comments",
+        "https://chatwithgpt.substack.com/p/when-claude-code-becomes-your-codeveloper"
+      ],
+      "word_count": 66
+    },
+    {
+      "title": "Beyond ChatGPT: How AI Transformed My Classroom Into a Living Laboratory",
+      "url": "https://chatwithgpt.substack.com/p/beyond-chatgpt-how-ai-transformed",
+      "slug": "beyond-chatgpt-how-ai-transformed",
+      "lastmod": "2025-06-19",
+      "date": "2025-06-19",
+      "description": "How 22 student forum posts became a foundation for an experiment in AI's educational potential\u2014and what it reveals about the future of learning",
+      "excerpt": "This week, while my Introductory Information Systems students shared eight nouns to describe themselves in an online forum, I ran an unplanned pilot\u2014AI analysis of every word\u2014to map our classroom\u2019s \"social DNA.\" What was a simple community building exercise turned into a demonstration of AI\u2019s potential for pedagogical insight. The Accidental Experiment What started as a routine \"get to know each other\" assignment became an unplanned demonstration of AI's potential. Here's what happened: Thanks f",
+      "themes": [
+        "teaching",
+        "research"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/beyond-chatgpt-how-ai-transformed",
+        "https://chatwithgpt.substack.com/p/we-are-all-app-developers-now",
+        "https://chatwithgpt.substack.com/p/if-intelligence-is-too-cheap-to-meter",
+        "https://chatwithgpt.substack.com/p/beyond-chatgpt-how-ai-transformed/comments",
+        "https://chatwithgpt.substack.com/p/build-it-and-they-will-learn"
+      ],
+      "word_count": 90
+    },
+    {
+      "title": "Rethinking Online Learning in an AI-Saturated World",
+      "url": "https://chatwithgpt.substack.com/p/rethinking-online-learning-in-an",
+      "slug": "rethinking-online-learning-in-an",
+      "lastmod": "2025-05-10",
+      "date": "2025-05-10",
+      "description": "Mentorship + Formative Assessment: one possible future of online education",
+      "excerpt": "The rise of AI tools capable of generating sophisticated responses has fundamentally broken traditional assessment models in education. A recent article in the Intelligencier has captured a lot of attention with a catchy title \u201cEveryone Is Cheating Their Way Through College : ChatGPT has unraveled the entire academic project\u201d (screenshot with link below) Thanks for reading ChatWithGPT for learning! Subscribe for free to receive new posts and support my work.",
+      "themes": [
+        "teaching"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/rethinking-online-learning-in-an/comments",
+        "https://chatwithgpt.substack.com/p/rethinking-online-learning-in-an"
+      ],
+      "word_count": 70
+    },
+    {
+      "title": "Can you <profitably> own a Waymo?",
+      "url": "https://chatwithgpt.substack.com/p/can-you-profitably-own-a-waymo",
+      "slug": "can-you-profitably-own-a-waymo",
+      "lastmod": "2025-04-27",
+      "date": "2025-04-27",
+      "description": "And learn using AI",
+      "excerpt": "This news highlight from LinkedIn caught my attention. I am nursing a hypothesis that in a post-AGI economy, one possible way to sip pi\u00f1a coladas on a beach somewhere would be to deploy capital in ventures that are not dependent on human labor. With all the talk about AI agents, you might focus on software based agents. However, I propose that we consider physical agents, such as autonomous cars, robots(home or industrial) and similar manifestation of physical intelligence technologies, which ca",
+      "themes": [
+        "ai-collaboration",
+        "teaching",
+        "compound-engineering",
+        "automation",
+        "microsim",
+        "research"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/can-you-profitably-own-a-waymo/comments",
+        "https://chatwithgpt.substack.com/p/can-you-profitably-own-a-waymo"
+      ],
+      "word_count": 820
+    },
+    {
+      "title": "Join my new subscriber chat",
+      "url": "https://chatwithgpt.substack.com/p/join-my-new-subscriber-chat",
+      "slug": "join-my-new-subscriber-chat",
+      "lastmod": "2025-03-18",
+      "date": "2025-03-18",
+      "description": "A private space for us to converse and connect",
+      "excerpt": "Today I\u2019m announcing a brand new addition to my Substack publication: ChatWithGPT for learning subscriber chat. This is a conversation space exclusively for subscribers\u2014kind of like a group chat or live hangout. I\u2019ll post questions and updates that come my way, and you can jump into the discussion. Join chat How to get started Get the Substack app by clicking this link or the button below. New chat threads won\u2019t be sent sent via email, so turn on push notifications so you don\u2019t miss conversation",
+      "themes": [
+        "teaching"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/join-my-new-subscriber-chat",
+        "https://chatwithgpt.substack.com/p/join-my-new-subscriber-chat/comments"
+      ],
+      "word_count": 145
+    },
+    {
+      "title": "Build it and they will learn",
+      "url": "https://chatwithgpt.substack.com/p/build-it-and-they-will-learn",
+      "slug": "build-it-and-they-will-learn",
+      "lastmod": "2025-03-17",
+      "date": "2025-03-17",
+      "description": "Vibe Coding",
+      "excerpt": "When OpenAI launched ChatGPT with tasks, I setup a task for it to email me a SQL command with explanation and an example every day and keep track of my history. Each day at 11 am I get an email prompting me to learning something about SQL for a few minutes and then click a link to continue to a chat. Seems like a perfect setup to leverage micro learning and spaced repetition. Thanks for reading ChatWithGPT for learning! Subscribe for free to receive new posts and support my work.",
+      "themes": [
+        "teaching",
+        "context-engineering"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/build-it-and-they-will-learn/comments",
+        "https://chatwithgpt.substack.com/p/build-it-and-they-will-learn"
+      ],
+      "word_count": 90
+    },
+    {
+      "title": "If Intelligence is too cheap to meter....",
+      "url": "https://chatwithgpt.substack.com/p/if-intelligence-is-too-cheap-to-meter",
+      "slug": "if-intelligence-is-too-cheap-to-meter",
+      "lastmod": "2024-07-27",
+      "date": "2024-07-27",
+      "description": "What new use cases does it unlock?",
+      "excerpt": "The launch of gpt-4o-mini this past week triggered this dive down the rabbithole of the cost of intelligence. 15 cents to process an input of a million tokens, or \u2018intelligence too cheap to meter\u2019 as Sam Altman stated in a tweet. Last year in March, Jim Fan of Nvidia fame, tweeted that it cost him $4.30 to process all seven harry potter books at about a 2 million tokens, so the same corpus would now cost 30 cents to process with gpt4o-mini. Intelligence just got cheaper by a factor of about 15 o",
+      "themes": [
+        "skills",
+        "teaching",
+        "automation"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/if-intelligence-is-too-cheap-to-meter?utm_source=substack&amp;utm_medium=email&amp;utm_content=share&amp;action=share",
+        "https://chatwithgpt.substack.com/p/if-intelligence-is-too-cheap-to-meter/comments",
+        "https://chatwithgpt.substack.com/p/if-intelligence-is-too-cheap-to-meter"
+      ],
+      "word_count": 846
+    },
+    {
+      "title": "We are all app developers now",
+      "url": "https://chatwithgpt.substack.com/p/we-are-all-app-developers-now",
+      "slug": "we-are-all-app-developers-now",
+      "lastmod": "2024-07-15",
+      "date": "2024-07-15",
+      "description": "Copy/paste skills required",
+      "excerpt": "Credit- Substack image generator I built seven apps last week in about 5 hours. Nothing fancy, but simple one page javascript apps, hosted on Replit , without \u2018writing\u2019 a line of code. Only copy/paste skills required, and some willingness to face my fears of code. Over the last 18 months I have built several apps experimenting with LLMs, but in contrast those were all much bigger development projects involving student teams, dollars, which we always have fewer of than ideas, and numerous hours. ",
+      "themes": [
+        "skills",
+        "teaching",
+        "automation",
+        "microsim"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/how-to-train-your-dragon-oops-ai",
+        "https://chatwithgpt.substack.com/p/we-are-all-app-developers-now/comments",
+        "https://chatwithgpt.substack.com/p/we-are-all-app-developers-now"
+      ],
+      "word_count": 199
+    },
+    {
+      "title": "How to train your dragon .... oops.. AI? ",
+      "url": "https://chatwithgpt.substack.com/p/how-to-train-your-dragon-oops-ai",
+      "slug": "how-to-train-your-dragon-oops-ai",
+      "lastmod": "2024-05-03",
+      "date": "2024-05-03",
+      "description": "If you cant beat em, join em",
+      "excerpt": "Can we reverse the process where students avoid learning by using AI tools, and instead have them train a model on a specific domain or topic? Teaching is the best way to learn and maybe we could have students teach an LLM? As I researched this idea, I found a similar initiative that worked with custom software built at Vanderbilt, called 'Betty's brain' . Not sure if anyone has tried this with LLM's in class yet, but this is exactly what I am getting at. Another trend that informed this idea is",
+      "themes": [
+        "teaching",
+        "research"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/how-to-train-your-dragon-oops-ai",
+        "https://chatwithgpt.substack.com/p/how-to-train-your-dragon-oops-ai/comments"
+      ],
+      "word_count": 211
+    },
+    {
+      "title": "What to do after you destroy your assessments",
+      "url": "https://chatwithgpt.substack.com/p/what-to-do-after-you-destroy-your",
+      "slug": "what-to-do-after-you-destroy-your",
+      "lastmod": "2023-09-18",
+      "date": "2023-09-18",
+      "description": "Weekends are for going down rabbit holes as I think about writing in public.",
+      "excerpt": "Weekends are for going down rabbit holes as I think about writing in public. I've had four ideas already. Here is one rabbit hole I went deeper into this weekend, though the digging started earlier. I'm writing a separate post about 'creative destruction', where my attempt is to 'destroy' the foundations of common assessments I have used in the past (using LLM's aka ChatGPT of course), and post it publicly so I have to redesign them. I wont discuss the context/topic for this here, and focus on t",
+      "themes": [
+        "skills",
+        "teaching",
+        "context-engineering"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/what-to-do-after-you-destroy-your",
+        "https://chatwithgpt.substack.com/p/what-to-do-after-you-destroy-your/comments"
+      ],
+      "word_count": 208
+    },
+    {
+      "title": "Some more thoughts on simulating and learning",
+      "url": "https://chatwithgpt.substack.com/p/some-more-thoughts-on-simulating",
+      "slug": "some-more-thoughts-on-simulating",
+      "lastmod": "2023-08-09",
+      "date": "2023-08-09",
+      "description": "It has been a quiet summer in terms of writing, but not in terms of learning. I just finished the summer online course (described here) and have a lot of pending posts. I also have a podcast recorded with James Gray which has a summary of setup and the experience",
+      "excerpt": "It has been a quiet summer in terms of writing, but not in terms of learning. I just finished the summer online course (described here ) and have a lot of pending posts. I also have a podcast recorded with James Gray which has a summary of setup and the experience midway through the course. For today, I want to extend on the thread I started on simulating to learn at the start of summer (post below) and update it with some other thoughts and \u2018forward looking statements\u2019 given the demo\u2019s I have s",
+      "themes": [
+        "teaching",
+        "research"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/what-will-we-learn-teach-about-this",
+        "https://chatwithgpt.substack.com/p/simulating-to-learn",
+        "https://chatwithgpt.substack.com/p/some-more-thoughts-on-simulating",
+        "https://chatwithgpt.substack.com/p/some-more-thoughts-on-simulating/comments"
+      ],
+      "word_count": 118
+    },
+    {
+      "title": "Simulating to learn",
+      "url": "https://chatwithgpt.substack.com/p/simulating-to-learn",
+      "slug": "simulating-to-learn",
+      "lastmod": "2023-05-11",
+      "date": "2023-05-11",
+      "description": "Conversations with GPT4 to create a simulation/role play",
+      "excerpt": "\ufeffI was searching for a paper released a month back where some autonomous agents with a LLM backend were set free in a virtual environment and they created a semblance of a community along with some relationships as well. I tried every possible combination of keywords to find this paper on Bing Search, on my browsing history keeper( Heyday.xyz ) and just could not find it. I had given up on google ever since GPT came along, but today google came out ahead and I found the paper in one try. Here is",
+      "themes": [
+        "skills",
+        "teaching",
+        "context-engineering",
+        "microsim",
+        "research"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/what-will-we-learn-teach-about-this",
+        "https://chatwithgpt.substack.com/p/simulating-to-learn",
+        "https://chatwithgpt.substack.com/p/simulating-to-learn/comments"
+      ],
+      "word_count": 275
+    },
+    {
+      "title": "What will we learn /teach about this summer",
+      "url": "https://chatwithgpt.substack.com/p/what-will-we-learn-teach-about-this",
+      "slug": "what-will-we-learn-teach-about-this",
+      "lastmod": "2023-05-08",
+      "date": "2023-05-08",
+      "description": "I started this newsletter with a view to learn how to teach with AI, by talking to various Conversational AI tools, such as ChatGPT among others.",
+      "excerpt": "\ufeff I started this newsletter with a view to learn how to teach with AI, by talking to various Conversational AI tools, such as ChatGPT among others. This post describes the initial ideas I have about directions to take when modifying the course and describes the course and the audience which is the focus of my current experiments. I might report on some other experiments for the course I teach in the Fall as well. I will reference this course many times in this series, so its probably best to put",
+      "themes": [
+        "skills",
+        "teaching"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/what-will-we-learn-teach-about-this",
+        "https://chatwithgpt.substack.com/p/what-will-we-learn-teach-about-this/comments"
+      ],
+      "word_count": 102
+    },
+    {
+      "title": "Conversations with AI - for learning ",
+      "url": "https://chatwithgpt.substack.com/p/conversations-with-ai-for-learning",
+      "slug": "conversations-with-ai-for-learning",
+      "lastmod": "2023-05-07",
+      "date": "2023-05-07",
+      "description": "A place to share thoughts on learning with AI",
+      "excerpt": "\ufeff A place to share thoughts on learning with AI I am an educator, or rather a learner who gets paid to teach. I like learning all kinds of stuff, usually about tech and its good that I get paid to teach about it. As I learn how to work with AI to improve by ability to learn and teach and that of my students, I realized that I am forced to change my perspective on what it means to teach once again. The last time I changed my perspective on what teaching involves was when I started learning how to",
+      "themes": [
+        "skills",
+        "teaching",
+        "context-engineering"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/conversations-with-ai-for-learning/comments",
+        "https://chatwithgpt.substack.com/p/conversations-with-ai-for-learning"
+      ],
+      "word_count": 479
+    }
+  ],
+  "theme_index": {
+    "ai-collaboration": [
+      "from-video-to-skill-building-a-repeatable",
+      "the-vibe-coders-setup-context-aware",
+      "building-shareable-learning-design",
+      "teaching-claude-code-to-remember",
+      "compound-engineering-use-it-before",
+      "teaching-database-management-in-the",
+      "i-taught-claude-a-skill-you-can-too",
+      "research-at-machine-speed-compiling",
+      "skills-creating-skills-when-ai-becomes",
+      "context-engineering-in-action-from",
+      "three-months-of-canvas-mcp-evolution",
+      "shipping-a-800-project-explorer-in",
+      "analyzing-course-discussions-using",
+      "from-announcement-to-production-building",
+      "launching-the-hybrid-builder-when",
+      "when-claude-code-becomes-your-codeveloper",
+      "can-you-profitably-own-a-waymo"
+    ],
+    "skills": [
+      "from-video-to-skill-building-a-repeatable",
+      "the-magnitude-9-earthquake-how-ai",
+      "building-shareable-learning-design",
+      "compound-engineering-use-it-before",
+      "i-taught-claude-a-skill-you-can-too",
+      "skills-creating-skills-when-ai-becomes",
+      "upgraded-automated-delivered-a-canvas",
+      "three-months-of-canvas-mcp-evolution",
+      "if-intelligence-is-too-cheap-to-meter",
+      "we-are-all-app-developers-now",
+      "what-to-do-after-you-destroy-your",
+      "simulating-to-learn",
+      "what-will-we-learn-teach-about-this",
+      "conversations-with-ai-for-learning"
+    ],
+    "teaching": [
+      "from-video-to-skill-building-a-repeatable",
+      "the-vibe-coders-setup-context-aware",
+      "building-shareable-learning-design",
+      "teaching-claude-code-to-remember",
+      "compound-engineering-use-it-before",
+      "teaching-database-management-in-the",
+      "connecting-the-dots-with-grok-a-case",
+      "i-taught-claude-a-skill-you-can-too",
+      "research-at-machine-speed-compiling",
+      "skills-creating-skills-when-ai-becomes",
+      "context-engineering-in-action-from",
+      "upgraded-automated-delivered-a-canvas",
+      "three-months-of-canvas-mcp-evolution",
+      "shipping-a-800-project-explorer-in",
+      "context-engineering-is-the-new-prompt",
+      "analyzing-course-discussions-using",
+      "the-ai-memory-problem-when-your-teams",
+      "from-announcement-to-production-building",
+      "launching-the-hybrid-builder-when",
+      "when-claude-code-becomes-your-codeveloper",
+      "beyond-chatgpt-how-ai-transformed",
+      "rethinking-online-learning-in-an",
+      "can-you-profitably-own-a-waymo",
+      "join-my-new-subscriber-chat",
+      "build-it-and-they-will-learn",
+      "if-intelligence-is-too-cheap-to-meter",
+      "we-are-all-app-developers-now",
+      "how-to-train-your-dragon-oops-ai",
+      "what-to-do-after-you-destroy-your",
+      "some-more-thoughts-on-simulating",
+      "simulating-to-learn",
+      "what-will-we-learn-teach-about-this",
+      "conversations-with-ai-for-learning"
+    ],
+    "context-engineering": [
+      "from-video-to-skill-building-a-repeatable",
+      "the-vibe-coders-setup-context-aware",
+      "the-magnitude-9-earthquake-how-ai",
+      "compound-engineering-use-it-before",
+      "teaching-database-management-in-the",
+      "context-engineering-in-action-from",
+      "upgraded-automated-delivered-a-canvas",
+      "context-engineering-is-the-new-prompt",
+      "launching-the-hybrid-builder-when",
+      "build-it-and-they-will-learn",
+      "what-to-do-after-you-destroy-your",
+      "simulating-to-learn",
+      "conversations-with-ai-for-learning"
+    ],
+    "automation": [
+      "from-video-to-skill-building-a-repeatable",
+      "teaching-claude-code-to-remember",
+      "context-engineering-in-action-from",
+      "upgraded-automated-delivered-a-canvas",
+      "three-months-of-canvas-mcp-evolution",
+      "launching-the-hybrid-builder-when",
+      "can-you-profitably-own-a-waymo",
+      "if-intelligence-is-too-cheap-to-meter",
+      "we-are-all-app-developers-now"
+    ],
+    "compound-engineering": [
+      "the-vibe-coders-setup-context-aware",
+      "building-shareable-learning-design",
+      "compound-engineering-use-it-before",
+      "context-engineering-in-action-from",
+      "three-months-of-canvas-mcp-evolution",
+      "can-you-profitably-own-a-waymo"
+    ],
+    "mcp": [
+      "building-shareable-learning-design",
+      "three-months-of-canvas-mcp-evolution",
+      "from-announcement-to-production-building"
+    ],
+    "research": [
+      "connecting-the-dots-with-grok-a-case",
+      "research-at-machine-speed-compiling",
+      "three-months-of-canvas-mcp-evolution",
+      "context-engineering-is-the-new-prompt",
+      "analyzing-course-discussions-using",
+      "beyond-chatgpt-how-ai-transformed",
+      "can-you-profitably-own-a-waymo",
+      "how-to-train-your-dragon-oops-ai",
+      "some-more-thoughts-on-simulating",
+      "simulating-to-learn"
+    ],
+    "microsim": [
+      "context-engineering-in-action-from",
+      "can-you-profitably-own-a-waymo",
+      "we-are-all-app-developers-now",
+      "simulating-to-learn"
+    ]
+  },
+  "link_graph": {
+    "from-video-to-skill-building-a-repeatable": {
+      "references": [
+        "i-taught-claude-a-skill-you-can-too",
+        "building-shareable-learning-design",
+        "from-video-to-skill-building-a-repeatable/comments",
+        "from-video-to-skill-building-a-repeatable"
+      ],
+      "referenced_by": [
+        "from-video-to-skill-building-a-repeatable"
+      ]
+    },
+    "the-vibe-coders-setup-context-aware": {
+      "references": [
+        "compound-engineering-use-it-before",
+        "the-vibe-coders-setup-context-aware",
+        "the-vibe-coders-setup-context-aware/comments",
+        "context-engineering-is-the-new-prompt",
+        "skills-creating-skills-when-ai-becomes"
+      ],
+      "referenced_by": [
+        "the-vibe-coders-setup-context-aware"
+      ]
+    },
+    "the-magnitude-9-earthquake-how-ai": {
+      "references": [
+        "the-magnitude-9-earthquake-how-ai/comments",
+        "the-magnitude-9-earthquake-how-ai"
+      ],
+      "referenced_by": [
+        "the-magnitude-9-earthquake-how-ai"
+      ]
+    },
+    "building-shareable-learning-design": {
+      "references": [
+        "building-shareable-learning-design",
+        "three-months-of-canvas-mcp-evolution",
+        "skills-creating-skills-when-ai-becomes",
+        "building-shareable-learning-design/comments",
+        "teaching-database-management-in-the"
+      ],
+      "referenced_by": [
+        "from-video-to-skill-building-a-repeatable",
+        "building-shareable-learning-design"
+      ]
+    },
+    "teaching-claude-code-to-remember": {
+      "references": [
+        "teaching-claude-code-to-remember",
+        "teaching-claude-code-to-remember/comments",
+        "compound-engineering-use-it-before"
+      ],
+      "referenced_by": [
+        "teaching-claude-code-to-remember"
+      ]
+    },
+    "compound-engineering-use-it-before": {
+      "references": [
+        "compound-engineering-use-it-before",
+        "compound-engineering-use-it-before/comments"
+      ],
+      "referenced_by": [
+        "the-vibe-coders-setup-context-aware",
+        "teaching-claude-code-to-remember",
+        "compound-engineering-use-it-before"
+      ]
+    },
+    "teaching-database-management-in-the": {
+      "references": [
+        "teaching-database-management-in-the/comments",
+        "teaching-database-management-in-the",
+        "when-claude-code-becomes-your-codeveloper"
+      ],
+      "referenced_by": [
+        "building-shareable-learning-design",
+        "teaching-database-management-in-the"
+      ]
+    },
+    "connecting-the-dots-with-grok-a-case": {
+      "references": [
+        "connecting-the-dots-with-grok-a-case",
+        "connecting-the-dots-with-grok-a-case/comment/190761986",
+        "connecting-the-dots-with-grok-a-case/comments",
+        "connecting-the-dots-with-grok-a-case/comment/190220275"
+      ],
+      "referenced_by": [
+        "connecting-the-dots-with-grok-a-case"
+      ]
+    },
+    "i-taught-claude-a-skill-you-can-too": {
+      "references": [
+        "i-taught-claude-a-skill-you-can-too/comments",
+        "i-taught-claude-a-skill-you-can-too"
+      ],
+      "referenced_by": [
+        "from-video-to-skill-building-a-repeatable",
+        "i-taught-claude-a-skill-you-can-too"
+      ]
+    },
+    "research-at-machine-speed-compiling": {
+      "references": [
+        "research-at-machine-speed-compiling/comments",
+        "research-at-machine-speed-compiling"
+      ],
+      "referenced_by": [
+        "research-at-machine-speed-compiling"
+      ]
+    },
+    "skills-creating-skills-when-ai-becomes": {
+      "references": [
+        "skills-creating-skills-when-ai-becomes/comments",
+        "skills-creating-skills-when-ai-becomes"
+      ],
+      "referenced_by": [
+        "the-vibe-coders-setup-context-aware",
+        "building-shareable-learning-design",
+        "skills-creating-skills-when-ai-becomes"
+      ]
+    },
+    "context-engineering-in-action-from": {
+      "references": [
+        "context-engineering-in-action-from/comments",
+        "context-engineering-is-the-new-prompt",
+        "context-engineering-in-action-from"
+      ],
+      "referenced_by": [
+        "context-engineering-in-action-from"
+      ]
+    },
+    "upgraded-automated-delivered-a-canvas": {
+      "references": [
+        "upgraded-automated-delivered-a-canvas/comments",
+        "upgraded-automated-delivered-a-canvas"
+      ],
+      "referenced_by": [
+        "upgraded-automated-delivered-a-canvas"
+      ]
+    },
+    "three-months-of-canvas-mcp-evolution": {
+      "references": [
+        "three-months-of-canvas-mcp-evolution/comments",
+        "three-months-of-canvas-mcp-evolution",
+        "when-claude-code-becomes-your-codeveloper"
+      ],
+      "referenced_by": [
+        "building-shareable-learning-design",
+        "three-months-of-canvas-mcp-evolution"
+      ]
+    },
+    "shipping-a-800-project-explorer-in": {
+      "references": [
+        "shipping-a-800-project-explorer-in/comments",
+        "shipping-a-800-project-explorer-in"
+      ],
+      "referenced_by": [
+        "shipping-a-800-project-explorer-in"
+      ]
+    },
+    "context-engineering-is-the-new-prompt": {
+      "references": [
+        "context-engineering-is-the-new-prompt",
+        "context-engineering-is-the-new-prompt/comments"
+      ],
+      "referenced_by": [
+        "the-vibe-coders-setup-context-aware",
+        "context-engineering-in-action-from",
+        "context-engineering-is-the-new-prompt"
+      ]
+    },
+    "analyzing-course-discussions-using": {
+      "references": [
+        "analyzing-course-discussions-using/comments",
+        "analyzing-course-discussions-using"
+      ],
+      "referenced_by": [
+        "analyzing-course-discussions-using"
+      ]
+    },
+    "the-ai-memory-problem-when-your-teams": {
+      "references": [
+        "the-ai-memory-problem-when-your-teams/comments",
+        "the-ai-memory-problem-when-your-teams"
+      ],
+      "referenced_by": [
+        "the-ai-memory-problem-when-your-teams"
+      ]
+    },
+    "from-announcement-to-production-building": {
+      "references": [
+        "from-announcement-to-production-building",
+        "from-announcement-to-production-building/comments",
+        "when-claude-code-becomes-your-codeveloper"
+      ],
+      "referenced_by": [
+        "from-announcement-to-production-building"
+      ]
+    },
+    "launching-the-hybrid-builder-when": {
+      "references": [
+        "launching-the-hybrid-builder-when",
+        "launching-the-hybrid-builder-when/comments"
+      ],
+      "referenced_by": [
+        "launching-the-hybrid-builder-when"
+      ]
+    },
+    "when-claude-code-becomes-your-codeveloper": {
+      "references": [
+        "beyond-chatgpt-how-ai-transformed",
+        "when-claude-code-becomes-your-codeveloper/comments",
+        "when-claude-code-becomes-your-codeveloper"
+      ],
+      "referenced_by": [
+        "teaching-database-management-in-the",
+        "three-months-of-canvas-mcp-evolution",
+        "from-announcement-to-production-building",
+        "when-claude-code-becomes-your-codeveloper"
+      ]
+    },
+    "beyond-chatgpt-how-ai-transformed": {
+      "references": [
+        "beyond-chatgpt-how-ai-transformed",
+        "we-are-all-app-developers-now",
+        "if-intelligence-is-too-cheap-to-meter",
+        "beyond-chatgpt-how-ai-transformed/comments",
+        "build-it-and-they-will-learn"
+      ],
+      "referenced_by": [
+        "when-claude-code-becomes-your-codeveloper",
+        "beyond-chatgpt-how-ai-transformed"
+      ]
+    },
+    "rethinking-online-learning-in-an": {
+      "references": [
+        "rethinking-online-learning-in-an/comments",
+        "rethinking-online-learning-in-an"
+      ],
+      "referenced_by": [
+        "rethinking-online-learning-in-an"
+      ]
+    },
+    "can-you-profitably-own-a-waymo": {
+      "references": [
+        "can-you-profitably-own-a-waymo/comments",
+        "can-you-profitably-own-a-waymo"
+      ],
+      "referenced_by": [
+        "can-you-profitably-own-a-waymo"
+      ]
+    },
+    "join-my-new-subscriber-chat": {
+      "references": [
+        "join-my-new-subscriber-chat",
+        "join-my-new-subscriber-chat/comments"
+      ],
+      "referenced_by": [
+        "join-my-new-subscriber-chat"
+      ]
+    },
+    "build-it-and-they-will-learn": {
+      "references": [
+        "build-it-and-they-will-learn/comments",
+        "build-it-and-they-will-learn"
+      ],
+      "referenced_by": [
+        "beyond-chatgpt-how-ai-transformed",
+        "build-it-and-they-will-learn"
+      ]
+    },
+    "if-intelligence-is-too-cheap-to-meter": {
+      "references": [
+        "if-intelligence-is-too-cheap-to-meter?utm_source=substack&amp;utm_medium=email&amp;utm_content=share&amp;action=share",
+        "if-intelligence-is-too-cheap-to-meter/comments",
+        "if-intelligence-is-too-cheap-to-meter"
+      ],
+      "referenced_by": [
+        "beyond-chatgpt-how-ai-transformed",
+        "if-intelligence-is-too-cheap-to-meter"
+      ]
+    },
+    "we-are-all-app-developers-now": {
+      "references": [
+        "how-to-train-your-dragon-oops-ai",
+        "we-are-all-app-developers-now/comments",
+        "we-are-all-app-developers-now"
+      ],
+      "referenced_by": [
+        "beyond-chatgpt-how-ai-transformed",
+        "we-are-all-app-developers-now"
+      ]
+    },
+    "how-to-train-your-dragon-oops-ai": {
+      "references": [
+        "how-to-train-your-dragon-oops-ai",
+        "how-to-train-your-dragon-oops-ai/comments"
+      ],
+      "referenced_by": [
+        "we-are-all-app-developers-now",
+        "how-to-train-your-dragon-oops-ai"
+      ]
+    },
+    "what-to-do-after-you-destroy-your": {
+      "references": [
+        "what-to-do-after-you-destroy-your",
+        "what-to-do-after-you-destroy-your/comments"
+      ],
+      "referenced_by": [
+        "what-to-do-after-you-destroy-your"
+      ]
+    },
+    "some-more-thoughts-on-simulating": {
+      "references": [
+        "what-will-we-learn-teach-about-this",
+        "simulating-to-learn",
+        "some-more-thoughts-on-simulating",
+        "some-more-thoughts-on-simulating/comments"
+      ],
+      "referenced_by": [
+        "some-more-thoughts-on-simulating"
+      ]
+    },
+    "simulating-to-learn": {
+      "references": [
+        "what-will-we-learn-teach-about-this",
+        "simulating-to-learn",
+        "simulating-to-learn/comments"
+      ],
+      "referenced_by": [
+        "some-more-thoughts-on-simulating",
+        "simulating-to-learn"
+      ]
+    },
+    "what-will-we-learn-teach-about-this": {
+      "references": [
+        "what-will-we-learn-teach-about-this",
+        "what-will-we-learn-teach-about-this/comments"
+      ],
+      "referenced_by": [
+        "some-more-thoughts-on-simulating",
+        "simulating-to-learn",
+        "what-will-we-learn-teach-about-this"
+      ]
+    },
+    "conversations-with-ai-for-learning": {
+      "references": [
+        "conversations-with-ai-for-learning/comments",
+        "conversations-with-ai-for-learning"
+      ],
+      "referenced_by": [
+        "conversations-with-ai-for-learning"
+      ]
+    }
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "title": "Sample Concept Map",
+    "description": "An interactive infographic demonstrating the infograph-generator-p5 template",
+    "author": "Template Author",
+    "created": "2025-01-09",
+    "subject": "Educational Technology",
+    "version": "1.0"
+  },
+  "groups": {
+    "foundation": {
+      "color": "#FF6B6B",
+      "borderColor": "#C92A2A",
+      "shape": "ellipse"
+    },
+    "intermediate": {
+      "color": "#4ECDC4",
+      "borderColor": "#0B7285",
+      "shape": "box"
+    },
+    "advanced": {
+      "color": "#95E1D3",
+      "borderColor": "#087F5B",
+      "shape": "diamond"
+    }
+  },
+  "nodes": [
+    {
+      "id": 1,
+      "label": "Core Concept",
+      "group": "foundation",
+      "x": 400,
+      "y": 100,
+      "shortDescription": "The foundational idea upon which everything builds",
+      "fullDescription": "This is the core concept that serves as the foundation for all other related ideas. Understanding this concept is essential before moving to more advanced topics. It represents the most basic principles that students must grasp first."
+    },
+    {
+      "id": 2,
+      "label": "Supporting Idea A",
+      "group": "intermediate",
+      "x": 200,
+      "y": 250,
+      "shortDescription": "First major supporting concept",
+      "fullDescription": "This supporting idea builds directly on the core concept and represents an important application or extension of the foundational principles. Students should understand the core concept before studying this topic."
+    },
+    {
+      "id": 3,
+      "label": "Supporting Idea B",
+      "group": "intermediate",
+      "x": 600,
+      "y": 250,
+      "shortDescription": "Second major supporting concept",
+      "fullDescription": "Another important supporting idea that also builds on the core concept. This represents a different application or perspective compared to Supporting Idea A, showing the versatility of the foundational principles."
+    },
+    {
+      "id": 4,
+      "label": "Advanced Topic 1",
+      "group": "advanced",
+      "x": 150,
+      "y": 450,
+      "shortDescription": "Complex topic requiring multiple prerequisites",
+      "fullDescription": "This advanced topic combines understanding from both the core concept and Supporting Idea A. It represents a more sophisticated application that requires synthesis of multiple prerequisite ideas. Students should master the foundational concepts first."
+    },
+    {
+      "id": 5,
+      "label": "Advanced Topic 2",
+      "group": "advanced",
+      "x": 400,
+      "y": 450,
+      "shortDescription": "Integration of multiple concepts",
+      "fullDescription": "An advanced topic that integrates knowledge from both supporting ideas. This demonstrates how different paths of learning can converge to enable understanding of more complex concepts. Requires solid foundation in prerequisites."
+    },
+    {
+      "id": 6,
+      "label": "Advanced Topic 3",
+      "group": "advanced",
+      "x": 650,
+      "y": 450,
+      "shortDescription": "Highest level of conceptual complexity",
+      "fullDescription": "The most advanced topic in this concept map, building primarily on Supporting Idea B but also requiring understanding of the core concept. Represents the pinnacle of learning in this domain and requires mastery of all prerequisite concepts."
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2,
+      "label": "builds on",
+      "color": "#999999",
+      "width": 2
+    },
+    {
+      "from": 1,
+      "to": 3,
+      "label": "builds on",
+      "color": "#999999",
+      "width": 2
+    },
+    {
+      "from": 2,
+      "to": 4,
+      "label": "leads to",
+      "color": "#666666",
+      "width": 1.5
+    },
+    {
+      "from": 2,
+      "to": 5,
+      "label": "contributes",
+      "color": "#666666",
+      "width": 1.5
+    },
+    {
+      "from": 3,
+      "to": 5,
+      "label": "contributes",
+      "color": "#666666",
+      "width": 1.5
+    },
+    {
+      "from": 3,
+      "to": 6,
+      "label": "leads to",
+      "color": "#666666",
+      "width": 1.5
+    },
+    {
+      "from": 1,
+      "to": 5,
+      "label": "informs",
+      "color": "#AAAAAA",
+      "width": 1,
+      "dashes": true
+    }
+  ]
+}
