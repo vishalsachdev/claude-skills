@@ -4,6 +4,23 @@ A collection of production-ready, reusable Claude Code skills extracted from the
 
 ## Skills Available
 
+### 📋 CLAUDE.md Template
+**Folder**: `claude-md-template/` • **SKILL.md + template asset**
+
+Creates or repairs a project's `CLAUDE.md` - the highest-leverage file in any repo, since it
+shapes how every agent behaves on every task:
+- Template carrying only non-inferable knowledge (commands, env vars, external ids, gotchas)
+- Verification guardrails baked in, to catch confident-wrong agent output
+- 60-line discipline, with guidance on where bloat actually comes from
+- Maintenance rules: reactive additions, single session-log entry, periodic command re-verification
+
+**Use when**: Starting a project, a repo has no CLAUDE.md, an existing one has bloated or gone
+stale, or setting up a project for someone who is not a professional developer
+
+See also: [CONTRIBUTING.md](CONTRIBUTING.md) for how entries in this library are tiered and verified.
+
+---
+
 ### 🚀 Vibe Coder SDLC
 **Folder**: `vibe-coder-sdlc/` • **SKILL.md + 4 agent references**
 

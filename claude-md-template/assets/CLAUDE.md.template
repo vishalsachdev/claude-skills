@@ -1,0 +1,79 @@
+# CLAUDE.md - <project name>
+
+<One or two sentences: what this project is and who it is for. Enough that an agent opening
+this repo cold knows what it is looking at.>
+
+**Read order for orientation:** <README.md, then the file that actually explains the design>
+
+---
+
+## Commands
+
+<Only commands that cannot be guessed. Run each one before writing it here.>
+
+| Task | Command |
+|------|---------|
+| Install | `<...>` |
+| Run locally | `<...>` |
+| Test | `<...>` |
+| Deploy | `<...>` |
+
+## Environment
+
+<Env vars, external ids, endpoints, account names. The things nobody can derive.
+NEVER put secret values here - name the variable and say where the value lives.>
+
+- `<VAR_NAME>` - <what it is; where the value comes from, e.g. 1Password / .env.local / CI secret>
+- <External id, e.g. "Canvas course id: 12345">
+
+## Guardrails
+
+These exist because agents produce confident, plausible, wrong output, and the person
+reading it often cannot tell. Keep this section verbatim.
+
+- **Verify before claiming.** Anything with a number, count, or file state: run the command
+  and paste the real output. Do not reason your way to a factual claim.
+- **"Does not exist" requires a stated search scope.** Say where you looked. Never report
+  something missing without naming the places you checked.
+- **A passing test proves the code matches the fixture, not that the fixture matches
+  reality.** For anything touching an external API, check a real payload.
+- **Never commit secrets.** If a secret was ever committed, rotate it - deleting it from the
+  working tree does not remove it from history.
+- **Test before calling it done.** State what you ran and what it output.
+- **Ask before irreversible or outward-facing actions** (sending, publishing, deleting,
+  deploying), unless explicitly told to proceed.
+
+## Gotchas
+
+<The expensive part. Each entry is something that cost real time to discover and cannot be
+inferred from the code. Include how to verify it is still true.>
+
+- **<Short name>:** <what happens, why, what to do instead>
+  Verify: `<command>` - expect `<result>`
+
+## Security boundaries
+
+<Delete if not applicable. What must stay true: what this code may never do, which
+credentials it may never touch, what an untrusted input can never reach.>
+
+---
+
+## Current Focus
+
+<Delete this section if there is no active focus. One or two lines: what is being worked on
+right now.>
+
+## Roadmap
+
+<Delete this section if there is no roadmap. Checkbox list, not prose.>
+
+- [ ] <next thing>
+- [ ] <thing after that>
+
+## Session Log
+
+<Keep ONLY the most recent entry. Archive older ones to docs/session-archive.md.>
+
+### <YYYY-MM-DD>
+- Completed: <what actually landed, with commit hashes or verifiable artifacts>
+- Next: <the specific next step, concrete enough to start from cold>
