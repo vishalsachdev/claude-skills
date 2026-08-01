@@ -83,9 +83,9 @@ recurring across consumers — freeze them, regenerate the verification code its
 - `~/code/quick/src/auth/entra.ts` — original, TypeScript, `jose`-based verification
   (`verifyEntraToken`, `mapClaims`). Constraints 1-4 live here as inline comments at the
   point they matter.
-- `~/code/mykai-worktrees/portal/portal/lib/entra.mjs` — second consumer, direct JS port
+- `~/code/mykai/portal/lib/entra.mjs` — second consumer, direct JS port
   of the above (same constraints 1-4, unchanged).
-- `~/code/mykai-worktrees/portal/portal/lib/identity.mjs` — second consumer's hardening
+- `~/code/mykai/portal/lib/identity.mjs` — second consumer's hardening
   beyond the port: constraints 5-6 (`bindIdentity`, `netidFromUpn`), plus fail-closed
   handling of malformed/missing `history` and epoch-scoped oid binding (a provisioning-
   registry-specific invariant, not a general Entra constraint — read the file's own
