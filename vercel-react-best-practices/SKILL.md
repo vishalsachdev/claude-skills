@@ -9,7 +9,7 @@ metadata:
 
 # Vercel React Best Practices
 
-Comprehensive performance optimization guide for React and Next.js applications, maintained by Vercel. Contains 45 rules across 8 categories, prioritized by impact to guide automated refactoring and code generation.
+Comprehensive performance optimization guide for React and Next.js applications, maintained by Vercel. Contains 47 rules across 8 categories, prioritized by impact to guide automated refactoring and code generation.
 
 ## When to Apply
 
@@ -63,6 +63,8 @@ Reference these guidelines when:
 
 - `client-swr-dedup` - Use SWR for automatic request deduplication
 - `client-event-listeners` - Deduplicate global event listeners
+- `client-localstorage-schema` - Schema-validate localStorage reads
+- `client-passive-event-listeners` - Use passive listeners for scroll/touch
 
 ### 5. Re-render Optimization (MEDIUM)
 
@@ -111,7 +113,6 @@ Read individual rule files for detailed explanations and code examples:
 ```
 rules/async-parallel.md
 rules/bundle-barrel-imports.md
-rules/_sections.md
 ```
 
 Each rule file contains:

@@ -1,6 +1,25 @@
 # Claude Code Skills Library
 
-A collection of production-ready, reusable Claude Code skills extracted from the [TLDW](https://github.com/vishalsachdev/tldw) project - a production AI-powered YouTube video analysis app with 10K+ lines of code.
+[![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Compatible-blue?style=flat&logo=anthropic)](https://agentskills.io)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+A component store of production-ready, reusable Claude Code skills, following the
+[Agent Skills](https://agentskills.io) open specification. Entries are tiered by failure mode and
+each one carries a verification command — see [CONTRIBUTING.md](CONTRIBUTING.md) for the rules that
+govern what gets in.
+
+Several skills were originally extracted from [TLDW](https://github.com/vishalsachdev/tldw), a
+production AI-powered YouTube video analysis app.
+
+> **Consolidation note (2026-08-01):** this repository absorbed
+> `vishalsachdev/claude-code-skills`, which is now archived. Everything that lived there — skills,
+> `skill-specs/`, `releases/`, and the authoring mechanics guide — is here.
+
+> **Attribution note:** Some skills in this repository were originally contributed or inspired by
+> other authors in the broader Claude Code community. I've collected and refined them over time
+> across many machines and sessions, and I've lost the traceability needed to credit individual
+> contributors. If you recognize a skill as yours or derived from your work, please open an issue
+> and I'll happily add attribution. Skills I authored myself are noted in their frontmatter.
 
 ## Skills Available
 
@@ -181,13 +200,117 @@ React state patterns without external libraries:
 
 ---
 
+### 🏛️ LLM Council
+**Folder**: `llm-council/` • **SKILL.md**
+
+Convenes a 3-model council (Claude + GPT via `codex` CLI + Gemini CLI) on a high-stakes decision,
+forcing cross-critique between members so real disagreement surfaces instead of default agreement.
+
+**Use when**: Architecture, strategy, hiring, or pricing calls where being wrong is expensive.
+Skip for factual questions and anything premortem-shaped
+
+---
+
+### 🔮 Premortem
+**Folder**: `premortem/` • **SKILL.md**
+
+Assumes the plan already failed six months out and works backward through every reason why, then
+produces a revised plan.
+
+**Use when**: A concrete plan or commitment needs stress-testing. Not for vague ideas, or decisions
+already irreversible
+
+---
+
+### 📊 Agentic Eval-First Development
+**Folder**: `agentic-eval-first-development/` • **SKILL.md + 3 references**
+
+Architect, execute, and iterate on AI evaluations via the Data-Task-Score framework, treating evals
+as the quantifiable form of a PRD.
+
+**Use when**: Moving past vibe checks — building an eval, scoring LLM output, benchmarking a prompt,
+or answering "is the model actually getting better?"
+
+---
+
+### 🐦 Tweet Series Extractor
+**Folder**: `tweet-series-extractor/` • **SKILL.md**
+
+Extracts tweet series from X/Twitter profiles with full content, embedded links, and engagement
+metrics preserved. Requires Chrome browser automation.
+
+**Use when**: Analyzing an author's recurring tweet format, or collecting a series from a seed URL
+
+---
+
+### 🏛️ FormBuilder Admin
+**Folder**: `formbuilder-admin/` • **SKILL.md + 6 references**
+
+Create, edit, and manage forms in the University of Illinois ATLAS FormBuilder Admin application —
+questions and sections, event sessions, payment line items and CFOAPAL codes, workflow phases and
+conditional routing triggers.
+
+**Use when**: Working with Illinois FormBuilder. Institution-specific
+
+---
+
+### 📝 Paper Writing
+**Folder**: `paper-writing/` • **SKILL.md + 4 reference guides (~69KB)**
+
+Academic and research paper guidance across the whole arc — planning, structure, revision, final
+polish — covering journal articles, conference papers (ACM/IEEE), technical reports, thesis
+chapters, and literature reviews. Includes Thatcher's 17 Rules for elite IS papers.
+
+**Use when**: Writing or revising any academic paper
+
+---
+
+### 🎯 Codebase Singularity
+**Folder**: `codebase-singularity/` • **SKILL.md + references**
+
+**Use when**: Consolidating a sprawling codebase toward a single coherent structure
+
+---
+
+### ✅ Agentic Validators
+**Folder**: `agentic-validators/` • **SKILL.md + references**
+
+Design and install validation hooks for coding agents — post-tool-use and stop hooks, automated
+tests/linters/formatters, parallel subagents with per-file validation, and audit logs. This is the
+top tier of the store's own doctrine: enforcement that survives context pressure.
+
+**Use when**: Making agent changes safer and more deterministic than prose rules can
+
+---
+
+### 🔄 Start / Wrap-Up Session
+**Folders**: `start-session/`, `wrap-up-session/` • **SKILL.md each**
+
+Bookend a work session. `start-session` orients — syncs from remote, reads git and worktree state,
+surfaces plans, background processes, agent-inbox handoffs, and open GitHub issues/PRs, then parses
+roadmap sections from CLAUDE.md. `wrap-up-session` closes — reviews uncommitted work, updates the
+session log and roadmap, runs a memory dedup check, nudges on observability gaps, and surfaces
+outstanding issues.
+
+**Use when**: Session start ("where are we") and session end ("let's wrap up")
+
+---
+
 ## Stats
 
-- **9 skills** covering SDLC workflows, security, async, AI, validation, search, database, state, and setup
-- **Official format**: Following [Anthropic Agent Skills Spec v1.0](https://github.com/anthropics/skills)
+- **64 skills** spanning SDLC workflows, security, async, AI, validation, search, database, state,
+  teaching and course design, research writing, deployment golden paths, and session workflow
+- **Official format**: Following the [Agent Skills](https://agentskills.io) open specification
 - **Folder-based skills**: Proper SKILL.md format with references for long content
-- **6,330+ lines** of production-ready code and documentation
-- **Extracted from** [TLDW](https://github.com/vishalsachdev/tldw) - production app with 10K+ LOC
+- **~52,700 lines** of documentation across 234 markdown files
+- **Sources**: [TLDW](https://github.com/vishalsachdev/tldw) (production app, 10K+ LOC), the
+  archived `claude-code-skills` repo, and the broader community (see attribution note above)
+
+Counts verified 2026-08-01:
+```bash
+find . -name SKILL.md -not -path './.git/*' | wc -l    # 64
+find . -name '*.md'   -not -path './.git/*' | wc -l    # 234
+```
 
 ---
 
@@ -301,7 +424,7 @@ Tips and gotchas...
 
 ## License
 
-MIT - Feel free to use in your projects!
+MIT — see [LICENSE](LICENSE). Feel free to use in your projects.
 
 ---
 

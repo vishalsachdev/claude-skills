@@ -5,22 +5,7 @@ description: Generate learning science-backed feedback templates for Canvas assi
 
 # Canvas Feedback Template Generator
 
-Generate learning science-backed feedback templates for Canvas assignments.
-
-## Skill Purpose
-
-This skill creates feedback templates that apply the Four Learning Design Pillars, specifically focusing on Pillar 3: Continuous Practice & Feedback. It generates targeted, encouraging feedback that helps students improve while maintaining a positive tone.
-
-## Usage
-
-```bash
-/canvas-feedback-template
-```
-
-Or with specific context:
-```bash
-/canvas-feedback-template "peer review assignment" --rubric
-```
+Generate feedback templates applying Pillar 3: Continuous Practice & Feedback.
 
 ## Workflow
 
@@ -34,24 +19,25 @@ Ask the user for:
 
 ### Step 2: Generate Templates
 
-Create feedback templates organized by:
-
-#### Performance Levels
-- **Exceeds Expectations** - Celebrate mastery, suggest stretch goals
-- **Meets Expectations** - Acknowledge success, highlight one improvement area
-- **Approaching Expectations** - Specific improvements with encouragement
-- **Needs Improvement** - Clear next steps with support resources
-
-#### Feedback Components (per Principle 3.2.1 - Targeted Feedback)
-Each template should include:
-1. **Strength acknowledgment** (Principle 3.2.2 - Encouraging)
+Organize by performance level. Each template must include these components (per Principle 3.2.1):
+1. **Strength acknowledgment** (3.2.2 - Encouraging)
 2. **Specific observation** with evidence from submission
 3. **Actionable improvement** with concrete next step
 4. **Forward-looking connection** to future learning
 
-### Step 3: Apply Learning Principles
+#### Exceeds Expectations
+Celebrate mastery, suggest stretch goals.
 
-Ensure all templates follow these principles:
+#### Meets Expectations
+Acknowledge success, highlight one improvement area.
+
+#### Approaching Expectations
+Specific improvements with encouragement.
+
+#### Needs Improvement
+Clear next steps with support resources.
+
+### Step 3: Apply Principles
 
 | Principle | Application in Feedback |
 |-----------|------------------------|
@@ -64,123 +50,48 @@ Ensure all templates follow these principles:
 ### Step 4: Canvas Integration
 
 If canvas-mcp is available:
-1. **Rubric Comments**: Generate comment options for each rubric criterion
-2. **Comment Library**: Format for Canvas SpeedGrader comment library
-3. **Bulk Feedback**: Create templates suitable for `bulk_grade_submissions`
+- **Rubric Comments**: Generate comment options for each rubric criterion at each level
+- **Comment Library**: Format for Canvas SpeedGrader comment library
+- **Bulk Feedback**: Create templates for `bulk_grade_submissions`
 
 ## Template Examples
 
-### Essay Assignment - Meets Expectations
-
-```markdown
+### Essay — Meets Expectations
+```
 **What's Working Well:**
-Your thesis statement in paragraph 1 clearly establishes your argument about [topic].
-The evidence in paragraphs 2-3 effectively supports your main claim.
+Your thesis in paragraph 1 clearly establishes your argument about [topic].
 
 **One Area to Strengthen:**
-Your conclusion summarizes your points but could be more impactful. Try connecting
-back to your opening hook or suggesting implications of your argument.
+Your conclusion summarizes but could be more impactful. Try connecting
+back to your opening hook or suggesting implications.
 
 **Next Step:**
-For your next essay, experiment with a "so what?" statement in your conclusion
-that explains why your argument matters to the reader.
+For your next essay, experiment with a "so what?" statement in your
+conclusion that explains why your argument matters.
 ```
 
-### Peer Review Assignment - Approaching Expectations
-
-```markdown
+### Peer Review — Approaching Expectations
+```
 **Strengths in Your Review:**
-You identified the key strengths in your peer's draft and provided specific examples.
+You identified key strengths and provided specific examples.
 
 **Area for Growth:**
-Your suggestions for improvement are general ("make it clearer"). More effective
-peer feedback includes specific, actionable recommendations.
+Your suggestions are general ("make it clearer"). Effective peer feedback
+includes specific, actionable recommendations.
 
 **How to Improve:**
-Instead of "the introduction needs work," try: "Consider opening with a specific
-example of [topic] to immediately engage readers. For instance, you could describe..."
+Instead of "the introduction needs work," try: "Consider opening with a
+specific example of [topic] to immediately engage readers."
 
 **Reflection Question:**
 What specific change would have the biggest impact on your peer's draft?
 ```
 
-### Quiz/Assessment - Needs Improvement
-
-```markdown
-**Current Standing:**
-You've demonstrated understanding of [specific topics]. Some foundational concepts
-need more practice before moving forward.
-
-**Focus Areas:**
-- [Concept 1]: Review [specific resource or module]
-- [Concept 2]: Complete practice problems in [location]
-
-**Support Available:**
-- Office hours: [times]
-- Tutoring center: [link]
-- Practice quiz: [link] (unlimited attempts)
-
-**Encouragement:**
-Many students find these concepts challenging at first. With targeted practice,
-you can build mastery. Let's connect if you'd like to discuss a study plan.
-```
-
-## Rubric Comment Generation
-
-When `--rubric` flag is used, generate comments for each criterion:
-
-```yaml
-criterion: "Thesis Statement"
-levels:
-  excellent:
-    points: 20
-    comment: "Your thesis is clear, specific, and arguable. It effectively previews your main arguments and sets up the essay structure."
-  proficient:
-    points: 16
-    comment: "Your thesis establishes a clear position. To strengthen it, make your main argument more specific by identifying [the key factor/the primary cause/etc.]."
-  developing:
-    points: 12
-    comment: "Your thesis identifies a topic but needs a clearer argumentative claim. Try completing this sentence: 'This essay argues that [specific claim] because [key reasons].'"
-  beginning:
-    points: 8
-    comment: "I don't see a clear thesis statement. Let's meet to discuss how to craft a thesis that makes a specific, arguable claim about your topic."
-```
-
-## Canvas MCP Integration
-
-### Using with SpeedGrader
-
-```python
-# After generating templates, user can apply via canvas-mcp
-# Example workflow:
-# 1. Generate templates with this skill
-# 2. Copy to SpeedGrader comment library
-# 3. Use bulk_grade_submissions for consistent feedback
-```
-
-### Bulk Grading Template
-
-For `bulk_grade_submissions`, generate CSV-compatible format:
-
-```csv
-student_id,grade,comment
-12345,85,"[Generated feedback based on rubric scores]"
-12346,72,"[Generated feedback based on rubric scores]"
-```
-
 ## Feedback Quality Checklist
 
-Before finalizing templates, verify:
-
+Before finalizing:
 - [ ] **Specific**: References actual work, not generic statements
 - [ ] **Actionable**: Includes concrete next step
-- [ ] **Encouraging**: Leads with strengths, maintains supportive tone
-- [ ] **Forward-looking**: Connects to future assignments/learning
+- [ ] **Encouraging**: Leads with strengths
+- [ ] **Forward-looking**: Connects to future assignments
 - [ ] **Proportionate**: Length matches assignment weight
-- [ ] **Accessible**: Uses clear language appropriate to course level
-
-## Related Skills
-
-- `/canvas-assignment-design` - Design assignments with feedback in mind
-- `/canvas-course-audit` - Audit feedback practices across a course
-- `/learning-design-review` - Review feedback quality against principles

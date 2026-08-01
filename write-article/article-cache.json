@@ -1,9 +1,344 @@
 {
-  "last_updated": "2026-01-16T09:01:50.869224",
+  "last_updated": "2026-04-21T00:55:23.360406",
   "source": "sitemap",
   "sitemap_url": "https://chatwithgpt.substack.com/sitemap.xml",
-  "article_count": 34,
+  "article_count": 50,
   "articles": [
+    {
+      "title": "Build to Learn, Learn to Build: When the Leverage Is Already There",
+      "url": "https://chatwithgpt.substack.com/p/build-to-learn-learn-to-build-when",
+      "slug": "build-to-learn-learn-to-build-when",
+      "lastmod": "2026-04-18",
+      "date": "2026-04-18",
+      "description": "A faculty deliberation platform shipped between talks at a retreat. The day was easy. The decade that preceded it did the work.",
+      "excerpt": "This morning I was in a breakout session at a Gies College of Business spring retreat, sitting with faculty in the department that\u2019s possibly being reorganized, looking at half a dozen blank slides on the agenda: PhD Program, Budget, Course Rubric, College Bylaws, Timeline. After any reorg, each new department will have to design its own operating system \u2014 governance rules, promotion procedures, advisory committees, curricular identity. There\u2019s never enough meeting time. Around 10:30 am, I opene",
+      "themes": [
+        "teaching"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/compound-engineering-use-it-before",
+        "https://chatwithgpt.substack.com/p/build-to-learn-learn-to-build-when",
+        "https://chatwithgpt.substack.com/p/build-to-learn-learn-to-build-when/comments",
+        "https://chatwithgpt.substack.com/p/the-classroom-where-ai-and-students"
+      ],
+      "word_count": 149
+    },
+    {
+      "title": "When AI Tests AI, the Human Finds What Matters",
+      "url": "https://chatwithgpt.substack.com/p/when-ai-tests-ai-the-human-finds",
+      "slug": "when-ai-tests-ai-the-human-finds",
+      "lastmod": "2026-04-06",
+      "date": "2026-04-06",
+      "description": "I used Claude Code to walk through my OpenAI Codex course as a simulated student. The AI executed every lesson flawlessly. The problem it couldn\u2019t see was the one that mattered most.",
+      "excerpt": "Six weeks ago, I shipped a course . An interactive AI curriculum for business students, delivered entirely inside OpenAI\u2019s Codex desktop app. Fourteen lessons, a fictional coffee startup, zero coding required. Students clone a repo, type \u201clet\u2019s start,\u201d and an AI instructor walks them through analyzing messy data, building strategy, and shipping a real web app. I was proud of it. This week I broke it open and rebuilt half of it \u2014 because I discovered that a course can work perfectly and still not",
+      "themes": [
+        "ai-collaboration",
+        "teaching",
+        "microsim"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/the-ai-course-that-teaches-itself",
+        "https://chatwithgpt.substack.com/p/when-ai-tests-ai-the-human-finds/comments",
+        "https://chatwithgpt.substack.com/p/when-ai-tests-ai-the-human-finds",
+        "https://chatwithgpt.substack.com/p/resistance-is-learning-what-60-teachers"
+      ],
+      "word_count": 104
+    },
+    {
+      "title": "Resistance Is Learning: What 60 Teachers Built in 20 Minutes",
+      "url": "https://chatwithgpt.substack.com/p/resistance-is-learning-what-60-teachers",
+      "slug": "resistance-is-learning-what-60-teachers",
+      "lastmod": "2026-04-03",
+      "date": "2026-04-03",
+      "description": "How a build-along workshop at a high school AI symposium tested a hypothesis about keeping AI on the right side of learning",
+      "excerpt": "I used AI to prepare this talk. Let me tell you about it, because the contradiction is the point. On April 2, I opened the Uni High Spring Symposium on AI in High Schools with a 55-minute session at the I Hotel in Champaign. Sixty area teachers. IMSA , Normal U-High , local districts, plus UIUC faculty from the iSchool , College of Education, Philosophy, the Chancellor\u2019s office, and the Siebel Center for Design . A full-day event organized by Robert Fitzgerald at Uni High, with panels, roundtabl",
+      "themes": [
+        "teaching"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/beyond-chatgpt-how-ai-transformed",
+        "https://chatwithgpt.substack.com/p/resistance-is-learning-what-60-teachers/comments",
+        "https://chatwithgpt.substack.com/p/skills-creating-skills-when-ai-becomes",
+        "https://chatwithgpt.substack.com/p/resistance-is-learning-what-60-teachers"
+      ],
+      "word_count": 117
+    },
+    {
+      "title": "The Classroom Where AI and Students Argue",
+      "url": "https://chatwithgpt.substack.com/p/the-classroom-where-ai-and-students",
+      "slug": "the-classroom-where-ai-and-students",
+      "lastmod": "2026-03-22",
+      "date": "2026-03-22",
+      "description": "How we adapted an MIT research platform to create a new kind of business school assignment \u2014 where AI agents investigate with real data, and students learn by challenging them.",
+      "excerpt": "In an AI-first world, the old quality signals are broken. Grades don\u2019t signal understanding when AI can ace tests. Written work doesn\u2019t signal thinking when AI can write. The question every educator is wrestling with: what assignments still matter? Here\u2019s one answer: make students argue with AI. Not in a chatbot window. On a public research platform where AI agents pull real financial data, publish structured analyses, and students challenge those findings across different analytical frameworks ",
+      "themes": [
+        "ai-collaboration",
+        "skills",
+        "teaching",
+        "compound-engineering",
+        "context-engineering",
+        "research"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/compound-engineering-use-it-before",
+        "https://chatwithgpt.substack.com/p/the-classroom-where-ai-and-students/comments",
+        "https://chatwithgpt.substack.com/p/the-classroom-where-ai-and-students"
+      ],
+      "word_count": 734
+    },
+    {
+      "title": "When Your Curriculum Talks Back: Building an AI-Powered Program Assistant",
+      "url": "https://chatwithgpt.substack.com/p/when-your-curriculum-talks-back-building",
+      "slug": "when-your-curriculum-talks-back-building",
+      "lastmod": "2026-03-17",
+      "date": "2026-03-17",
+      "description": "How a non-coder built a multi-channel AI team member for a new graduate program \u2014 in a single day",
+      "excerpt": "We are launching a new online Master of Science in Business Analytics at the University of Illinois. Like any new program, there\u2019s an enormous amount of coordination: course designs across 10 courses, decisions from a dozen faculty and staff, open questions multiplying faster than we can close them, and a shared documentation site that nobody has time to read. Last week I had an idea: what if the program\u2019s documentation could talk back? Not a chatbot trained on scraped web content. Not a generic",
+      "themes": [
+        "ai-collaboration",
+        "teaching",
+        "research"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/when-your-curriculum-talks-back-building",
+        "https://chatwithgpt.substack.com/p/we-are-all-app-developers-now",
+        "https://chatwithgpt.substack.com/p/the-ai-memory-problem-when-your-teams",
+        "https://chatwithgpt.substack.com/p/when-your-curriculum-talks-back-building/comments"
+      ],
+      "word_count": 828
+    },
+    {
+      "title": "When One AI Puppeteers Another",
+      "url": "https://chatwithgpt.substack.com/p/when-one-ai-puppeteers-another",
+      "slug": "when-one-ai-puppeteers-another",
+      "lastmod": "2026-03-09",
+      "date": "2026-03-09",
+      "description": "Testing a kids\u2019 3D printing camp with agent inception",
+      "excerpt": "Saturday afternoon. I\u2019m staring at a chess king on my screen \u2014 a tall cylinder with four pointy cones and a ball on top. Not bad for a kid who\u2019s never opened Blender. Except there is no kid. Claude Code is pretending to be one. It\u2019s typing messages like \u201cmake it way taller! like 4 times taller. a chess king is tall and skinny\u201d into OpenAI\u2019s Codex desktop app \u2014 an Electron application that Claude Code is puppeteering through Chrome DevTools Protocol via a tool called agent-browser . Codex reads t",
+      "themes": [
+        "ai-collaboration",
+        "skills",
+        "mcp",
+        "teaching",
+        "compound-engineering",
+        "context-engineering",
+        "automation",
+        "microsim"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/the-ai-course-that-teaches-itself",
+        "https://chatwithgpt.substack.com/p/when-one-ai-puppeteers-another/comments",
+        "https://chatwithgpt.substack.com/p/when-one-ai-puppeteers-another"
+      ],
+      "word_count": 823
+    },
+    {
+      "title": "The Self-Improving Loop: How Claude Code\u2019s /insights Turns Usage Data Into Compounding Returns",
+      "url": "https://chatwithgpt.substack.com/p/the-self-improving-loop-how-claude",
+      "slug": "the-self-improving-loop-how-claude",
+      "lastmod": "2026-03-06",
+      "date": "2026-03-06",
+      "description": "109 sessions. 97 hours. 3 days. One report that changed how I work.",
+      "excerpt": "Earlier today I ran /insights in Claude Code for the first time. Im getting a lot of output from the $200 max plan! 1,429 MESSAGES - +9,885/-599 LINES- 126 FILES- 3 DAYS- 476.3 MSGS/DAY It analyzed my recent sessions and produced a shareable HTML report \u2014 a detailed breakdown of what I\u2019d been building, where I\u2019d been wasting time, and what I should do differently. That alone would be useful. But the real power isn\u2019t the report. It\u2019s what happens when you feed it back in. What /insights Actually ",
+      "themes": [
+        "ai-collaboration",
+        "skills",
+        "mcp",
+        "teaching",
+        "compound-engineering",
+        "context-engineering",
+        "automation",
+        "research"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/the-self-improving-loop-how-claude/comments",
+        "https://chatwithgpt.substack.com/p/the-self-improving-loop-how-claude"
+      ],
+      "word_count": 803
+    },
+    {
+      "title": "What If Your AI Assistant Could Talk to Canvas?",
+      "url": "https://chatwithgpt.substack.com/p/what-if-your-ai-assistant-could-talk",
+      "slug": "what-if-your-ai-assistant-could-talk",
+      "lastmod": "2026-03-04",
+      "date": "2026-03-04",
+      "description": "A practical guide for learning designers who are tired of clicking",
+      "excerpt": "You know the drill. New semester, new course shell. You open Canvas, create Module 1, add an overview page, create the participation assignment, set the points, pick the submission type, set the due date, set the late policy. Then you do it again for Module 2. And 3. And 4. Fifteen times. By Module 8, you\u2019re copy-pasting from Module 3 because you\u2019ve lost track of which version had the right rubric language. Then someone asks: \u201cAre all the due dates sequential?\u201d And you click through every assign",
+      "themes": [
+        "teaching",
+        "automation"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/what-if-your-ai-assistant-could-talk",
+        "https://chatwithgpt.substack.com/p/what-if-your-ai-assistant-could-talk/comments",
+        "https://chatwithgpt.substack.com/p/three-months-of-canvas-mcp-evolution"
+      ],
+      "word_count": 117
+    },
+    {
+      "title": "Canvas MCP Meets skills.sh: From MCP Server to Agent Skill Ecosystem",
+      "url": "https://chatwithgpt.substack.com/p/canvas-mcp-meets-skillssh-from-mcp",
+      "slug": "canvas-mcp-meets-skillssh-from-mcp",
+      "lastmod": "2026-03-02",
+      "date": "2026-03-02",
+      "description": "One command. Forty agents. Five workflow recipes that teach AI how to use Canvas.",
+      "excerpt": "When I first built Canvas MCP, the distribution story was straightforward: publish to PyPI, register with the MCP Registry, and let MCP-compatible clients discover it. That covered Claude Desktop, Cursor, Zed, and a handful of others. Good reach for an education tool. But today the agent landscape looks different. There are dozens of coding agents \u2014 Codex, OpenCode, Cline, Continue \u2014 and most of them support some form of reusable instruction sets. The question shifted from \u201chow do I distribute m",
+      "themes": [
+        "ai-collaboration",
+        "skills",
+        "mcp",
+        "teaching",
+        "automation"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/building-shareable-learning-design",
+        "https://chatwithgpt.substack.com/p/canvas-mcp-meets-skillssh-from-mcp",
+        "https://chatwithgpt.substack.com/p/canvas-mcp-meets-skillssh-from-mcp/comments",
+        "https://chatwithgpt.substack.com/p/three-months-of-canvas-mcp-evolution"
+      ],
+      "word_count": 112
+    },
+    {
+      "title": "The AI Course That Teaches Itself",
+      "url": "https://chatwithgpt.substack.com/p/the-ai-course-that-teaches-itself",
+      "slug": "the-ai-course-that-teaches-itself",
+      "lastmod": "2026-02-27",
+      "date": "2026-02-27",
+      "description": "How I turned a developer-focused concept into a zero-code business course \u2014 53 files, 50,000 words, one session \u2014 and why the real lesson is about scaling expertise, not scaling code.",
+      "excerpt": "I built an entire interactive course in a single afternoon. Fourteen lessons, a fictional startup with 26 files of messy business data, a GitHub Pages landing site, and a root orchestration file that turns the AI into a patient, business-savvy instructor who remembers where each user left off. Thanks for reading ChatWithGPT for learning! Subscribe for free to receive new posts and support my work.",
+      "themes": [
+        "teaching",
+        "microsim"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/the-ai-course-that-teaches-itself",
+        "https://chatwithgpt.substack.com/p/beyond-chatgpt-how-ai-transformed",
+        "https://chatwithgpt.substack.com/p/the-ai-course-that-teaches-itself/comments",
+        "https://chatwithgpt.substack.com/p/the-ai-course-that-teaches-itself/comment/220162602"
+      ],
+      "word_count": 65
+    },
+    {
+      "title": "The Moment Your Side Project Stops Being Yours",
+      "url": "https://chatwithgpt.substack.com/p/the-moment-your-side-project-stops",
+      "slug": "the-moment-your-side-project-stops",
+      "lastmod": "2026-02-23",
+      "date": "2026-02-23",
+      "description": "How strangers across three continents turned a solo teaching tool into something I never expected",
+      "excerpt": "A year ago, I pushed the first commit to canvas-mcp \u2014 a tool born from frustration with Canvas LMS\u2019s clunky interface. I built it for myself: an MCP server that let me talk to Canvas through Claude instead of clicking through seventeen screens to grade an assignment. I never expected strangers to care. Thanks for reading ChatWithGPT for learning! Subscribe for free to receive new posts and support my work.",
+      "themes": [
+        "ai-collaboration",
+        "mcp",
+        "teaching"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/the-moment-your-side-project-stops",
+        "https://chatwithgpt.substack.com/p/the-moment-your-side-project-stops/comments",
+        "https://chatwithgpt.substack.com/p/three-months-of-canvas-mcp-evolution"
+      ],
+      "word_count": 70
+    },
+    {
+      "title": "I Put an AI Teaching Assistant in My Students' WhatsApp \u2014 Here's Why",
+      "url": "https://chatwithgpt.substack.com/p/i-put-an-ai-teaching-assistant-in",
+      "slug": "i-put-an-ai-teaching-assistant-in",
+      "lastmod": "2026-02-19",
+      "date": "2026-02-19",
+      "description": "How an open-source messaging framework became the backbone of a 24/7 Socratic tutor for a university database course",
+      "excerpt": "It\u2019s 11:47 PM on a Tuesday. A student in my database management course is stuck on a SQL query. She\u2019s tried three variations of a LEFT JOIN, and nothing returns the right result. She\u2019s not going to open Canvas. She\u2019s not going to email me. She\u2019s definitely not going to wait until Thursday\u2019s office hours. Thanks for reading ChatWithGPT for learning! Subscribe for free to receive new posts and support my work.",
+      "themes": [
+        "skills",
+        "teaching"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/i-put-an-ai-teaching-assistant-in/comments",
+        "https://chatwithgpt.substack.com/p/i-put-an-ai-teaching-assistant-in/comment/218240515",
+        "https://chatwithgpt.substack.com/p/i-put-an-ai-teaching-assistant-in",
+        "https://chatwithgpt.substack.com/p/analyzing-course-discussions-using",
+        "https://chatwithgpt.substack.com/p/conversations-with-ai-for-learning"
+      ],
+      "word_count": 72
+    },
+    {
+      "title": "Taste Is the New Code",
+      "url": "https://chatwithgpt.substack.com/p/taste-is-the-new-code",
+      "slug": "taste-is-the-new-code",
+      "lastmod": "2026-02-17",
+      "date": "2026-02-17",
+      "description": "Four writers, one conclusion: AI made execution cheap, so human judgment is the last bottleneck standing",
+      "excerpt": "Four articles landed in my reading list this week that, on the surface, seem to be about different things. Birgitta B\u00f6ckeler writes about harness engineering. Wes McKinney revisits The Mythical Man-Month through the lens of AI agents. Mitchell Hashimoto shares his personal AI adoption journey. Garry Tan argues that AI killed your excuses, not your creativity. But read them together and a single thesis emerges: AI has made execution cheap, so human judgment is now the bottleneck. They just approa",
+      "themes": [
+        "teaching",
+        "context-engineering"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/taste-is-the-new-code/comments",
+        "https://chatwithgpt.substack.com/p/taste-is-the-new-code"
+      ],
+      "word_count": 103
+    },
+    {
+      "title": "From Tweet to Treatise: How a Grok Conversation Became a 31,000-Word Research Project in One Afternoon",
+      "url": "https://chatwithgpt.substack.com/p/from-tweet-to-treatise-how-a-grok",
+      "slug": "from-tweet-to-treatise-how-a-grok",
+      "lastmod": "2026-02-15",
+      "date": "2026-02-15",
+      "description": "How human-in-the-loop direction, multi-agent evaluation, and source-grounded AI research turned a casual X conversation into a rigorously critiqued educational framework",
+      "excerpt": "It started, as many things do now, with a tweet. @cryptodaaddy</span> clarifies curiosity drives exploration/learning, agency enables action/entrepreneurship, taste refines choices, and risk-taking opens doors\",\"username\":\"vkhosla\",\"name\":\"Vinod Khosla\",\"profile_image_url\":\"https://pbs.substack.com/profile_images/1726662238046724096/VmfHT8C__normal.jpg\",\"date\":\"2026-02-15T04:14:11.000Z\",\"photos\":[],\"quoted_tweet\":{\"full_text\":\"People with curiosity, agency, taste and risk taking will take advant",
+      "themes": [
+        "skills",
+        "teaching",
+        "compound-engineering",
+        "research"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/research-at-machine-speed-compiling",
+        "https://chatwithgpt.substack.com/p/from-tweet-to-treatise-how-a-grok",
+        "https://chatwithgpt.substack.com/p/connecting-the-dots-with-grok-a-case",
+        "https://chatwithgpt.substack.com/p/from-tweet-to-treatise-how-a-grok/comments"
+      ],
+      "word_count": 53
+    },
+    {
+      "title": "From Forms to Conversations: How Compound Engineering Turned a Google Form into an AI Survey Bot",
+      "url": "https://chatwithgpt.substack.com/p/from-forms-to-conversations-how-compound",
+      "slug": "from-forms-to-conversations-how-compound",
+      "lastmod": "2026-01-28",
+      "date": "2026-01-28",
+      "description": "When your pre-course survey becomes a conversation that actually teaches you about your students",
+      "excerpt": "The Google Form Problem Every semester starts the same way: I send students a Google Form asking about their database experience. Thirteen questions. Likert scales. \u201cRate your SQL experience from 1-5.\u201d Thanks for reading ChatWithGPT for learning! Subscribe for free to receive new posts and support my work.",
+      "themes": [
+        "teaching",
+        "compound-engineering",
+        "context-engineering"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/compound-engineering-use-it-before",
+        "https://chatwithgpt.substack.com/p/conversations-with-ai-for-learning",
+        "https://chatwithgpt.substack.com/p/from-forms-to-conversations-how-compound/comments",
+        "https://chatwithgpt.substack.com/p/from-forms-to-conversations-how-compound"
+      ],
+      "word_count": 48
+    },
+    {
+      "title": "When a Skill Goes Viral: Building Educational Animations with Claude Code",
+      "url": "https://chatwithgpt.substack.com/p/when-a-skill-goes-viral-building",
+      "slug": "when-a-skill-goes-viral-building",
+      "lastmod": "2026-01-24",
+      "date": "2026-01-24",
+      "description": "Build to learn. Learn to build.",
+      "excerpt": "This week Remotion Labs dropped a tweet that exploded:",
+      "themes": [
+        "ai-collaboration",
+        "skills",
+        "teaching"
+      ],
+      "outbound_links": [
+        "https://chatwithgpt.substack.com/p/when-a-skill-goes-viral-building",
+        "https://chatwithgpt.substack.com/p/when-a-skill-goes-viral-building/comments"
+      ],
+      "word_count": 9
+    },
     {
       "title": "From Video to Skill: Building a Repeatable Agentic-Layer Pipeline",
       "url": "https://chatwithgpt.substack.com/p/from-video-to-skill-building-a-repeatable",
@@ -20,10 +355,11 @@
         "automation"
       ],
       "outbound_links": [
+        "https://chatwithgpt.substack.com/p/from-video-to-skill-building-a-repeatable",
+        "https://chatwithgpt.substack.com/p/from-video-to-skill-building-a-repeatable/comment/225020132",
         "https://chatwithgpt.substack.com/p/i-taught-claude-a-skill-you-can-too",
-        "https://chatwithgpt.substack.com/p/building-shareable-learning-design",
         "https://chatwithgpt.substack.com/p/from-video-to-skill-building-a-repeatable/comments",
-        "https://chatwithgpt.substack.com/p/from-video-to-skill-building-a-repeatable"
+        "https://chatwithgpt.substack.com/p/building-shareable-learning-design"
       ],
       "word_count": 87
     },
@@ -42,11 +378,11 @@
         "context-engineering"
       ],
       "outbound_links": [
-        "https://chatwithgpt.substack.com/p/compound-engineering-use-it-before",
-        "https://chatwithgpt.substack.com/p/the-vibe-coders-setup-context-aware",
-        "https://chatwithgpt.substack.com/p/the-vibe-coders-setup-context-aware/comments",
         "https://chatwithgpt.substack.com/p/context-engineering-is-the-new-prompt",
-        "https://chatwithgpt.substack.com/p/skills-creating-skills-when-ai-becomes"
+        "https://chatwithgpt.substack.com/p/the-vibe-coders-setup-context-aware",
+        "https://chatwithgpt.substack.com/p/skills-creating-skills-when-ai-becomes",
+        "https://chatwithgpt.substack.com/p/compound-engineering-use-it-before",
+        "https://chatwithgpt.substack.com/p/the-vibe-coders-setup-context-aware/comments"
       ],
       "word_count": 23
     },
@@ -63,8 +399,8 @@
         "context-engineering"
       ],
       "outbound_links": [
-        "https://chatwithgpt.substack.com/p/the-magnitude-9-earthquake-how-ai/comments",
-        "https://chatwithgpt.substack.com/p/the-magnitude-9-earthquake-how-ai"
+        "https://chatwithgpt.substack.com/p/the-magnitude-9-earthquake-how-ai",
+        "https://chatwithgpt.substack.com/p/the-magnitude-9-earthquake-how-ai/comments"
       ],
       "word_count": 119
     },
@@ -84,11 +420,11 @@
         "compound-engineering"
       ],
       "outbound_links": [
-        "https://chatwithgpt.substack.com/p/building-shareable-learning-design",
+        "https://chatwithgpt.substack.com/p/building-shareable-learning-design/comments",
         "https://chatwithgpt.substack.com/p/three-months-of-canvas-mcp-evolution",
         "https://chatwithgpt.substack.com/p/skills-creating-skills-when-ai-becomes",
-        "https://chatwithgpt.substack.com/p/building-shareable-learning-design/comments",
-        "https://chatwithgpt.substack.com/p/teaching-database-management-in-the"
+        "https://chatwithgpt.substack.com/p/teaching-database-management-in-the",
+        "https://chatwithgpt.substack.com/p/building-shareable-learning-design"
       ],
       "word_count": 0
     },
@@ -106,9 +442,9 @@
         "automation"
       ],
       "outbound_links": [
-        "https://chatwithgpt.substack.com/p/teaching-claude-code-to-remember",
+        "https://chatwithgpt.substack.com/p/compound-engineering-use-it-before",
         "https://chatwithgpt.substack.com/p/teaching-claude-code-to-remember/comments",
-        "https://chatwithgpt.substack.com/p/compound-engineering-use-it-before"
+        "https://chatwithgpt.substack.com/p/teaching-claude-code-to-remember"
       ],
       "word_count": 50
     },
@@ -129,7 +465,8 @@
       ],
       "outbound_links": [
         "https://chatwithgpt.substack.com/p/compound-engineering-use-it-before",
-        "https://chatwithgpt.substack.com/p/compound-engineering-use-it-before/comments"
+        "https://chatwithgpt.substack.com/p/compound-engineering-use-it-before/comments",
+        "https://chatwithgpt.substack.com/p/compound-engineering-use-it-before/comment/224531275"
       ],
       "word_count": 53
     },
@@ -148,8 +485,8 @@
       ],
       "outbound_links": [
         "https://chatwithgpt.substack.com/p/teaching-database-management-in-the/comments",
-        "https://chatwithgpt.substack.com/p/teaching-database-management-in-the",
-        "https://chatwithgpt.substack.com/p/when-claude-code-becomes-your-codeveloper"
+        "https://chatwithgpt.substack.com/p/when-claude-code-becomes-your-codeveloper",
+        "https://chatwithgpt.substack.com/p/teaching-database-management-in-the"
       ],
       "word_count": 99
     },
@@ -166,10 +503,9 @@
         "research"
       ],
       "outbound_links": [
-        "https://chatwithgpt.substack.com/p/connecting-the-dots-with-grok-a-case",
-        "https://chatwithgpt.substack.com/p/connecting-the-dots-with-grok-a-case/comment/190761986",
         "https://chatwithgpt.substack.com/p/connecting-the-dots-with-grok-a-case/comments",
-        "https://chatwithgpt.substack.com/p/connecting-the-dots-with-grok-a-case/comment/190220275"
+        "https://chatwithgpt.substack.com/p/connecting-the-dots-with-grok-a-case/comment/190761986",
+        "https://chatwithgpt.substack.com/p/connecting-the-dots-with-grok-a-case"
       ],
       "word_count": 80
     },
@@ -206,8 +542,8 @@
         "research"
       ],
       "outbound_links": [
-        "https://chatwithgpt.substack.com/p/research-at-machine-speed-compiling/comments",
-        "https://chatwithgpt.substack.com/p/research-at-machine-speed-compiling"
+        "https://chatwithgpt.substack.com/p/research-at-machine-speed-compiling",
+        "https://chatwithgpt.substack.com/p/research-at-machine-speed-compiling/comments"
       ],
       "word_count": 90
     },
@@ -292,8 +628,8 @@
       ],
       "outbound_links": [
         "https://chatwithgpt.substack.com/p/three-months-of-canvas-mcp-evolution/comments",
-        "https://chatwithgpt.substack.com/p/three-months-of-canvas-mcp-evolution",
-        "https://chatwithgpt.substack.com/p/when-claude-code-becomes-your-codeveloper"
+        "https://chatwithgpt.substack.com/p/when-claude-code-becomes-your-codeveloper",
+        "https://chatwithgpt.substack.com/p/three-months-of-canvas-mcp-evolution"
       ],
       "word_count": 624
     },
@@ -329,8 +665,8 @@
         "research"
       ],
       "outbound_links": [
-        "https://chatwithgpt.substack.com/p/context-engineering-is-the-new-prompt",
-        "https://chatwithgpt.substack.com/p/context-engineering-is-the-new-prompt/comments"
+        "https://chatwithgpt.substack.com/p/context-engineering-is-the-new-prompt/comments",
+        "https://chatwithgpt.substack.com/p/context-engineering-is-the-new-prompt"
       ],
       "word_count": 115
     },
@@ -348,8 +684,8 @@
         "research"
       ],
       "outbound_links": [
-        "https://chatwithgpt.substack.com/p/analyzing-course-discussions-using/comments",
-        "https://chatwithgpt.substack.com/p/analyzing-course-discussions-using"
+        "https://chatwithgpt.substack.com/p/analyzing-course-discussions-using",
+        "https://chatwithgpt.substack.com/p/analyzing-course-discussions-using/comments"
       ],
       "word_count": 135
     },
@@ -385,8 +721,8 @@
       ],
       "outbound_links": [
         "https://chatwithgpt.substack.com/p/from-announcement-to-production-building",
-        "https://chatwithgpt.substack.com/p/from-announcement-to-production-building/comments",
-        "https://chatwithgpt.substack.com/p/when-claude-code-becomes-your-codeveloper"
+        "https://chatwithgpt.substack.com/p/when-claude-code-becomes-your-codeveloper",
+        "https://chatwithgpt.substack.com/p/from-announcement-to-production-building/comments"
       ],
       "word_count": 83
     },
@@ -405,8 +741,8 @@
         "automation"
       ],
       "outbound_links": [
-        "https://chatwithgpt.substack.com/p/launching-the-hybrid-builder-when",
-        "https://chatwithgpt.substack.com/p/launching-the-hybrid-builder-when/comments"
+        "https://chatwithgpt.substack.com/p/launching-the-hybrid-builder-when/comments",
+        "https://chatwithgpt.substack.com/p/launching-the-hybrid-builder-when"
       ],
       "word_count": 86
     },
@@ -423,7 +759,6 @@
         "teaching"
       ],
       "outbound_links": [
-        "https://chatwithgpt.substack.com/p/beyond-chatgpt-how-ai-transformed",
         "https://chatwithgpt.substack.com/p/when-claude-code-becomes-your-codeveloper/comments",
         "https://chatwithgpt.substack.com/p/when-claude-code-becomes-your-codeveloper"
       ],
@@ -442,11 +777,10 @@
         "research"
       ],
       "outbound_links": [
-        "https://chatwithgpt.substack.com/p/beyond-chatgpt-how-ai-transformed",
         "https://chatwithgpt.substack.com/p/we-are-all-app-developers-now",
+        "https://chatwithgpt.substack.com/p/beyond-chatgpt-how-ai-transformed",
         "https://chatwithgpt.substack.com/p/if-intelligence-is-too-cheap-to-meter",
-        "https://chatwithgpt.substack.com/p/beyond-chatgpt-how-ai-transformed/comments",
-        "https://chatwithgpt.substack.com/p/build-it-and-they-will-learn"
+        "https://chatwithgpt.substack.com/p/beyond-chatgpt-how-ai-transformed/comments"
       ],
       "word_count": 90
     },
@@ -462,8 +796,8 @@
         "teaching"
       ],
       "outbound_links": [
-        "https://chatwithgpt.substack.com/p/rethinking-online-learning-in-an/comments",
-        "https://chatwithgpt.substack.com/p/rethinking-online-learning-in-an"
+        "https://chatwithgpt.substack.com/p/rethinking-online-learning-in-an",
+        "https://chatwithgpt.substack.com/p/rethinking-online-learning-in-an/comments"
       ],
       "word_count": 70
     },
@@ -501,8 +835,8 @@
         "teaching"
       ],
       "outbound_links": [
-        "https://chatwithgpt.substack.com/p/join-my-new-subscriber-chat",
-        "https://chatwithgpt.substack.com/p/join-my-new-subscriber-chat/comments"
+        "https://chatwithgpt.substack.com/p/join-my-new-subscriber-chat/comments",
+        "https://chatwithgpt.substack.com/p/join-my-new-subscriber-chat"
       ],
       "word_count": 145
     },
@@ -519,8 +853,8 @@
         "context-engineering"
       ],
       "outbound_links": [
-        "https://chatwithgpt.substack.com/p/build-it-and-they-will-learn/comments",
-        "https://chatwithgpt.substack.com/p/build-it-and-they-will-learn"
+        "https://chatwithgpt.substack.com/p/build-it-and-they-will-learn",
+        "https://chatwithgpt.substack.com/p/build-it-and-they-will-learn/comments"
       ],
       "word_count": 90
     },
@@ -538,8 +872,8 @@
         "automation"
       ],
       "outbound_links": [
-        "https://chatwithgpt.substack.com/p/if-intelligence-is-too-cheap-to-meter?utm_source=substack&amp;utm_medium=email&amp;utm_content=share&amp;action=share",
         "https://chatwithgpt.substack.com/p/if-intelligence-is-too-cheap-to-meter/comments",
+        "https://chatwithgpt.substack.com/p/if-intelligence-is-too-cheap-to-meter?utm_source=substack&amp;utm_medium=email&amp;utm_content=share&amp;action=share",
         "https://chatwithgpt.substack.com/p/if-intelligence-is-too-cheap-to-meter"
       ],
       "word_count": 846
@@ -559,9 +893,9 @@
         "microsim"
       ],
       "outbound_links": [
+        "https://chatwithgpt.substack.com/p/we-are-all-app-developers-now",
         "https://chatwithgpt.substack.com/p/how-to-train-your-dragon-oops-ai",
-        "https://chatwithgpt.substack.com/p/we-are-all-app-developers-now/comments",
-        "https://chatwithgpt.substack.com/p/we-are-all-app-developers-now"
+        "https://chatwithgpt.substack.com/p/we-are-all-app-developers-now/comments"
       ],
       "word_count": 199
     },
@@ -615,10 +949,10 @@
         "research"
       ],
       "outbound_links": [
-        "https://chatwithgpt.substack.com/p/what-will-we-learn-teach-about-this",
-        "https://chatwithgpt.substack.com/p/simulating-to-learn",
         "https://chatwithgpt.substack.com/p/some-more-thoughts-on-simulating",
-        "https://chatwithgpt.substack.com/p/some-more-thoughts-on-simulating/comments"
+        "https://chatwithgpt.substack.com/p/some-more-thoughts-on-simulating/comments",
+        "https://chatwithgpt.substack.com/p/simulating-to-learn",
+        "https://chatwithgpt.substack.com/p/what-will-we-learn-teach-about-this"
       ],
       "word_count": 118
     },
@@ -657,8 +991,8 @@
         "teaching"
       ],
       "outbound_links": [
-        "https://chatwithgpt.substack.com/p/what-will-we-learn-teach-about-this",
-        "https://chatwithgpt.substack.com/p/what-will-we-learn-teach-about-this/comments"
+        "https://chatwithgpt.substack.com/p/what-will-we-learn-teach-about-this/comments",
+        "https://chatwithgpt.substack.com/p/what-will-we-learn-teach-about-this"
       ],
       "word_count": 102
     },
@@ -683,42 +1017,23 @@
     }
   ],
   "theme_index": {
-    "ai-collaboration": [
-      "from-video-to-skill-building-a-repeatable",
-      "the-vibe-coders-setup-context-aware",
-      "building-shareable-learning-design",
-      "teaching-claude-code-to-remember",
-      "compound-engineering-use-it-before",
-      "teaching-database-management-in-the",
-      "i-taught-claude-a-skill-you-can-too",
-      "research-at-machine-speed-compiling",
-      "skills-creating-skills-when-ai-becomes",
-      "context-engineering-in-action-from",
-      "three-months-of-canvas-mcp-evolution",
-      "shipping-a-800-project-explorer-in",
-      "analyzing-course-discussions-using",
-      "from-announcement-to-production-building",
-      "launching-the-hybrid-builder-when",
-      "when-claude-code-becomes-your-codeveloper",
-      "can-you-profitably-own-a-waymo"
-    ],
-    "skills": [
-      "from-video-to-skill-building-a-repeatable",
-      "the-magnitude-9-earthquake-how-ai",
-      "building-shareable-learning-design",
-      "compound-engineering-use-it-before",
-      "i-taught-claude-a-skill-you-can-too",
-      "skills-creating-skills-when-ai-becomes",
-      "upgraded-automated-delivered-a-canvas",
-      "three-months-of-canvas-mcp-evolution",
-      "if-intelligence-is-too-cheap-to-meter",
-      "we-are-all-app-developers-now",
-      "what-to-do-after-you-destroy-your",
-      "simulating-to-learn",
-      "what-will-we-learn-teach-about-this",
-      "conversations-with-ai-for-learning"
-    ],
     "teaching": [
+      "build-to-learn-learn-to-build-when",
+      "when-ai-tests-ai-the-human-finds",
+      "resistance-is-learning-what-60-teachers",
+      "the-classroom-where-ai-and-students",
+      "when-your-curriculum-talks-back-building",
+      "when-one-ai-puppeteers-another",
+      "the-self-improving-loop-how-claude",
+      "what-if-your-ai-assistant-could-talk",
+      "canvas-mcp-meets-skillssh-from-mcp",
+      "the-ai-course-that-teaches-itself",
+      "the-moment-your-side-project-stops",
+      "i-put-an-ai-teaching-assistant-in",
+      "taste-is-the-new-code",
+      "from-tweet-to-treatise-how-a-grok",
+      "from-forms-to-conversations-how-compound",
+      "when-a-skill-goes-viral-building",
       "from-video-to-skill-building-a-repeatable",
       "the-vibe-coders-setup-context-aware",
       "building-shareable-learning-design",
@@ -753,7 +1068,84 @@
       "what-will-we-learn-teach-about-this",
       "conversations-with-ai-for-learning"
     ],
+    "ai-collaboration": [
+      "when-ai-tests-ai-the-human-finds",
+      "the-classroom-where-ai-and-students",
+      "when-your-curriculum-talks-back-building",
+      "when-one-ai-puppeteers-another",
+      "the-self-improving-loop-how-claude",
+      "canvas-mcp-meets-skillssh-from-mcp",
+      "the-moment-your-side-project-stops",
+      "when-a-skill-goes-viral-building",
+      "from-video-to-skill-building-a-repeatable",
+      "the-vibe-coders-setup-context-aware",
+      "building-shareable-learning-design",
+      "teaching-claude-code-to-remember",
+      "compound-engineering-use-it-before",
+      "teaching-database-management-in-the",
+      "i-taught-claude-a-skill-you-can-too",
+      "research-at-machine-speed-compiling",
+      "skills-creating-skills-when-ai-becomes",
+      "context-engineering-in-action-from",
+      "three-months-of-canvas-mcp-evolution",
+      "shipping-a-800-project-explorer-in",
+      "analyzing-course-discussions-using",
+      "from-announcement-to-production-building",
+      "launching-the-hybrid-builder-when",
+      "when-claude-code-becomes-your-codeveloper",
+      "can-you-profitably-own-a-waymo"
+    ],
+    "microsim": [
+      "when-ai-tests-ai-the-human-finds",
+      "when-one-ai-puppeteers-another",
+      "the-ai-course-that-teaches-itself",
+      "context-engineering-in-action-from",
+      "can-you-profitably-own-a-waymo",
+      "we-are-all-app-developers-now",
+      "simulating-to-learn"
+    ],
+    "skills": [
+      "the-classroom-where-ai-and-students",
+      "when-one-ai-puppeteers-another",
+      "the-self-improving-loop-how-claude",
+      "canvas-mcp-meets-skillssh-from-mcp",
+      "i-put-an-ai-teaching-assistant-in",
+      "from-tweet-to-treatise-how-a-grok",
+      "when-a-skill-goes-viral-building",
+      "from-video-to-skill-building-a-repeatable",
+      "the-magnitude-9-earthquake-how-ai",
+      "building-shareable-learning-design",
+      "compound-engineering-use-it-before",
+      "i-taught-claude-a-skill-you-can-too",
+      "skills-creating-skills-when-ai-becomes",
+      "upgraded-automated-delivered-a-canvas",
+      "three-months-of-canvas-mcp-evolution",
+      "if-intelligence-is-too-cheap-to-meter",
+      "we-are-all-app-developers-now",
+      "what-to-do-after-you-destroy-your",
+      "simulating-to-learn",
+      "what-will-we-learn-teach-about-this",
+      "conversations-with-ai-for-learning"
+    ],
+    "compound-engineering": [
+      "the-classroom-where-ai-and-students",
+      "when-one-ai-puppeteers-another",
+      "the-self-improving-loop-how-claude",
+      "from-tweet-to-treatise-how-a-grok",
+      "from-forms-to-conversations-how-compound",
+      "the-vibe-coders-setup-context-aware",
+      "building-shareable-learning-design",
+      "compound-engineering-use-it-before",
+      "context-engineering-in-action-from",
+      "three-months-of-canvas-mcp-evolution",
+      "can-you-profitably-own-a-waymo"
+    ],
     "context-engineering": [
+      "the-classroom-where-ai-and-students",
+      "when-one-ai-puppeteers-another",
+      "the-self-improving-loop-how-claude",
+      "taste-is-the-new-code",
+      "from-forms-to-conversations-how-compound",
       "from-video-to-skill-building-a-repeatable",
       "the-vibe-coders-setup-context-aware",
       "the-magnitude-9-earthquake-how-ai",
@@ -768,31 +1160,11 @@
       "simulating-to-learn",
       "conversations-with-ai-for-learning"
     ],
-    "automation": [
-      "from-video-to-skill-building-a-repeatable",
-      "teaching-claude-code-to-remember",
-      "context-engineering-in-action-from",
-      "upgraded-automated-delivered-a-canvas",
-      "three-months-of-canvas-mcp-evolution",
-      "launching-the-hybrid-builder-when",
-      "can-you-profitably-own-a-waymo",
-      "if-intelligence-is-too-cheap-to-meter",
-      "we-are-all-app-developers-now"
-    ],
-    "compound-engineering": [
-      "the-vibe-coders-setup-context-aware",
-      "building-shareable-learning-design",
-      "compound-engineering-use-it-before",
-      "context-engineering-in-action-from",
-      "three-months-of-canvas-mcp-evolution",
-      "can-you-profitably-own-a-waymo"
-    ],
-    "mcp": [
-      "building-shareable-learning-design",
-      "three-months-of-canvas-mcp-evolution",
-      "from-announcement-to-production-building"
-    ],
     "research": [
+      "the-classroom-where-ai-and-students",
+      "when-your-curriculum-talks-back-building",
+      "the-self-improving-loop-how-claude",
+      "from-tweet-to-treatise-how-a-grok",
       "connecting-the-dots-with-grok-a-case",
       "research-at-machine-speed-compiling",
       "three-months-of-canvas-mcp-evolution",
@@ -804,20 +1176,210 @@
       "some-more-thoughts-on-simulating",
       "simulating-to-learn"
     ],
-    "microsim": [
+    "mcp": [
+      "when-one-ai-puppeteers-another",
+      "the-self-improving-loop-how-claude",
+      "canvas-mcp-meets-skillssh-from-mcp",
+      "the-moment-your-side-project-stops",
+      "building-shareable-learning-design",
+      "three-months-of-canvas-mcp-evolution",
+      "from-announcement-to-production-building"
+    ],
+    "automation": [
+      "when-one-ai-puppeteers-another",
+      "the-self-improving-loop-how-claude",
+      "what-if-your-ai-assistant-could-talk",
+      "canvas-mcp-meets-skillssh-from-mcp",
+      "from-video-to-skill-building-a-repeatable",
+      "teaching-claude-code-to-remember",
       "context-engineering-in-action-from",
+      "upgraded-automated-delivered-a-canvas",
+      "three-months-of-canvas-mcp-evolution",
+      "launching-the-hybrid-builder-when",
       "can-you-profitably-own-a-waymo",
-      "we-are-all-app-developers-now",
-      "simulating-to-learn"
+      "if-intelligence-is-too-cheap-to-meter",
+      "we-are-all-app-developers-now"
     ]
   },
   "link_graph": {
+    "build-to-learn-learn-to-build-when": {
+      "references": [
+        "compound-engineering-use-it-before",
+        "build-to-learn-learn-to-build-when",
+        "build-to-learn-learn-to-build-when/comments",
+        "the-classroom-where-ai-and-students"
+      ],
+      "referenced_by": [
+        "build-to-learn-learn-to-build-when"
+      ]
+    },
+    "when-ai-tests-ai-the-human-finds": {
+      "references": [
+        "the-ai-course-that-teaches-itself",
+        "when-ai-tests-ai-the-human-finds/comments",
+        "when-ai-tests-ai-the-human-finds",
+        "resistance-is-learning-what-60-teachers"
+      ],
+      "referenced_by": [
+        "when-ai-tests-ai-the-human-finds"
+      ]
+    },
+    "resistance-is-learning-what-60-teachers": {
+      "references": [
+        "beyond-chatgpt-how-ai-transformed",
+        "resistance-is-learning-what-60-teachers/comments",
+        "skills-creating-skills-when-ai-becomes",
+        "resistance-is-learning-what-60-teachers"
+      ],
+      "referenced_by": [
+        "when-ai-tests-ai-the-human-finds",
+        "resistance-is-learning-what-60-teachers"
+      ]
+    },
+    "the-classroom-where-ai-and-students": {
+      "references": [
+        "compound-engineering-use-it-before",
+        "the-classroom-where-ai-and-students/comments",
+        "the-classroom-where-ai-and-students"
+      ],
+      "referenced_by": [
+        "build-to-learn-learn-to-build-when",
+        "the-classroom-where-ai-and-students"
+      ]
+    },
+    "when-your-curriculum-talks-back-building": {
+      "references": [
+        "when-your-curriculum-talks-back-building",
+        "we-are-all-app-developers-now",
+        "the-ai-memory-problem-when-your-teams",
+        "when-your-curriculum-talks-back-building/comments"
+      ],
+      "referenced_by": [
+        "when-your-curriculum-talks-back-building"
+      ]
+    },
+    "when-one-ai-puppeteers-another": {
+      "references": [
+        "the-ai-course-that-teaches-itself",
+        "when-one-ai-puppeteers-another/comments",
+        "when-one-ai-puppeteers-another"
+      ],
+      "referenced_by": [
+        "when-one-ai-puppeteers-another"
+      ]
+    },
+    "the-self-improving-loop-how-claude": {
+      "references": [
+        "the-self-improving-loop-how-claude/comments",
+        "the-self-improving-loop-how-claude"
+      ],
+      "referenced_by": [
+        "the-self-improving-loop-how-claude"
+      ]
+    },
+    "what-if-your-ai-assistant-could-talk": {
+      "references": [
+        "what-if-your-ai-assistant-could-talk",
+        "what-if-your-ai-assistant-could-talk/comments",
+        "three-months-of-canvas-mcp-evolution"
+      ],
+      "referenced_by": [
+        "what-if-your-ai-assistant-could-talk"
+      ]
+    },
+    "canvas-mcp-meets-skillssh-from-mcp": {
+      "references": [
+        "building-shareable-learning-design",
+        "canvas-mcp-meets-skillssh-from-mcp",
+        "canvas-mcp-meets-skillssh-from-mcp/comments",
+        "three-months-of-canvas-mcp-evolution"
+      ],
+      "referenced_by": [
+        "canvas-mcp-meets-skillssh-from-mcp"
+      ]
+    },
+    "the-ai-course-that-teaches-itself": {
+      "references": [
+        "the-ai-course-that-teaches-itself",
+        "beyond-chatgpt-how-ai-transformed",
+        "the-ai-course-that-teaches-itself/comments",
+        "the-ai-course-that-teaches-itself/comment/220162602"
+      ],
+      "referenced_by": [
+        "when-ai-tests-ai-the-human-finds",
+        "when-one-ai-puppeteers-another",
+        "the-ai-course-that-teaches-itself"
+      ]
+    },
+    "the-moment-your-side-project-stops": {
+      "references": [
+        "the-moment-your-side-project-stops",
+        "the-moment-your-side-project-stops/comments",
+        "three-months-of-canvas-mcp-evolution"
+      ],
+      "referenced_by": [
+        "the-moment-your-side-project-stops"
+      ]
+    },
+    "i-put-an-ai-teaching-assistant-in": {
+      "references": [
+        "i-put-an-ai-teaching-assistant-in/comments",
+        "i-put-an-ai-teaching-assistant-in/comment/218240515",
+        "i-put-an-ai-teaching-assistant-in",
+        "analyzing-course-discussions-using",
+        "conversations-with-ai-for-learning"
+      ],
+      "referenced_by": [
+        "i-put-an-ai-teaching-assistant-in"
+      ]
+    },
+    "taste-is-the-new-code": {
+      "references": [
+        "taste-is-the-new-code/comments",
+        "taste-is-the-new-code"
+      ],
+      "referenced_by": [
+        "taste-is-the-new-code"
+      ]
+    },
+    "from-tweet-to-treatise-how-a-grok": {
+      "references": [
+        "research-at-machine-speed-compiling",
+        "from-tweet-to-treatise-how-a-grok",
+        "connecting-the-dots-with-grok-a-case",
+        "from-tweet-to-treatise-how-a-grok/comments"
+      ],
+      "referenced_by": [
+        "from-tweet-to-treatise-how-a-grok"
+      ]
+    },
+    "from-forms-to-conversations-how-compound": {
+      "references": [
+        "compound-engineering-use-it-before",
+        "conversations-with-ai-for-learning",
+        "from-forms-to-conversations-how-compound/comments",
+        "from-forms-to-conversations-how-compound"
+      ],
+      "referenced_by": [
+        "from-forms-to-conversations-how-compound"
+      ]
+    },
+    "when-a-skill-goes-viral-building": {
+      "references": [
+        "when-a-skill-goes-viral-building",
+        "when-a-skill-goes-viral-building/comments"
+      ],
+      "referenced_by": [
+        "when-a-skill-goes-viral-building"
+      ]
+    },
     "from-video-to-skill-building-a-repeatable": {
       "references": [
+        "from-video-to-skill-building-a-repeatable",
+        "from-video-to-skill-building-a-repeatable/comment/225020132",
         "i-taught-claude-a-skill-you-can-too",
-        "building-shareable-learning-design",
         "from-video-to-skill-building-a-repeatable/comments",
-        "from-video-to-skill-building-a-repeatable"
+        "building-shareable-learning-design"
       ],
       "referenced_by": [
         "from-video-to-skill-building-a-repeatable"
@@ -825,11 +1387,11 @@
     },
     "the-vibe-coders-setup-context-aware": {
       "references": [
-        "compound-engineering-use-it-before",
-        "the-vibe-coders-setup-context-aware",
-        "the-vibe-coders-setup-context-aware/comments",
         "context-engineering-is-the-new-prompt",
-        "skills-creating-skills-when-ai-becomes"
+        "the-vibe-coders-setup-context-aware",
+        "skills-creating-skills-when-ai-becomes",
+        "compound-engineering-use-it-before",
+        "the-vibe-coders-setup-context-aware/comments"
       ],
       "referenced_by": [
         "the-vibe-coders-setup-context-aware"
@@ -837,8 +1399,8 @@
     },
     "the-magnitude-9-earthquake-how-ai": {
       "references": [
-        "the-magnitude-9-earthquake-how-ai/comments",
-        "the-magnitude-9-earthquake-how-ai"
+        "the-magnitude-9-earthquake-how-ai",
+        "the-magnitude-9-earthquake-how-ai/comments"
       ],
       "referenced_by": [
         "the-magnitude-9-earthquake-how-ai"
@@ -846,22 +1408,23 @@
     },
     "building-shareable-learning-design": {
       "references": [
-        "building-shareable-learning-design",
+        "building-shareable-learning-design/comments",
         "three-months-of-canvas-mcp-evolution",
         "skills-creating-skills-when-ai-becomes",
-        "building-shareable-learning-design/comments",
-        "teaching-database-management-in-the"
+        "teaching-database-management-in-the",
+        "building-shareable-learning-design"
       ],
       "referenced_by": [
+        "canvas-mcp-meets-skillssh-from-mcp",
         "from-video-to-skill-building-a-repeatable",
         "building-shareable-learning-design"
       ]
     },
     "teaching-claude-code-to-remember": {
       "references": [
-        "teaching-claude-code-to-remember",
+        "compound-engineering-use-it-before",
         "teaching-claude-code-to-remember/comments",
-        "compound-engineering-use-it-before"
+        "teaching-claude-code-to-remember"
       ],
       "referenced_by": [
         "teaching-claude-code-to-remember"
@@ -870,9 +1433,13 @@
     "compound-engineering-use-it-before": {
       "references": [
         "compound-engineering-use-it-before",
-        "compound-engineering-use-it-before/comments"
+        "compound-engineering-use-it-before/comments",
+        "compound-engineering-use-it-before/comment/224531275"
       ],
       "referenced_by": [
+        "build-to-learn-learn-to-build-when",
+        "the-classroom-where-ai-and-students",
+        "from-forms-to-conversations-how-compound",
         "the-vibe-coders-setup-context-aware",
         "teaching-claude-code-to-remember",
         "compound-engineering-use-it-before"
@@ -881,8 +1448,8 @@
     "teaching-database-management-in-the": {
       "references": [
         "teaching-database-management-in-the/comments",
-        "teaching-database-management-in-the",
-        "when-claude-code-becomes-your-codeveloper"
+        "when-claude-code-becomes-your-codeveloper",
+        "teaching-database-management-in-the"
       ],
       "referenced_by": [
         "building-shareable-learning-design",
@@ -891,12 +1458,12 @@
     },
     "connecting-the-dots-with-grok-a-case": {
       "references": [
-        "connecting-the-dots-with-grok-a-case",
-        "connecting-the-dots-with-grok-a-case/comment/190761986",
         "connecting-the-dots-with-grok-a-case/comments",
-        "connecting-the-dots-with-grok-a-case/comment/190220275"
+        "connecting-the-dots-with-grok-a-case/comment/190761986",
+        "connecting-the-dots-with-grok-a-case"
       ],
       "referenced_by": [
+        "from-tweet-to-treatise-how-a-grok",
         "connecting-the-dots-with-grok-a-case"
       ]
     },
@@ -912,10 +1479,11 @@
     },
     "research-at-machine-speed-compiling": {
       "references": [
-        "research-at-machine-speed-compiling/comments",
-        "research-at-machine-speed-compiling"
+        "research-at-machine-speed-compiling",
+        "research-at-machine-speed-compiling/comments"
       ],
       "referenced_by": [
+        "from-tweet-to-treatise-how-a-grok",
         "research-at-machine-speed-compiling"
       ]
     },
@@ -925,6 +1493,7 @@
         "skills-creating-skills-when-ai-becomes"
       ],
       "referenced_by": [
+        "resistance-is-learning-what-60-teachers",
         "the-vibe-coders-setup-context-aware",
         "building-shareable-learning-design",
         "skills-creating-skills-when-ai-becomes"
@@ -952,10 +1521,13 @@
     "three-months-of-canvas-mcp-evolution": {
       "references": [
         "three-months-of-canvas-mcp-evolution/comments",
-        "three-months-of-canvas-mcp-evolution",
-        "when-claude-code-becomes-your-codeveloper"
+        "when-claude-code-becomes-your-codeveloper",
+        "three-months-of-canvas-mcp-evolution"
       ],
       "referenced_by": [
+        "what-if-your-ai-assistant-could-talk",
+        "canvas-mcp-meets-skillssh-from-mcp",
+        "the-moment-your-side-project-stops",
         "building-shareable-learning-design",
         "three-months-of-canvas-mcp-evolution"
       ]
@@ -971,8 +1543,8 @@
     },
     "context-engineering-is-the-new-prompt": {
       "references": [
-        "context-engineering-is-the-new-prompt",
-        "context-engineering-is-the-new-prompt/comments"
+        "context-engineering-is-the-new-prompt/comments",
+        "context-engineering-is-the-new-prompt"
       ],
       "referenced_by": [
         "the-vibe-coders-setup-context-aware",
@@ -982,10 +1554,11 @@
     },
     "analyzing-course-discussions-using": {
       "references": [
-        "analyzing-course-discussions-using/comments",
-        "analyzing-course-discussions-using"
+        "analyzing-course-discussions-using",
+        "analyzing-course-discussions-using/comments"
       ],
       "referenced_by": [
+        "i-put-an-ai-teaching-assistant-in",
         "analyzing-course-discussions-using"
       ]
     },
@@ -995,14 +1568,15 @@
         "the-ai-memory-problem-when-your-teams"
       ],
       "referenced_by": [
+        "when-your-curriculum-talks-back-building",
         "the-ai-memory-problem-when-your-teams"
       ]
     },
     "from-announcement-to-production-building": {
       "references": [
         "from-announcement-to-production-building",
-        "from-announcement-to-production-building/comments",
-        "when-claude-code-becomes-your-codeveloper"
+        "when-claude-code-becomes-your-codeveloper",
+        "from-announcement-to-production-building/comments"
       ],
       "referenced_by": [
         "from-announcement-to-production-building"
@@ -1010,8 +1584,8 @@
     },
     "launching-the-hybrid-builder-when": {
       "references": [
-        "launching-the-hybrid-builder-when",
-        "launching-the-hybrid-builder-when/comments"
+        "launching-the-hybrid-builder-when/comments",
+        "launching-the-hybrid-builder-when"
       ],
       "referenced_by": [
         "launching-the-hybrid-builder-when"
@@ -1019,7 +1593,6 @@
     },
     "when-claude-code-becomes-your-codeveloper": {
       "references": [
-        "beyond-chatgpt-how-ai-transformed",
         "when-claude-code-becomes-your-codeveloper/comments",
         "when-claude-code-becomes-your-codeveloper"
       ],
@@ -1032,21 +1605,21 @@
     },
     "beyond-chatgpt-how-ai-transformed": {
       "references": [
-        "beyond-chatgpt-how-ai-transformed",
         "we-are-all-app-developers-now",
+        "beyond-chatgpt-how-ai-transformed",
         "if-intelligence-is-too-cheap-to-meter",
-        "beyond-chatgpt-how-ai-transformed/comments",
-        "build-it-and-they-will-learn"
+        "beyond-chatgpt-how-ai-transformed/comments"
       ],
       "referenced_by": [
-        "when-claude-code-becomes-your-codeveloper",
+        "resistance-is-learning-what-60-teachers",
+        "the-ai-course-that-teaches-itself",
         "beyond-chatgpt-how-ai-transformed"
       ]
     },
     "rethinking-online-learning-in-an": {
       "references": [
-        "rethinking-online-learning-in-an/comments",
-        "rethinking-online-learning-in-an"
+        "rethinking-online-learning-in-an",
+        "rethinking-online-learning-in-an/comments"
       ],
       "referenced_by": [
         "rethinking-online-learning-in-an"
@@ -1063,8 +1636,8 @@
     },
     "join-my-new-subscriber-chat": {
       "references": [
-        "join-my-new-subscriber-chat",
-        "join-my-new-subscriber-chat/comments"
+        "join-my-new-subscriber-chat/comments",
+        "join-my-new-subscriber-chat"
       ],
       "referenced_by": [
         "join-my-new-subscriber-chat"
@@ -1072,18 +1645,17 @@
     },
     "build-it-and-they-will-learn": {
       "references": [
-        "build-it-and-they-will-learn/comments",
-        "build-it-and-they-will-learn"
+        "build-it-and-they-will-learn",
+        "build-it-and-they-will-learn/comments"
       ],
       "referenced_by": [
-        "beyond-chatgpt-how-ai-transformed",
         "build-it-and-they-will-learn"
       ]
     },
     "if-intelligence-is-too-cheap-to-meter": {
       "references": [
-        "if-intelligence-is-too-cheap-to-meter?utm_source=substack&amp;utm_medium=email&amp;utm_content=share&amp;action=share",
         "if-intelligence-is-too-cheap-to-meter/comments",
+        "if-intelligence-is-too-cheap-to-meter?utm_source=substack&amp;utm_medium=email&amp;utm_content=share&amp;action=share",
         "if-intelligence-is-too-cheap-to-meter"
       ],
       "referenced_by": [
@@ -1093,11 +1665,12 @@
     },
     "we-are-all-app-developers-now": {
       "references": [
+        "we-are-all-app-developers-now",
         "how-to-train-your-dragon-oops-ai",
-        "we-are-all-app-developers-now/comments",
-        "we-are-all-app-developers-now"
+        "we-are-all-app-developers-now/comments"
       ],
       "referenced_by": [
+        "when-your-curriculum-talks-back-building",
         "beyond-chatgpt-how-ai-transformed",
         "we-are-all-app-developers-now"
       ]
@@ -1123,10 +1696,10 @@
     },
     "some-more-thoughts-on-simulating": {
       "references": [
-        "what-will-we-learn-teach-about-this",
-        "simulating-to-learn",
         "some-more-thoughts-on-simulating",
-        "some-more-thoughts-on-simulating/comments"
+        "some-more-thoughts-on-simulating/comments",
+        "simulating-to-learn",
+        "what-will-we-learn-teach-about-this"
       ],
       "referenced_by": [
         "some-more-thoughts-on-simulating"
@@ -1145,8 +1718,8 @@
     },
     "what-will-we-learn-teach-about-this": {
       "references": [
-        "what-will-we-learn-teach-about-this",
-        "what-will-we-learn-teach-about-this/comments"
+        "what-will-we-learn-teach-about-this/comments",
+        "what-will-we-learn-teach-about-this"
       ],
       "referenced_by": [
         "some-more-thoughts-on-simulating",
@@ -1160,6 +1733,8 @@
         "conversations-with-ai-for-learning"
       ],
       "referenced_by": [
+        "i-put-an-ai-teaching-assistant-in",
+        "from-forms-to-conversations-how-compound",
         "conversations-with-ai-for-learning"
       ]
     }

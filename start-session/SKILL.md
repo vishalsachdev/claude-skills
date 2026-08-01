@@ -5,256 +5,132 @@ description: Use when user says "let's get started", "where are we", or at begin
 
 # Session Start
 
-Orient yourself at the beginning of a work session. This skill reads project context, roadmap progress, and provides a summary to get started quickly.
+Orient at the beginning of a work session. Execute these steps directly (do NOT spawn a subagent — you have the session context, a subagent does not).
 
 ## Steps
 
-### 1. Sync with Remote Machine
+### 0. Read project instructions
 
-Run Unison to pull latest changes from the other machine:
+Check CLAUDE.md for `## Session Wrap-up`, `## Deployment`, sync commands, or similar sections. Note any sync/pull commands — you'll run them in Step 1.
+
+### 1. Sync from remote
+
+If CLAUDE.md documents a sync or pull command (rsync, git pull, etc.), run it now. If nothing is documented, skip this step.
+
+### 2. Detect repo type
+
+CLAUDE.md is already loaded into conversation context — don't re-read it. Detect repo type from `type:` declaration in CLAUDE.md or infer from contents (package.json = code, mostly .md = research). Only read `agents.md` or `README.md` if CLAUDE.md is missing or lacks project context.
+
+### 3. Check git state
 
 ```bash
-unison folders -batch -terse
-```
-
-- `-batch` — non-interactive, skips conflicts (won't hang waiting for input)
-- `-terse` — minimal output
-
-This syncs all @folders and configs (.claude, .codex, .gemini, vault) before reading project context. Conflicts are skipped and left unsynced — review manually if needed.
-
-### 2. Read Project Context
-
-Check for context files in order of priority:
-1. `CLAUDE.md` - Primary project context (if exists)
-2. `agents.md` - Agent/workflow instructions (if exists)
-3. `README.md` - Fallback for project overview
-4. `.claude/` directory - Check for local settings
-
-### 3. Detect Repo Type
-
-Look for `type:` declaration in CLAUDE.md, or infer from contents:
-
-| Indicator | Repo Type |
-|-----------|-----------|
-| `type: code` or `package.json`, `requirements.txt`, `go.mod` | Code |
-| `type: research` or mostly `.md` files, no code dependencies | Research/Writing |
-| Both code and documents | Mixed |
-
-### 4. Check Git State
-
-Run these commands to understand current state:
-```bash
+git fetch --prune 2>/dev/null
 git status --short
 git branch --show-current
 git log --oneline -5
 ```
 
-### 4b. Check Remote for New Branches
-
-Fetch from remote and identify branches that exist on origin but have no local counterpart:
+After fetching, check if the current branch is behind the remote:
 
 ```bash
-# Fetch and prune stale references
-git fetch --prune 2>/dev/null
-
-# Find remote-only branches (exist on origin, not locally)
-comm -23 \
-  <(git branch -r | grep -v HEAD | sed 's|^ *origin/||' | sort) \
-  <(git branch | sed 's|^[* ] ||' | sort)
+git rev-list --count HEAD..@{u} 2>/dev/null
 ```
 
-**What to report:**
-- If remote-only branches exist, list them with a 🆕 marker
-- Show the latest commit on each (one-liner) so user knows what it contains
-- Skip `main`/`master` if they appear (these are typically tracked)
+If behind, note it in the summary so the user can decide whether to pull.
 
-**Example output:**
-```
-**Remote-only branches:**
-| Branch | Latest Commit |
-|--------|---------------|
-| 🆕 `feature/new-auth` | a1b2c3d Add OAuth2 support |
-| 🆕 `claude/experiment-xyz` | e4f5g6h Initial setup |
+Also list any remote-only branches (excluding main/master) if they exist:
+
+```bash
+git branch -r --no-merged HEAD 2>/dev/null | grep -v HEAD | grep -v 'main$' | grep -v 'master$' | head -5
 ```
 
-**Why this matters:**
-- Catches work from other machines or sessions
-- Surfaces auto-created `claude/*` branches from Claude Code
-- Identifies collaboration branches pushed by teammates
+Check for forgotten stashes from previous sessions:
 
-### 5. Parse Project Actions (if present)
-
-Look for `## Project Actions` section in CLAUDE.md or agents.md:
-
-1. Find all `### action-name` headers under `## Project Actions`
-2. Extract action name and brief description (first line after header)
-3. List them in the output summary
-
-Example parsing:
-```markdown
-## Project Actions
-
-### new-experiment <name>
-Creates a new experiment branch with worktree...
+```bash
+git stash list 2>/dev/null | head -5
 ```
-→ Action: `new-experiment <name>` - Creates a new experiment branch with worktree
 
-### 6. Parse Roadmap Sections (if present)
+If stashes exist, list them in the summary so the user can decide whether to pop or drop them.
 
-Look for these sections in CLAUDE.md and parse them:
+### 3b. Check worktrees
 
-**`## Current Focus`** - The single item being worked on right now
-- Extract the checkbox item (e.g., `- [ ] Dark mode toggle`)
-- This is the suggested starting point for the session
+If the repo uses git worktrees (common for experiment frameworks):
 
-**`## Roadmap`** - The feature checklist
-- Count total items and completed items (`[x]` vs `[ ]`)
-- Calculate progress: "3/7 items complete"
-- List next 2-3 incomplete items as "upcoming"
-
-**`## Session Log`** - Historical record of sessions
-- Find the most recent date entry (e.g., `### 2025-12-22`)
-- Extract what was completed and what was set as "next"
-
-### 7. Output Orientation Summary
-
-Provide a structured summary based on repo type:
-
-**For Code Repos:**
-- Project name and purpose
-- Current branch
-- Uncommitted changes (if any)
-- Recent commits
-- **Remote-only branches** (if any exist on origin but not locally)
-- **Project Actions** (from `## Project Actions` section, if any)
-- **Current Focus** (from `## Current Focus` section)
-- **Roadmap Progress** (from `## Roadmap` section)
-- **Last Session Summary** (from `## Session Log`)
-
-**For Research/Writing Repos:**
-- Project/document name and purpose
-- Document structure (chapters, sections)
-- Recently edited files
-- Word count or progress (if tracked)
-- Where writing left off
-- **Roadmap Progress** (if present)
-
-**For Mixed Repos:**
-- Combine relevant aspects from both
-
-## Example Output
-
+```bash
+git worktree list 2>/dev/null
 ```
-## Session Start: helloworld
 
-**Purpose:** Experiment framework for rapid prototyping
+If multiple worktrees exist, list them in the summary. This surfaces sibling experiments or feature branches the user may have been working on.
 
-**Current State:**
-- Branch: `main`
-- Status: Clean (no uncommitted changes)
+### 4. Check for existing plans
 
-**Recent Commits:**
-- 9f139bd Update agents.md with session workflow and worktree docs
-- 6b19a1f Reorganize main as experiment framework only
+Look for files in `.claude/plans/`. If any exist, list them with a one-line summary. These may represent in-progress work from previous sessions.
 
-**Remote-only Branches:**
-| Branch | Latest Commit |
-|--------|---------------|
-| 🆕 `feature/dark-mode` | c3d4e5f Add theme toggle component |
+### 5. Check for running background processes
 
-**Project Actions:**
-- `new-experiment <name>` - Creates a new experiment branch with worktree
-- `graduate-experiment <name>` - Promotes an experiment to its own repo
+Flag any relevant background processes (pm2, nohup jobs, screen sessions, drip campaigns). These may be left over from a previous session or actively running.
 
-**Current Focus:**
-- [ ] Add bulk import from CSV
+### 5b. Check agent-inbox for pending handoffs
 
-**Roadmap Progress:** 4/7 items complete
-- [ ] Next: Add bulk import from CSV
-- [ ] Then: Export to PDF
-- [ ] Then: Analytics dashboard
+Some projects use an `_agent-inbox/` handoff pattern — sandboxed/container agents drop tasks there for the host Claude Code session to execute (things they can't do: deploy, touch host, run pm2, edit .env, etc.).
 
-**Last Session (2025-12-21):**
-- Completed: Supabase integration, helpful tips for editors
-- Next: Bulk import feature
+1. **Locate the inbox.** Check `_agent-inbox/` in the current repo. Also check any related-repo path referenced by CLAUDE.md (e.g., a `## Related Repository` section with a "Local path:" line). Auto-memory may also record an inbox path — use it if the current CLAUDE.md points there.
+2. **Pull before listing** so items are fresh: `cd <inbox-repo> && git pull`.
+3. **List pending items.** `.md` files directly in `_agent-inbox/` that are NOT in the `done/` subfolder, excluding `README.md` (that's the inbox's own readme, not an instruction).
+4. **Surface each pending item** in the orientation with filename + a one-line summary (first heading or first non-empty line). These are tasks waiting for execution.
+5. **Do not auto-execute.** Let the user decide whether to process them this session — some may be stale, superseded, or lower priority than the user's current goal.
+
+Completion convention (for when the user chooses to process): move the file to `done/` via `git mv` and commit the move to the inbox repo. Run any deploy command documented in the instruction.
+
+### 5c. Check open GitHub issues & PRs
+
+If the repo has a GitHub remote and `gh` is available, surface open issues and PRs — these are in-progress work that lives on the remote, not in local git state (especially relevant when collaborators/TAs contribute via the issue→PR workflow).
+
+```bash
+git remote get-url origin 2>/dev/null | grep -q github.com && gh auth status >/dev/null 2>&1 && {
+  echo "=== OPEN ISSUES ==="; gh issue list --state open --limit 30
+  echo "=== OPEN PRs ==="; gh pr list --state open --limit 30
+}
 ```
+
+Surface in the orientation:
+- **Open PRs** awaiting review (note author + branch). A PR from a collaborator is usually the highest-priority "do this now" item.
+- **Open issues**, especially any assigned to others (work in flight) or referenced by an open PR (`Closes #N`).
+- **Cross-check the last session log's "Next" items against issue state** — if the log said "confirm issue #N is closed" and #N no longer appears in the open list, note that it was resolved.
+
+Skip silently if there's no GitHub remote or `gh` isn't authenticated.
+
+### 6. Parse roadmap sections
+
+From CLAUDE.md, extract — skip any that don't exist:
+
+- **`## Current Focus`** — Suggested starting point for the session
+- **`## Roadmap`** — Count total vs completed items, list next 2-3 incomplete items
+- **`## Session Log`** — Most recent entry (what was completed, what was next)
+
+### 6b. Flag stale session log entries
+
+If any session log entries are older than 30 days, flag them for archiving. Suggest the user move old entries to a separate file (e.g., `docs/session-archive.md`) or delete them to keep CLAUDE.md concise.
+
+### 7. Output orientation summary
+
+Provide a structured summary including: project purpose, current branch, uncommitted changes, upstream status, recent commits, current focus, roadmap progress, last session summary, existing plans, and any running background processes.
+
+Adapt for repo type:
+- **Code repos** (default): Focus on git state, plans, running services
+- **Research repos**: Include document structure, recently edited files, where writing left off
+- **Mixed**: Combine both
+
+## Structure checks
+
+After the orientation, note any missing infrastructure as suggestions (don't block on them):
+
+1. **No CLAUDE.md** — Offer to create one with project description, roadmap sections, and current focus placeholder. Ask: "What is this project for? (one sentence)"
+
+2. **CLAUDE.md exists but missing roadmap sections** — Suggest adding `## Current Focus`, `## Roadmap`, and `## Session Log`. These enable progress tracking and `/wrap-up-session` integration.
 
 ## Notes
 
-- This skill is generic and works across all repos
-- Repo-specific context comes from CLAUDE.md
-- Pairs with `/wrap-up-session` which updates the roadmap sections
-
-## Structure Checks (Guardrails)
-
-After gathering context, check what's missing and prompt the user. This ensures new projects get properly set up.
-
-### Check 1: No CLAUDE.md
-
-If no CLAUDE.md exists:
-
-```
-⚠️ **No project context found.** This project is missing CLAUDE.md.
-
-Would you like me to create one? I'll add:
-- Project description (I'll ask what this project is for)
-- Roadmap sections for session tracking
-- Current focus placeholder
-
-This enables `/start-session` orientation and `/wrap-up-session` session logging.
-```
-
-If yes, ask: "What is this project for? (one sentence)"
-
-Then create CLAUDE.md with:
-```markdown
-# Project Name
-
-[User's description]
-
-## Current Focus
-- [ ] [Ask user or use "Initial setup"]
-
-## Roadmap
-- [ ] [Feature 1]
-
-## Backlog
-- [Ideas for later]
-
-## Session Log
-### YYYY-MM-DD
-- Completed: Initial project setup
-- Next: [First focus item]
-```
-
-### Check 2: CLAUDE.md exists but missing roadmap sections
-
-If CLAUDE.md exists but lacks `## Current Focus`, `## Roadmap`, or `## Session Log`:
-
-```
-⚠️ **Missing roadmap sections.** This project has CLAUDE.md but no session tracking.
-
-Missing:
-- [ ] ## Current Focus
-- [ ] ## Roadmap
-- [ ] ## Session Log
-
-Would you like me to add them? This enables progress tracking and `/wrap-up-session` integration.
-```
-
-If yes, append the roadmap template to CLAUDE.md.
-
-### Check 3: Summary of missing items
-
-At the end of the orientation output, if anything is missing, add a **Setup Suggestions** section:
-
-```
-**Setup Suggestions:**
-- [ ] Add CLAUDE.md with project description
-- [ ] Add roadmap sections for session tracking
-- [ ] Consider adding `## Project Actions` if this repo has custom workflows
-
-Run these suggestions? [y/n]
-```
-
-This serves as the "guardrail" - the system actively tells you what's missing instead of requiring you to remember.
+- Pairs with `/wrap-up-session` which writes the same roadmap sections this skill reads
+- The skill is a checklist — defer to project CLAUDE.md for project-specific details (sync commands, deploy targets, branch strategy)
+- If plans exist in `.claude/plans/`, flag stale ones (>30 days) for cleanup

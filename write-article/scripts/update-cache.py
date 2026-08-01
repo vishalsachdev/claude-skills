@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/opt/homebrew/bin/python3
 """
 Update the article cache from The Hybrid Builder sitemap (full archive).
 

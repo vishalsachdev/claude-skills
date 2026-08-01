@@ -5,122 +5,138 @@ description: Use when user says "let's wrap up", "close shop", "done for today",
 
 # Close Shop
 
-Wrap up a work session cleanly. This skill launches the wrap-up-session agent for comprehensive session wrap-up, adapting behavior based on repo type.
+Wrap up a work session. Execute these steps directly (do NOT spawn a subagent — you have the session context, a subagent does not).
 
-## Execution
+## Steps
 
-The wrap-up process has two parts:
+### 0. Read project wrap-up instructions
 
-### Part 1: Session Wrap-up (Agent)
+Check CLAUDE.md for `## Session Wrap-up`, `## Deployment`, or similar sections. If the project has specific wrap-up steps (sync commands, restart commands, deploy scripts), note them — you'll run them in Step 4.
 
-Launch the `wrap-up-session` agent using the Task tool:
-
-```
-Use Task tool with subagent_type: "wrap-up-session" and model: "opus"
-```
-
-**Important:** Always specify `model: "opus"` — currently only Opus 4.5 is deployed in Azure AI Foundry.
-
-The agent will handle the wrap-up process autonomously.
-
-### Part 2: Sync to Remote Machine
-
-After the agent completes, push changes to the other machine:
+### 1. Review uncommitted work
 
 ```bash
-unison folders -batch -terse
+git status --short
+git diff --stat
+git log --oneline -5
 ```
 
-- `-batch` — non-interactive, skips conflicts (won't hang waiting for input)
-- `-terse` — minimal output
+If there are uncommitted changes, ask the user what to do:
+- **Commit**: Stage and commit with a descriptive message following the repo's existing commit style.
+- **Stash**: `git stash push -m "WIP: [description]"` — for work-in-progress not ready to commit. `/start-session` will surface this next time.
+- **Leave**: Note the uncommitted files in the session summary as carry-forward.
 
-This ensures all commits, roadmap updates, and logs are synced before you switch machines.
+### 2. Push and update CLAUDE.md
 
-## Behavior by Repo Type
+**Push:** After committing, push to the remote branch. Ask the user if unsure which branch.
 
-Before launching the agent, check CLAUDE.md for `type:` declaration to guide the agent.
+**Update roadmap sections** — skip if CLAUDE.md lacks these sections:
 
-### Code Repos (default)
-
-The wrap-up-session agent will:
-- Run linting and fix issues automatically
-- Execute tests and report failures
-- Review modified files and stage changes
-- Generate commit messages based on work done
-- **Update roadmap sections in CLAUDE.md** (see below)
-- Create TODO items for next session
-- Push if requested
-
-### Research/Writing Repos
-
-When `type: research` is detected, the agent should:
-- **Skip** linting and testing (no code)
-- Commit document changes with descriptive messages
-- Update word count or progress tracking if present
-- Note current section/chapter for next session
-- **Update roadmap sections in CLAUDE.md** (see below)
-- Optionally export to other formats (PDF, etc.)
-
-### Mixed Repos
-
-Apply relevant aspects from both code and research workflows.
-
-## Roadmap Updates
-
-The wrap-up-session agent MUST update the roadmap sections in CLAUDE.md:
-
-### 1. Update `## Session Log`
-
-Add a new entry with today's date:
+**`## Session Log`** — Keep only the **1 most recent entry** in CLAUDE.md. Replace (don't append) the existing session log content with today's entry:
 
 ```markdown
 ### YYYY-MM-DD
-- Completed: [list of completed items]
-- Next: [what to focus on next session]
+- Completed: [infer from git commits + conversation context]
+- Next: [ask user if unclear]
 ```
 
-### 2. Update `## Roadmap`
+Move any older entries to `docs/session-archive.md`. Create the archive file if it doesn't exist. claude-mem already stores full session history — the session log exists only so `/start-session` can show "last time + next steps."
 
-- Check off completed items: change `- [ ]` to `- [x]`
-- Infer completions from:
-  - Git commits made during session
-  - User's stated accomplishments
-  - Files modified
+**`## Roadmap`** — Check off completed items (`- [ ]` → `- [x]`). Infer completions from commits made during the session.
 
-### 3. Update `## Current Focus`
+**`## Current Focus`** — Update to the next incomplete roadmap item, or ask the user.
 
-- Move to the next incomplete roadmap item
-- Or ask user: "What should be the focus for next session?"
+Commit and push the CLAUDE.md update.
 
-### 4. Prompt User (if unclear)
+### 2b. Memory dedup check
 
-If completions are ambiguous, ask:
-- "What did you complete this session?"
-- "What should be the focus for next session?"
+Before writing anything to auto memory (`~/.claude/projects/*/memory/`), check:
+1. **Is this already in CLAUDE.md?** If the fact is in the project's CLAUDE.md (architecture, env vars, commands, gotchas), don't duplicate it in auto memory.
+2. **Is this a session event?** claude-mem records session observations automatically. Don't save session summaries, completed tasks, or "what we did" to auto memory — that's claude-mem's job.
+3. **Only write to auto memory** for: feedback/preferences, external reference pointers, gotchas that wasted hours and aren't in CLAUDE.md, and structured data (schemas, external IDs) that don't fit CLAUDE.md.
 
-## Pre-Launch Checklist
+If you spot existing auto memory files that duplicate CLAUDE.md content, note them in the session summary so the user can clean up (or run `node ~/.claude/scripts/memory-audit.js`).
 
-Before launching the agent, briefly check:
-1. Is there uncommitted work? (`git status`)
-2. What type of repo is this? (Check CLAUDE.md)
-3. Any specific wrap-up-session instructions in CLAUDE.md?
-4. Does CLAUDE.md have roadmap sections to update?
+### 2bb. Surprising-learnings prompt (lightweight promotion)
 
-## Example Invocation
+Ask the user a single question: **"Any surprising or non-obvious learnings from this session worth lifting into memory?"**
+
+- If **no**: skip.
+- If **yes**: draft 1–3 candidate entries with target location (global CLAUDE.md, project CLAUDE.md, or auto memory) and proposed text. Get approval, then write.
+- If the user wants a deeper cross-session pattern review (not just today), suggest running `/promote-memory` — that skill mines claude-mem for recurring patterns, "searched twice" items, and cross-project themes. This step only handles *fresh* learnings from the current session.
+
+Keep this lightweight — don't query claude-mem here. Most sessions will answer "no" and that's fine.
+
+### 2c. Check worktrees
+
+If the repo uses git worktrees:
+
+```bash
+git worktree list 2>/dev/null
+```
+
+If other worktrees have uncommitted changes, note them in the summary so the user is aware.
+
+### 3. Check for running background processes
+
+Flag any background processes started during this session (nohup jobs, pm2 processes, screen sessions, drip campaigns, dev servers). Note any that are still running so the user knows what's active after the session ends.
+
+### 3b. Observability nudge (code projects only)
+
+For `@code` projects that are user-facing (deployed to Vercel/Cloudflare/VPS, real users can hit them), check whether Sentry is wired up:
+
+```bash
+grep -q '"@sentry' package.json 2>/dev/null && echo "sentry: yes" || echo "sentry: no"
+```
+
+If absent and the project is user-facing, mention it once in the session summary — don't nag every session. Phrase as: "This project doesn't have Sentry; setup runbook at `~/admin/agent-infra/sentry-setup.md` if you want errors visible without SQL forensics."
+
+Skip for: local-only tools, CLI scripts, scratch projects, anything not deployed publicly. Skip for non-`@code` repos entirely.
+
+### 4. Sync / Deploy
+
+Run whatever sync or deploy commands are documented in the project's CLAUDE.md (found in Step 0). Common examples: rsync to VPS, deploy scripts, pm2 restart. If nothing is documented, skip this step.
+
+### 4b. Surface outstanding GitHub issues & PRs
+
+If the repo has a GitHub remote and `gh` is available, list what's still open so the next session (and the `## Session Log` "Next:" line) reflects it:
+
+```bash
+git remote get-url origin 2>/dev/null | grep -q github.com && gh auth status >/dev/null 2>&1 && {
+  echo "=== OPEN ISSUES ==="; gh issue list --state open --limit 30
+  echo "=== OPEN PRs ==="; gh pr list --state open --limit 30
+}
+```
+
+- Fold open PRs/issues awaiting action into the `## Session Log` "Next:" line so `/start-session` resurfaces them.
+- If this session **opened/merged a PR or closed an issue**, reflect that in the "Completed:" line.
+- Skip silently if there's no GitHub remote or `gh` isn't authenticated.
+
+### 5. Output session summary
+
+Provide a brief summary: what was done, what's next, any background processes still running, any uncommitted carry-forward files.
+
+### 6. Rename session
+
+Generate a concise session title (3-8 words) that captures the main accomplishment. Format: `[verb] [what]` (e.g., "Deploy Copilot Studio channel", "Fix timezone bug in cron", "Build document extraction pipeline").
+
+**IMPORTANT:** `/rename` is a built-in CLI command that only the user can execute — you cannot invoke it. Output the suggested title and ask the user to run it:
 
 ```
-I'll wrap up this session using the wrap-up-session agent.
-
-Based on CLAUDE.md, this is a [code/research] repo.
-Roadmap sections [found/not found] in CLAUDE.md.
-
-[Launch Task tool with wrap-up-session agent]
+Suggested session name: **<title>**
+Run: `/rename <title>`
 ```
+
+## Repo type adaptations
+
+Check CLAUDE.md for `type:` declaration or infer from contents.
+
+- **Code repos** (default): Review git changes, commit, push, update roadmap, sync/deploy.
+- **Research/writing repos**: Skip linting/testing. Commit document changes. Note current section for next session.
+- **Mixed**: Apply relevant aspects from both.
 
 ## Notes
 
-- This skill provides symmetric UX with `/start-session`
-- Heavy lifting is delegated to the wrap-up-session agent
-- Repo-specific behavior is guided by CLAUDE.md
-- If no CLAUDE.md exists, default to code repo behavior
-- If no roadmap sections exist, skip roadmap updates (but suggest adding them)
+- Pairs with `/start-session` which reads these same roadmap sections
+- If roadmap sections are missing, suggest adding them (but don't block the wrap-up)
+- The skill is a checklist — defer to project CLAUDE.md for project-specific details (sync targets, deploy commands, branch strategy)

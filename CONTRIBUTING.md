@@ -122,3 +122,28 @@ a discipline problem. If a rule matters, wire it into a hook or a CI gate.
 - [ ] Claims cite how they were checked
 - [ ] No secret values in the text (name the kind and location instead)
 - [ ] If extracting code: stated why the failure mode is silent
+
+## Mechanics
+
+This document decides *what* earns a place in the store and at *which tier*. For the mechanical
+side — directory layout, `SKILL.md` frontmatter requirements, packaging a `.skill` file, and the
+pull-request steps — see [docs/skill-authoring-mechanics.md](docs/skill-authoring-mechanics.md).
+
+Skills here follow the [Agent Skills](https://agentskills.io) open specification.
+
+### Keeping the store honest
+
+The live install at `~/.claude/skills` is **upstream** — it is what actually runs, so it is what
+actually gets maintained. This repo is the published mirror, and it drifts silently: on
+2026-08-01, 11 of 19 shared skills had diverged, every stale copy frozen at the same abandoned
+`2026-01-24` auto-sync commit that nobody noticed had stopped.
+
+Prose did not catch that for six months, so this is a script:
+
+```bash
+scripts/check-drift.sh          # exit 1 on drift or bad filename case
+scripts/check-drift.sh --pull   # take live for drifted skills, then review with git diff
+```
+
+Run it before publishing. It also enforces `SKILL.md` casing — macOS is case-insensitive, so a
+lowercase `skill.md` passes locally and breaks on Linux.

@@ -1,0 +1,6 @@
+# macOS
+.DS_Store
+
+# Python build artifacts (skill-creator ships helper scripts)
+__pycache__/
+*.py[cod]
