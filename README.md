@@ -21,6 +21,21 @@ See also: [CONTRIBUTING.md](CONTRIBUTING.md) for how entries in this library are
 
 ---
 
+### 🔌 LLM Client Golden Path
+**Folder**: `llm-client-golden-path/` • **SKILL.md + model registry**
+
+The correct shape for wiring an LLM client (OpenAI, Azure OpenAI, Anthropic, Gemini), plus
+the failure modes worth knowing before you hit them:
+- Key sourcing, client placement (handler not module scope), env-overridable model pins
+- The silent trap: reasoning models spend the output budget on thinking, returning empty output with no error
+- `max_tokens` vs `max_completion_tokens`; why `openai/gpt-5-mini` is correct under LiteLLM
+- Shared [model registry](llm-client-golden-path/references/model-registry.md) so model ids live in one place, with verification commands for Azure availability, price, and SKU choice
+
+**Use when**: Adding AI calls to a project, choosing which model to pin, debugging empty output
+or token/parameter errors, or auditing existing LLM integrations
+
+---
+
 ### 🚀 Vibe Coder SDLC
 **Folder**: `vibe-coder-sdlc/` • **SKILL.md + 4 agent references**
 
