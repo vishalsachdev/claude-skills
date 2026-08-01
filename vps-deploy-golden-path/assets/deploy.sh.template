@@ -1,0 +1,77 @@
+#!/usr/bin/env bash
+# VPS deploy: build-order enforced, lockfile-clean, health-checked, sentinel-wired.
+#
+# Each step below exists because its absence caused a real failure. Do not remove
+# a step to make a deploy pass; a deploy that "passes" without them is the bug.
+#
+# USAGE: copy to scripts/deploy.sh in the app repo, set the CONFIG block, then
+#   ssh <host> 'cd /path/to/app && ./scripts/deploy.sh'
+
+set -euo pipefail
+
+# ── CONFIG (edit per project) ──────────────────────────────────────────────
+APP_NAME="CHANGE_ME"                          # log label AND sentinel filename
+APP_DIR=""                                    # absolute path on the host; blank = script's repo root
+HEALTH_URL="http://localhost:PORT/health"     # a route that proves the app really serves
+BUILD_CMD="npm run build"                     # ":" if there is genuinely no build step
+MIGRATE_CMD=":"                               # e.g. "npm run migrate"; MUST be idempotent
+RESTART_CMD="pm2 restart $APP_NAME --update-env"   # or "sudo systemctl restart foo.service"
+BRANCH="main"
+# ───────────────────────────────────────────────────────────────────────────
+
+log()  { printf '\033[1;34m[deploy]\033[0m %s\n' "$*"; }
+fail() { printf '\033[1;31m[deploy:FAIL]\033[0m %s\n' "$*" >&2; exit 1; }
+
+[ "$APP_NAME" = "CHANGE_ME" ] && fail "Set the CONFIG block first."
+[ -n "$APP_DIR" ] && cd "$APP_DIR"
+
+# npm install rewrites package-lock.json, which then blocks the pull. Discard it.
+log "Discarding local lockfile churn..."
+git checkout -- package-lock.json 2>/dev/null || true
+
+# reset --hard, not pull: the host is a deploy target, not a place to author changes.
+# A merge conflict here would wedge the deploy with no human at the keyboard.
+log "Fetching $BRANCH..."
+git fetch origin "$BRANCH" --quiet
+git reset --hard "origin/$BRANCH"
+
+# ci is reproducible and respects the lockfile; install is neither.
+log "Installing dependencies..."
+npm ci --silent 2>/dev/null || npm install --silent
+
+# Migrations before build/restart so the new code never meets an old schema.
+if [ "$MIGRATE_CMD" != ":" ]; then
+  log "Running migrations..."
+  eval "$MIGRATE_CMD"
+fi
+
+# Build BEFORE restart. Restarting first serves a stale dist/ that looks deployed.
+log "Building..."
+eval "$BUILD_CMD"
+
+log "Restarting ($RESTART_CMD)..."
+eval "$RESTART_CMD"
+
+# Retry: a healthy app can still be booting. One attempt gives false failures,
+# zero attempts gives false successes.
+log "Health check: $HEALTH_URL"
+sleep 2
+for i in 1 2 3 4 5; do
+  if curl -fsS --max-time 5 "$HEALTH_URL" >/dev/null 2>&1; then
+    log "Healthy. Deploy complete."
+    # Sentinel LAST, on the success path only. A freshness monitor alerts when
+    # this file goes stale, which is the only thing that catches a silent
+    # failure. Logging is not alerting.
+    mkdir -p "$HOME/.deploy-sentinels"
+    touch "$HOME/.deploy-sentinels/$APP_NAME"
+    exit 0
+  fi
+  log "  not healthy yet ($i/5)..."
+  sleep 3
+done
+
+# Surface why, so the operator is not left guessing.
+pm2 logs "$APP_NAME" --lines 30 --nostream 2>/dev/null \
+  || journalctl -u "$APP_NAME" -n 30 --no-pager 2>/dev/null \
+  || true
+fail "Health check never passed. The service may have crashed; logs above."

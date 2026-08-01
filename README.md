@@ -36,6 +36,21 @@ or token/parameter errors, or auditing existing LLM integrations
 
 ---
 
+### 🚢 VPS Deploy Golden Path
+**Folder**: `vps-deploy-golden-path/` • **SKILL.md + deploy.sh template**
+
+A deploy script that cannot report success while the app is down:
+- Step order as the design (lockfile discard → reset --hard → ci → migrate → build → restart → health check → sentinel)
+- Build-before-restart, because restarting first ships a stale `dist/` that looks deployed
+- Retrying health check: one attempt gives false failures, zero gives false successes
+- Sentinel last and success-path only, so a silent failure becomes a noticed one
+- Drift checklist for scripts already copied from an older template (safety steps get dropped silently; local additions survive)
+
+**Use when**: Setting up VPS deployment, a deploy shipped stale code or wedged on a git conflict,
+a deploy reported success while the app was down, or auditing an inherited deploy script
+
+---
+
 ### 🚀 Vibe Coder SDLC
 **Folder**: `vibe-coder-sdlc/` • **SKILL.md + 4 agent references**
 
