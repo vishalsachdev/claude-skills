@@ -11,6 +11,17 @@ Write a newsletter article about our collaboration for https://chatwithgpt.subst
 - This publication is explicitly stated as AI-written
 - Article documents our collaboration on: $ARGUMENTS
 
+## Before Writing: Does this article already exist?
+
+**Run both of these before writing a word.** They are cheap, and skipping them is how you produce a duplicate of something already published.
+
+1. **`--search "<working title>"`, after confirming the cache is fresh.** `--list` prints `Last updated`; if it is more than a few weeks old, run `--full` first. A stale cache silently answers "no such article" for everything published since it was built — it does not warn you.
+2. **`ls <repo>/articles/`** in the repo the article narrates. The Substack cache only knows what is *published*. An in-progress draft, a companion piece, or a planned part 2 exists only on disk — and its `README.md`, if present, is the authority on how the material was already split.
+
+If a draft exists, the job is almost never "write it again" — it is to revise that file, or to write the *pending* companion piece. Confirm which with the user before drafting.
+
+> 2026-08-08: skipping both produced a complete duplicate of a piece published the previous day, merged with its unpublished sequel. The narrated repo's `articles/` directory was open in the same session for git-stats collection and was never listed; the cache was four months stale.
+
 ## Before Writing: Find Related Articles
 
 **Always check the article archive first.** The cache includes all 33+ articles with theme indexing and cross-reference tracking.
@@ -137,6 +148,13 @@ Avoid mechanical patterns. See [references/reference-patterns.md](references/ref
 - The closing section can re-link key resources (slide deck, gallery doc, newsletter) as a reference block
 
 ## Data Sources
+
+**When the article describes a real run, derive every number from the artifact, not from recall.** An article about a build/run/experiment lives or dies on its numbers, and session memory is exactly the wrong source — it rounds, it conflates phases, and it sounds equally confident either way. Pull timings from commit timestamps (`git log --pretty=format:'%h|%ad|%s' --date=format:'%Y-%m-%d %H:%M:%S' <base>..HEAD`), volumes from `--shortstat`, and word counts from `wc -w` on the actual outputs. State the commit range in the article's footer so a reader can re-derive them.
+
+Two corollaries, both learned the hard way (2026-08-05, "Conducting the Conductors"):
+- **Anything not derivable gets `[Vishal to confirm]`, never an estimate.** Approval counts, per-agent context consumption, and anything that lived only in a terminal session are gone. A plausible-looking invented number is the one defect a reader can catch and you can't.
+- **Cross-check the prose against its own tables before review.** Phase timings must sum to the stated total, and section counts must sum to the stated commit count — mismatches here read as fabrication even when both numbers are individually true.
+
 - Read git history and recent commits in current repo
 - Check `/articles/chat-sessions/` for exported session data if available
 - Cross-reference conversation context from this session
@@ -209,7 +227,7 @@ Return findings as P0/P1/P2 with specific line references and suggested fixes.
 
 ## Output
 - Create both Markdown (.md) and HTML (.html) versions
-- Store in `/articles` subfolder at the project root (create if needed)
+- Store in the `articles/` subfolder **of the repo the article narrates** (create if needed) — e.g. a piece about a run in `~/research/orchestration` goes in `~/research/orchestration/articles/`. This keeps the draft version-controlled alongside the work it describes, and is the convention across ~35 repos. `~/code/articles/` is *not* a central archive; it is merely the `articles/` folder of the `~/code` root, and is near-dead.
 - Filename format: `YYYY-MM-DD-descriptive-slug`
 - HTML version should be publication-ready with basic styling
 
