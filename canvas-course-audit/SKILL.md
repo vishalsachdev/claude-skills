@@ -27,9 +27,9 @@ Use canvas-mcp to gather:
 - `get_course_details` — metadata, syllabus
 - `list_modules` — structure, item counts, prerequisites
 - `list_assignments` — types, rubrics, due dates
-- `list_discussions` — engagement elements
+- `list_discussion_topics` — engagement elements
 - `list_pages` — content, headings, media
-- `list_files` — media inventory
+- `list_course_files` — media inventory
 
 ### Step 3: Analyze Against Each Pillar
 
@@ -116,4 +116,3 @@ For a complete example report, see **[references/example-report.md](references/e
 
 - Some criteria require manual review (tone, video quality) — flag these in the report
 - Run audit at start of semester for maximum improvement time
-- If a canvas-mcp tool is unavailable, note it and skip that analysis

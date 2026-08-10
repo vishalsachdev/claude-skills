@@ -120,9 +120,7 @@ What's genuinely hard to transfer: implicit reasoning the conversation built up,
 
 ## Chairman selection (advanced)
 
-By default Claude (this session) chairs because it has the richest session context with no transfer cost. But Claude is also a member, and that's a structural conflict — Claude will systematically over-weight its own R1 answer in synthesis.
-
-If the self-bias check (Round 3) keeps surfacing real over-weighting, **rotate the chairman**:
+By default Claude (this session) chairs because it has the richest session context with no transfer cost. If the self-bias check (Round 3) keeps surfacing real over-weighting, **rotate the chairman**:
 
 1. Package the full context (R1 answers, R2 critiques, original question, relevant brief) into a single prompt
 2. Send to Codex or Gemini with directive: "You are the chairman. Synthesize the council's findings into the 4-section output (agreement / disagreement / what matters most / recommendation). Be direct."
@@ -132,7 +130,7 @@ Rotating chairman costs more tokens (full context goes to a cold CLI) but elimin
 
 ## Failure handling
 
-- **One CLI fails:** proceed with two members. Note the missing voice in synthesis. Don't retry more than once.
+- **One CLI fails:** proceed with two members. Note the missing voice in synthesis.
 - **All three converge:** say so plainly. "The council agrees on X. Recommendation: do X." Manufactured drama is worse than agreement.
 - **Council disagrees with the user's framing entirely:** flag this explicitly. Sometimes the right output is "all three models think you're solving the wrong problem."
 - **Timeout:** wrap each call in a 90s timeout. Members are independent; one slow call shouldn't block synthesis.

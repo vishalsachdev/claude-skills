@@ -298,8 +298,6 @@ Then export using the `json` command (works non-interactively, unlike `local`):
 uvx claude-code-transcripts json <SESSION_FILE.jsonl> --gist 2>&1 | tee /tmp/transcript-output.txt
 ```
 
-**Note:** The `local` command requires interactive terminal input for session selection. Use `json` with a direct file path when running from Claude Code or scripts.
-
 Add to article:
 ```markdown
 ## Session Transcript

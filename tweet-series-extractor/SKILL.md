@@ -15,13 +15,9 @@ Extract recurring tweet series from X/Twitter with content, links, and engagemen
 
 ## Prerequisites
 
-Load Chrome tools before use:
+Load Chrome tools before use, in a single batched call:
 ```
-ToolSearch: select:mcp__claude-in-chrome__tabs_context_mcp
-ToolSearch: select:mcp__claude-in-chrome__navigate
-ToolSearch: select:mcp__claude-in-chrome__get_page_text
-ToolSearch: select:mcp__claude-in-chrome__read_page
-ToolSearch: select:mcp__claude-in-chrome__javascript_tool
+ToolSearch: select:mcp__claude-in-chrome__tabs_context_mcp,mcp__claude-in-chrome__navigate,mcp__claude-in-chrome__get_page_text,mcp__claude-in-chrome__read_page,mcp__claude-in-chrome__javascript_tool
 ```
 
 ## Workflow

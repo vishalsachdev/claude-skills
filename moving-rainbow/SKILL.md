@@ -253,15 +253,6 @@ When generating programs, follow these educational guidelines:
 6. **Clear pixels**: Turn off pixels when moving animations to prevent trails
 7. **Test boundary conditions**: Ensure animations work correctly at pixel 0 and the last pixel
 
-## When to Use This Skill
-
-Use this skill when:
-- Creating LED animation programs for Raspberry Pi Pico
-- Working with NeoPixel/WS2812B addressable LED strips
-- Building educational examples for the Moving Rainbow project
-- Implementing button-controlled LED effects
-- Generating MicroPython code for LED strip projects
-
 ## Output Format
 
 Generated programs should:

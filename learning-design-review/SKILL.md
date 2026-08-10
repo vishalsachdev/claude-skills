@@ -85,7 +85,5 @@ Overall = average of 4 pillar scores.
 
 ## Notes
 
-- Always cite specific principle IDs to make feedback actionable
 - Prioritize by impact on learning outcomes
 - Consider content context (audience, constraints, platform)
-- Focus on actionable suggestions, not just critique
