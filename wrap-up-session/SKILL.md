@@ -63,19 +63,19 @@ Ask the user a single question: **"Any surprising or non-obvious learnings from 
 
 - If **no**: skip.
 - If **yes**: draft 1–3 candidate entries with target location (global CLAUDE.md, project CLAUDE.md, or auto memory) and proposed text. Get approval, then write.
+- If the session established a **workflow change or new mental model the user must internalize** (new convention, hook, process rule), also enqueue it for their spaced repetition: `~/.claude/scripts/spaced-rep.sh add "Title" "1-3 sentence reminder"`. Check `spaced-rep.sh list` first to avoid duplicates.
 - If the user wants a deeper cross-session pattern review (not just today), suggest running `/promote-memory` — that skill mines claude-mem for recurring patterns, "searched twice" items, and cross-project themes. This step only handles *fresh* learnings from the current session.
 
 Keep this lightweight — don't query claude-mem here. Most sessions will answer "no" and that's fine.
 
-### 2c. Check worktrees
+### 2c. Worktree + branch hygiene
 
-If the repo uses git worktrees:
+If the repo uses git worktrees (`git worktree list 2>/dev/null` shows more than one entry), run a hygiene pass per the `worktree-pr` skill:
 
-```bash
-git worktree list 2>/dev/null
-```
-
-If other worktrees have uncommitted changes, note them in the summary so the user is aware.
+1. **Dirty worktrees**: note any with uncommitted changes in the summary — never touch another agent's tree (check `herdr agent list` for live agents whose cwd is inside one).
+2. **Dead worktrees**: for each worktree whose branch's PR has merged (`gh pr view <branch> --json state`), remove the worktree and delete the branch (local + remote) — the "Finish" steps in `worktree-pr`.
+3. **Stale merged branches** with no worktree: `git fetch --prune`, then delete local branches whose PRs merged.
+4. **Diverged survivors**: for worktrees still alive, report how far each branch is behind `main` (`git rev-list --count <branch>..origin/main`); recommend a rebase if behind and its files overlap recent merges.
 
 ### 3. Check for running background processes
 
