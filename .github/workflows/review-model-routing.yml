@@ -1,0 +1,88 @@
+name: Review OpenAI model routing
+
+on:
+  schedule:
+    - cron: '17 14 1 * *'
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: review-openai-model-routing
+  cancel-in-progress: false
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+
+      - name: Run deterministic automation tests
+        run: |
+          set -euo pipefail
+          node --check allocate-agent-models/scripts/review-openai-models.mjs
+          node --test allocate-agent-models/scripts/review-openai-models.test.mjs
+          ruby -e "require 'yaml'; YAML.safe_load(File.read('.github/workflows/review-model-routing.yml'), aliases: true); puts 'Workflow YAML is valid.'"
+
+      - name: Validate the skill
+        run: python3 skill-creator/scripts/quick_validate.py allocate-agent-models
+
+      - name: Check API key before repository writes
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          if [ -z "${OPENAI_API_KEY:-}" ]; then
+            echo 'OPENAI_API_KEY is required; no repository files were changed.' >&2
+            exit 1
+          fi
+
+      - name: Review current OpenAI documentation
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: node allocate-agent-models/scripts/review-openai-models.mjs
+
+      - name: Enforce generated-file allowlist
+        run: |
+          set -euo pipefail
+          git diff --name-only | node allocate-agent-models/scripts/review-openai-models.mjs --validate-changed-files
+
+      - name: Create a review pull request when evidence changed
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if git diff --quiet; then
+            echo 'No official-facts or evidence update is needed.'
+            exit 0
+          fi
+
+          branch="automation/openai-model-routing-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          if [ "$branch" = 'main' ]; then
+            echo 'Refusing to push the main branch.' >&2
+            exit 1
+          fi
+
+          git switch -c "$branch"
+          git add -- allocate-agent-models/references/openai-models.md allocate-agent-models/.generated/openai-model-routing-pr-body.md
+          git diff --cached --name-only | node allocate-agent-models/scripts/review-openai-models.mjs --validate-changed-files
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'chore: review OpenAI model guidance'
+          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push origin "HEAD:refs/heads/$branch"
+
+          if ! gh pr create \
+            --base main \
+            --head "$branch" \
+            --title 'chore: review OpenAI model guidance' \
+            --body-file allocate-agent-models/.generated/openai-model-routing-pr-body.md; then
+            echo 'GITHUB_TOKEN could not create the pull request. Check contents:write and pull-requests:write permissions.' >&2
+            exit 1
+          fi
