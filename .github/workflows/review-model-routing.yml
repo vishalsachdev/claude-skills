@@ -33,6 +33,23 @@ jobs:
       - name: Validate the skill
         run: python3 skill-creator/scripts/quick_validate.py allocate-agent-models
 
+      - name: Verify the triggering ref is the protected default branch
+        env:
+          TRIGGER_REF_NAME: ${{ github.ref_name }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          TRIGGER_REF_PROTECTED: ${{ github.ref_protected }}
+        run: |
+          set -euo pipefail
+          if [ "$TRIGGER_REF_NAME" != "$DEFAULT_BRANCH" ]; then
+            echo 'The workflow must run from the repository default branch; refusing to use the OpenAI API.' >&2
+            exit 1
+          fi
+          if [ "$TRIGGER_REF_PROTECTED" != 'true' ]; then
+            echo 'The default branch has no active GitHub protection or ruleset; refusing to use the OpenAI API.' >&2
+            exit 1
+          fi
+          echo "DEFAULT_BRANCH=$DEFAULT_BRANCH" >> "$GITHUB_ENV"
+
       - name: Check API key before repository writes
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -54,7 +71,6 @@ jobs:
 
       - name: Create a review pull request when evidence changed
         env:
-          GITHUB_TOKEN: ${{ github.token }}
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
@@ -64,8 +80,8 @@ jobs:
           fi
 
           branch="automation/openai-model-routing-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
-          if [ "$branch" = 'main' ]; then
-            echo 'Refusing to push the main branch.' >&2
+          if [ "$branch" = "$DEFAULT_BRANCH" ]; then
+            echo 'Refusing to push the default branch.' >&2
             exit 1
           fi
 
@@ -75,11 +91,11 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git commit -m 'chore: review OpenAI model guidance'
-          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          gh auth setup-git
           git push origin "HEAD:refs/heads/$branch"
 
           if ! gh pr create \
-            --base main \
+            --base "$DEFAULT_BRANCH" \
             --head "$branch" \
             --title 'chore: review OpenAI model guidance' \
             --body-file allocate-agent-models/.generated/openai-model-routing-pr-body.md; then

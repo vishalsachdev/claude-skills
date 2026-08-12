@@ -42,6 +42,28 @@ floor, fallback, and authority boundary.
 Model availability can change. Read
 [references/openai-models.md](references/openai-models.md) before relying on current provider facts.
 
+### Automated review protection
+
+The scheduled review requires GitHub to protect the repository's current default branch before the
+workflow may use the OpenAI API. Configure branch protection or a ruleset that blocks direct writes
+and requires changes to arrive through pull requests, including for administrators and every user,
+team, or app that could otherwise bypass the rule.
+
+The workflow fails closed unless the triggering ref name equals GitHub's reported default branch
+and `github.ref_protected` is `true`. That context proves an external protection or ruleset applies
+without granting the workflow broad repository-administration access. The normal workflow token
+remains limited to the declared contents and pull-request permissions.
+
+The configured GitHub protection is what blocks direct non-PR writes. The context preflight,
+workflow branch naming, and push checks are defense in depth; they do not make direct writes by
+other credentials impossible.
+
+The review itself uses `gpt-5.6-sol` at high effort with required OpenAI-domain web search and no
+model fallback. It accepts only individually sourced claim objects, validates every source against
+the completed search and HTTPS domain allowlist, and renders the managed block itself. Policy
+suggestions go only to the pull-request body. Checkout credentials remain disabled; `gh auth
+setup-git` supplies GitHub's temporary credential without putting a token in the remote URL.
+
 ## Verification
 
 ```yaml

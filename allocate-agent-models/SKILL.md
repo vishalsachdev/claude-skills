@@ -16,8 +16,6 @@ availability, or API facts affect a decision.
 Verified OpenAI facts as of 2026-08-11:
 
 - `gpt-5.6` currently aliases `gpt-5.6-sol`.
-- Use explicit IDs such as `gpt-5.6-sol` for auditability. The explicit ID is not a workaround for
-  an unknown alias.
 - Sol, Terra, and Luna are distinct models. More reasoning effort changes how a selected model
   works; it does not make Terra equivalent to Sol or Luna equivalent to Terra.
 
@@ -58,6 +56,9 @@ for representative local evaluations.
 ## Apply the local starting policy
 
 These allocations are **local recommendations pending representative evaluations**:
+
+Use explicit IDs such as `gpt-5.6-sol` for auditability. This is a local record-keeping policy, not
+a provider recommendation or a workaround for an unknown alias.
 
 | Task class | Starting allocation | Condition |
 |---|---|---|

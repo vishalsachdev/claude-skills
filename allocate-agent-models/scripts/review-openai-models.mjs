@@ -10,9 +10,9 @@ export const MODEL = 'gpt-5.6-sol';
 export const ALLOWED_DOMAINS = ['developers.openai.com', 'platform.openai.com'];
 export const REFERENCE_PATH = 'allocate-agent-models/references/openai-models.md';
 export const PR_BODY_PATH = 'allocate-agent-models/.generated/openai-model-routing-pr-body.md';
-export const OFFICIAL_FACTS_START = '<!-- OPENAI_OFFICIAL_FACTS:START -->';
-export const OFFICIAL_FACTS_END = '<!-- OPENAI_OFFICIAL_FACTS:END -->';
-export const REVIEWED_DATE_PREFIX = '<!-- OPENAI_MODEL_GUIDANCE_REVIEWED: ';
+export const OFFICIAL_FACTS_START = '<!-- BEGIN AUTO-MANAGED OFFICIAL FACTS -->';
+export const OFFICIAL_FACTS_END = '<!-- END AUTO-MANAGED OFFICIAL FACTS -->';
+export const REVIEWED_DATE_PREFIX = 'Checked: ';
 export const EVIDENCE_REFRESH_DAYS = 60;
 
 const ALLOWED_CHANGED_FILES = new Set([REFERENCE_PATH, PR_BODY_PATH]);
@@ -69,23 +69,21 @@ function strictSchema() {
   return {
     type: 'object',
     additionalProperties: false,
-    required: ['facts_changed', 'verified_facts', 'sources', 'official_facts_block', 'policy_recommendations'],
+    required: ['verified_facts', 'policy_recommendations'],
     properties: {
-      facts_changed: { type: 'boolean' },
       verified_facts: {
         type: 'array',
+        minItems: 1,
         items: {
           type: 'object',
           additionalProperties: false,
           required: ['claim', 'source_urls'],
           properties: {
-            claim: { type: 'string' },
-            source_urls: { type: 'array', items: { type: 'string' } },
+            claim: { type: 'string', minLength: 1 },
+            source_urls: { type: 'array', minItems: 1, uniqueItems: true, items: { type: 'string' } },
           },
         },
       },
-      sources: { type: 'array', items: { type: 'string' } },
-      official_facts_block: { type: 'string' },
       policy_recommendations: { type: 'array', items: { type: 'string' } },
     },
   };
@@ -108,11 +106,11 @@ export function buildReviewRequest(existingFactsBlock) {
               'Perform a live OpenAI documentation review. Use web search before answering.',
               'Only use https://developers.openai.com and https://platform.openai.com sources.',
               'Return verified official facts separately from local policy recommendations.',
-              'Every verified factual claim must link to one or more returned web-search sources.',
-              'The official_facts_block is a complete replacement for, and only for, the supplied delimited block.',
-              `It must retain ${OFFICIAL_FACTS_START} and ${OFFICIAL_FACTS_END} exactly.`,
-              'Do not put local policy recommendations in the official facts block.',
-              'Set facts_changed to false only when that complete block is byte-for-byte unchanged.',
+              'Return each official fact as one standalone, single-line plain-text claim.',
+              'Every claim must link to one or more source URLs returned by the completed web search.',
+              'Do not return Markdown, block delimiters, a replacement block, or a facts-changed decision.',
+              'The updater renders the managed block deterministically from validated claim objects.',
+              'Put every recommendation, routing preference, and auditability choice in policy_recommendations.',
             ].join('\n'),
           },
         ],
@@ -142,17 +140,35 @@ function requireExactKeys(object, keys, context) {
   }
 }
 
-function validateReplacementBlock(block) {
-  asNonEmptyString(block, 'official_facts_block');
-  if (block.trim() !== block) fail('official_facts_block must not have surrounding whitespace');
-  const start = block.indexOf(OFFICIAL_FACTS_START);
-  const end = block.indexOf(OFFICIAL_FACTS_END);
-  if (start !== 0 || end < OFFICIAL_FACTS_START.length || end + OFFICIAL_FACTS_END.length !== block.length) {
-    fail('official_facts_block does not preserve the required delimiters');
+function validateClaim(claim) {
+  asNonEmptyString(claim, 'verified fact claim');
+  if (claim.trim() !== claim) fail('verified fact claim must not have surrounding whitespace');
+  if (/\r|\n/.test(claim)) fail('verified fact claim must be a single line');
+  if (/https?:\/\//i.test(claim)) fail('verified fact claim must put links in source_urls');
+}
+
+function validatePolicyRecommendation(recommendation) {
+  asNonEmptyString(recommendation, 'policy recommendation');
+  if (recommendation.trim() !== recommendation || /\r|\n/.test(recommendation)) {
+    fail('policy recommendation must be one trimmed line');
   }
-  if (block.indexOf(OFFICIAL_FACTS_START, OFFICIAL_FACTS_START.length) !== -1 || block.indexOf(OFFICIAL_FACTS_END, end + OFFICIAL_FACTS_END.length) !== -1) {
-    fail('official_facts_block contains duplicate delimiters');
-  }
+}
+
+function escapeMarkdownText(value) {
+  return value.replace(/([\\`*_{}\[\]<>])/g, '\\$1');
+}
+
+function renderFactLine(fact) {
+  const sources = [...fact.source_urls].sort();
+  const links = sources.map((source, index) => {
+    const label = sources.length === 1 ? 'source' : `source ${index + 1}`;
+    return `[${label}](${source})`;
+  });
+  return `- ${escapeMarkdownText(fact.claim)} (${links.join(', ')})`;
+}
+
+export function renderOfficialFactsBlock(facts) {
+  return [OFFICIAL_FACTS_START, ...facts.map(renderFactLine), OFFICIAL_FACTS_END].join('\n');
 }
 
 function completedSearchSources(response) {
@@ -181,7 +197,7 @@ function outputTextOrRefusal(response) {
   fail('response has no structured output text');
 }
 
-function parseAndValidateReview(response, existingFactsBlock) {
+function parseAndValidateReview(response) {
   if (!isPlainObject(response)) fail('response body is not an object');
   if (response.status !== 'completed') fail(`response status is ${String(response.status)}`);
   if (response.model !== MODEL) fail(`response used ${String(response.model)}, not ${MODEL}`);
@@ -192,33 +208,27 @@ function parseAndValidateReview(response, existingFactsBlock) {
   } catch (error) {
     fail(`structured output is not valid JSON: ${error.message}`);
   }
-  requireExactKeys(output, ['facts_changed', 'verified_facts', 'sources', 'official_facts_block', 'policy_recommendations'], 'structured output');
-  if (typeof output.facts_changed !== 'boolean' || !Array.isArray(output.verified_facts) || !Array.isArray(output.sources) || !Array.isArray(output.policy_recommendations)) {
+  requireExactKeys(output, ['verified_facts', 'policy_recommendations'], 'structured output');
+  if (!Array.isArray(output.verified_facts) || !Array.isArray(output.policy_recommendations)) {
     fail('structured output violates the required schema');
   }
-  validateReplacementBlock(output.official_facts_block);
   if (output.verified_facts.length === 0) fail('structured output has no verified facts');
-  const reportedSources = new Set();
-  for (const source of output.sources) {
-    validateSource(source, 'reported source');
-    if (!searchSources.has(source)) fail('reported source was not returned by completed web search');
-    reportedSources.add(source);
-  }
-  if (reportedSources.size === 0) fail('structured output has no sources');
+  const claims = new Set();
   for (const fact of output.verified_facts) {
     requireExactKeys(fact, ['claim', 'source_urls'], 'verified fact');
-    asNonEmptyString(fact.claim, 'verified fact claim');
-    if (!output.official_facts_block.includes(fact.claim)) fail('verified fact claim is absent from the replacement block');
+    validateClaim(fact.claim);
+    if (claims.has(fact.claim)) fail('structured output contains a duplicate verified fact claim');
+    claims.add(fact.claim);
     if (!Array.isArray(fact.source_urls) || fact.source_urls.length === 0) fail('verified fact has no source linkage');
+    const factSources = new Set();
     for (const source of fact.source_urls) {
       validateSource(source, 'verified fact source');
-      if (!reportedSources.has(source)) fail('verified fact source linkage is absent from reported sources');
+      if (!searchSources.has(source)) fail('verified fact source was not returned by completed web search');
+      if (factSources.has(source)) fail('verified fact contains a duplicate source URL');
+      factSources.add(source);
     }
   }
-  for (const recommendation of output.policy_recommendations) asNonEmptyString(recommendation, 'policy recommendation');
-  if (!output.facts_changed && output.official_facts_block !== existingFactsBlock) {
-    fail('facts_changed is false but the replacement block differs');
-  }
+  for (const recommendation of output.policy_recommendations) validatePolicyRecommendation(recommendation);
   return output;
 }
 
@@ -229,9 +239,10 @@ function extractReferenceParts(reference) {
   if (reference.indexOf(OFFICIAL_FACTS_START, start + OFFICIAL_FACTS_START.length) !== -1 || reference.indexOf(OFFICIAL_FACTS_END, end + OFFICIAL_FACTS_END.length) !== -1) {
     fail('reference has duplicate official-facts delimiters');
   }
-  const dateExpression = /<!-- OPENAI_MODEL_GUIDANCE_REVIEWED: (\d{4}-\d{2}-\d{2}) -->/g;
+  const dateExpression = /^Checked: (\d{4}-\d{2}-\d{2})$/gm;
   const dates = [...reference.matchAll(dateExpression)];
   if (dates.length !== 1) fail('reference must have exactly one reviewed-date marker');
+  if (dates[0].index > start) fail('reviewed-date marker must appear before the official-facts block');
   const factsEnd = end + OFFICIAL_FACTS_END.length;
   return {
     existingFactsBlock: reference.slice(start, factsEnd),
@@ -247,8 +258,8 @@ function replaceReference(reference, parts, block, today, replaceFacts) {
   const withFacts = replaceFacts
     ? reference.slice(0, parts.factsStart) + block + reference.slice(parts.factsEnd)
     : reference;
-  const dateExpression = /<!-- OPENAI_MODEL_GUIDANCE_REVIEWED: \d{4}-\d{2}-\d{2} -->/;
-  const marker = `${REVIEWED_DATE_PREFIX}${today} -->`;
+  const dateExpression = /^Checked: \d{4}-\d{2}-\d{2}$/m;
+  const marker = `${REVIEWED_DATE_PREFIX}${today}`;
   const result = withFacts.replace(dateExpression, marker);
   if (result === withFacts) fail('could not update reviewed-date marker');
   return result;
@@ -262,11 +273,11 @@ function renderPrBody(review, today, refreshedEvidence) {
     `Official facts changed: ${review.facts_changed ? 'yes' : 'no'}`,
     `Evidence refreshed: ${refreshedEvidence ? 'yes' : 'no'}`,
     '',
-    '## Verified sources',
-    ...review.sources.map((source) => `- ${source}`),
+    '## Verified official claims',
+    ...review.verified_facts.map(renderFactLine),
     '',
     '## Local policy recommendations',
-    ...review.policy_recommendations.map((recommendation) => `- ${recommendation}`),
+    ...review.policy_recommendations.map((recommendation) => `- ${escapeMarkdownText(recommendation)}`),
     '',
   ].join('\n');
 }
@@ -330,12 +341,15 @@ export async function reviewModelGuidance({ rootDir, apiKey, today, fetchImpl = 
   } catch (error) {
     fail(`OpenAI Responses JSON parse failed: ${error.message}`);
   }
-  const review = parseAndValidateReview(response, parts.existingFactsBlock);
+  const structuredReview = parseAndValidateReview(response);
+  const renderedFactsBlock = renderOfficialFactsBlock(structuredReview.verified_facts);
+  const factsChanged = renderedFactsBlock !== parts.existingFactsBlock;
+  const review = { ...structuredReview, facts_changed: factsChanged };
   const refreshEvidence = shouldRefreshEvidence(parts.lastChecked, today);
-  const needsWrite = review.facts_changed || refreshEvidence;
+  const needsWrite = factsChanged || refreshEvidence;
   if (!needsWrite) return { changedFiles: [], review, refreshEvidence: false };
 
-  const nextReference = replaceReference(reference, parts, review.official_facts_block, today, review.facts_changed);
+  const nextReference = replaceReference(reference, parts, renderedFactsBlock, today, factsChanged);
   await writeRepositoryFile(rootDir, REFERENCE_PATH, nextReference);
   await writeRepositoryFile(rootDir, PR_BODY_PATH, renderPrBody(review, today, refreshEvidence));
   const actualChangedFiles = changedFiles();
