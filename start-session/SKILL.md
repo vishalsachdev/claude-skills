@@ -9,7 +9,31 @@ Orient at the beginning of a work session. Execute these steps directly (do NOT 
 
 ## Steps
 
-### 0. Read project instructions
+### 0a. Am I in Herdr? (do this FIRST — it changes how Step 3 must be run)
+
+```bash
+test "${HERDR_ENV:-}" = 1 && echo "IN HERDR" || echo "not in herdr"
+```
+
+Most sessions now run inside Herdr. When it reports `IN HERDR`:
+
+1. **Invoke the `herdr` skill** before running any `herdr` command. It carries the ID model, agent lifecycle states, and pane targeting rules.
+2. **Check who else is live, and in which directory:**
+   ```bash
+   herdr agent list   # compare each agent's cwd against this repo's path
+   ```
+3. **If another agent shares this working tree, do not create branches in it.** Git branches, HEAD and the index are per-*working-tree*, not per-session: two agents in one checkout switch branches under each other, and uncommitted edits ride along onto whichever branch the other session picks. Create a dedicated worktree instead:
+   ```bash
+   herdr worktree create --cwd <repo> --branch <name> --base origin/main \
+       --path <repo>-<purpose> --label <purpose> --no-focus
+   ```
+   Then address every git command as `git -C <path>` — the Bash tool's cwd resets between calls. Gitignored files (`.env`) do **not** carry into a new worktree; symlink them if the work needs live credentials.
+
+A `SessionStart` hook (`~/.claude/hooks/herdr-session-reminder.sh`) also injects this, but the hook's context can be compacted away mid-session — so run the check here too.
+
+*(Added 2026-08-08 after two Claude sessions ran concurrently in one canvas-mcp checkout: branches moved under each other and an uncommitted `files.py` edit appeared then vanished.)*
+
+### 0b. Read project instructions
 
 Check CLAUDE.md for `## Session Wrap-up`, `## Deployment`, sync commands, or similar sections. Note any sync/pull commands — you'll run them in Step 1.
 

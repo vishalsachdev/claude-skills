@@ -12,16 +12,6 @@ metadata:
 
 This skill provides comprehensive guidance for writing excellent academic and research papers across all disciplines. It covers structure, style, argumentation, and best practices from initial planning through final revision.
 
-## When to Use This Skill
-
-Use this skill when working on:
-- Research papers and journal articles
-- Conference papers and proceedings
-- Technical reports and white papers
-- Thesis chapters and dissertations
-- Literature reviews and survey papers
-- Position papers and perspectives
-
 ## Quick Start
 
 For immediate guidance, see the task-specific workflows below. For comprehensive reference material, consult:
@@ -96,7 +86,7 @@ Work section-by-section, not necessarily in order. Many authors write in this se
 
 **Results**
 - Present findings objectively without interpretation
-- Use tables and figures effectively (see Visualization section)
+- Use tables and figures effectively (see the dataviz skill and `references/REFERENCE.md`)
 - Report statistical significance where applicable
 - Address both positive and negative results
 - Organize by research question or hypothesis
@@ -137,54 +127,6 @@ Work section-by-section, not necessarily in order. Many authors write in this se
 - Ensure figures/tables are referenced in text
 - Number sections, equations, figures consistently
 - Proofread carefully (reading aloud helps)
-
-## Visualization Best Practices
-
-**Tables**
-- Use for precise numerical comparisons
-- Keep simple and readable (avoid excessive gridlines)
-- Include clear column headers and units
-- Caption goes above the table
-- Reference in text before the table appears
-
-**Figures**
-- Use for trends, patterns, relationships
-- Ensure axes are labeled with units
-- Use readable fonts (at least 10pt in final size)
-- Caption goes below the figure
-- Make interpretable in grayscale (avoid color-only distinctions)
-
-**General Rules**
-- Every table/figure must be referenced in the text
-- Each should be self-explanatory with its caption
-- Number consecutively (Figure 1, Figure 2, etc.)
-- Place close to first reference when possible
-
-## Common Pitfalls to Avoid
-
-**Structural Issues**
-- ❌ Burying the contribution in the middle
-- ✅ State contribution clearly in introduction
-- ❌ Results section that interprets rather than presents
-- ✅ Keep results objective, interpret in discussion
-- ❌ Conclusion that introduces new information
-- ✅ Conclusion only synthesizes existing content
-
-**Writing Issues**
-- ❌ Passive constructions: "It was found that..."
-- ✅ Active voice: "We found that..."
-- ❌ Hedging excessively: "It seems to possibly suggest..."
-- ✅ Be direct: "The results indicate..."
-- ❌ Undefined acronyms and jargon
-- ✅ Define terms on first use
-
-**Citation Issues**
-- ❌ Missing citations for claims
-- ✅ Every factual claim needs a source
-- ❌ Over-citing obvious facts
-- ✅ Common knowledge doesn't need citation
-- ❌ Citing without reading (citation padding)
-- ✅ Cite only what you've actually read and verified
 
 ## Discipline-Specific Considerations
 
@@ -250,14 +192,6 @@ This skill includes detailed reference materials for deeper guidance:
 
 Only load these materials when needed to conserve context. For most tasks, the guidance above is sufficient.
 
-## Progressive Enhancement
-
-**Basic use**: Follow the Core Workflow for writing or revising papers
-
-**Intermediate use**: Consult reference materials for specific sections or challenges
-
-**Advanced use**: Use templates from assets/ and customize for specific venues
-
 ## Quality Checklist
 
 Before considering a paper complete, verify:
@@ -273,93 +207,5 @@ Before considering a paper complete, verify:
 - [ ] Abstract accurately summarizes the paper
 - [ ] No typos or grammatical errors
 - [ ] Meets venue requirements (format, length, style)
-
-## Examples
-
-**Example 1: Progressive discovery—starting fresh**
-
-```
-User: Help me write a research paper.
-
-Claude: What's your paper about? (topic, working title, or research question)
-
-User: It's about federated learning for edge devices.
-
-Claude: Got it—that's a focused topic. Are you at the stage of having completed
-research and needing to write it up, or are you still planning the work?
-
-User: I've done the research and have preliminary results. I just don't know
-where to start.
-
-Claude: Perfect—let me help you structure this. What's your target venue?
-(e.g., a specific conference, journal, or is this a thesis chapter?)
-```
-
-Notice: One question asked, then the next, building naturally from their answers.
-
----
-
-**Example 2: Targeted revision (existing draft)**
-
-```
-User: My introduction feels weak and I'm not sure why.
-
-Claude: I'd like to take a look. Can you share what you have, or tell me
-what the main challenge is? (e.g., doesn't grab attention, doesn't explain
-why this work matters, etc.)
-
-User: I think I'm not making the research gap clear enough. Here's what I wrote...
-
-Claude: [Reads their draft]
-
-Looking at your introduction, I see you've identified the problem nicely,
-but you're right—the gap (what's missing in current solutions) isn't
-explicit. Here's what I'd suggest...
-```
-
-Notice: Start with curiosity about their specific challenge, then provide
-targeted feedback on the actual content.
-
----
-
-**Example 3: Stuck in the middle**
-
-```
-User: I have my methods section written, but I'm stuck on results.
-
-Claude: What's tripping you up about the results section specifically?
-(e.g., how to organize findings, whether to include raw data, interpretation
-vs. presentation, etc.)
-
-User: I have a lot of data. I don't know what to include and how to present it
-so it's not overwhelming.
-
-Claude: That's a common challenge. Let me help you think through data selection
-and visualization...
-```
-
-Notice: Rather than lecturing about results sections in general, we drill down
-into their specific problem first.
-```
-
-## Tips for Success
-
-**Writing Process**
-- Write regularly in focused sessions (2-3 hours)
-- Don't edit while drafting (separate creation from refinement)
-- Get feedback early and often
-- Read papers in your target venue for style/structure
-
-**Revision Strategy**
-- Take breaks between revision passes
-- Read paper aloud to catch awkward phrasing
-- Get fresh eyes (colleagues, advisors)
-- Use revision checklist systematically
-
-**Time Management**
-- Allocate 40% planning, 30% writing, 30% revision
-- Build in buffer time before deadlines
-- Start with rough drafts, refine iteratively
-- Don't aim for perfection in first draft
 
 Remember: All good papers go through multiple revisions. Writing is rewriting.

@@ -233,6 +233,19 @@ or answering "is the model actually getting better?"
 
 ---
 
+### 🧭 Allocate Agent Models
+**Folder**: `allocate-agent-models/` • **SKILL.md + 2 references**
+
+Choose auditable OpenAI model and reasoning-effort routes for delegated work while keeping provider
+facts separate from local starting policy. Starts new task classes with accuracy evidence, preserves
+a Sol high safety floor for dangerous or weakly verified work, and defines independent review,
+failure classification, fallback, and Herdr coordination guardrails.
+
+**Use when**: Delegating work across GPT-5.6 Sol, Terra, or Luna, evaluating a lower-cost route,
+handling model unavailability or repeated failures, or coordinating parallel agents
+
+---
+
 ### 🐦 Tweet Series Extractor
 **Folder**: `tweet-series-extractor/` • **SKILL.md**
 
@@ -298,18 +311,18 @@ outstanding issues.
 
 ## Stats
 
-- **64 skills** spanning SDLC workflows, security, async, AI, validation, search, database, state,
+- **66 skills** spanning SDLC workflows, security, async, AI, validation, search, database, state,
   teaching and course design, research writing, deployment golden paths, and session workflow
 - **Official format**: Following the [Agent Skills](https://agentskills.io) open specification
 - **Folder-based skills**: Proper SKILL.md format with references for long content
-- **~52,700 lines** of documentation across 234 markdown files
+- **~53,000 lines** of documentation across 246 markdown files
 - **Sources**: [TLDW](https://github.com/vishalsachdev/tldw) (production app, 10K+ LOC), the
   archived `claude-code-skills` repo, and the broader community (see attribution note above)
 
-Counts verified 2026-08-01:
+Counts verified 2026-08-11:
 ```bash
-find . -name SKILL.md -not -path './.git/*' | wc -l    # 64
-find . -name '*.md'   -not -path './.git/*' | wc -l    # 234
+find . -name SKILL.md -not -path './.git/*' | wc -l    # 66
+find . -name '*.md'   -not -path './.git/*' | wc -l    # 246
 ```
 
 ---
