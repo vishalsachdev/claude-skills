@@ -23,6 +23,18 @@ production AI-powered YouTube video analysis app.
 
 ## Skills Available
 
+### Visual Prompt Six Levers
+
+**Folder**: [visual-prompt-six-levers/](visual-prompt-six-levers/SKILL.md) • **SKILL.md + README + license**
+
+A flexible reference for Blender scenes, diagrams, images, and animations. Includes six prompt
+concerns, a concise template, and a fictional JOIN fan-out example.
+
+**Use when**: Drafting or revising visual prompts, or recalling "six Blender levers",
+"Blender mental model", or the older "four Blender levers".
+
+---
+
 ### 📋 CLAUDE.md Template
 **Folder**: `claude-md-template/` • **SKILL.md + template asset**
 
